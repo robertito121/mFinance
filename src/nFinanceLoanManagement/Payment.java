@@ -3,7 +3,6 @@ package nFinanceLoanManagement;
 
 public class Payment {
 
-    //Payment: Loan_number, amount, account, type
     private int loanNumber;
     private double amount;
     private String account;
