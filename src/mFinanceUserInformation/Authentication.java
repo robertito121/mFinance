@@ -1,9 +1,8 @@
-
-package mfinance;
+package mFinanceUserInformation;
 
 /**
  *
- * @author julia
+ * @author julian
  */
 public class Authentication {
     private String userName;

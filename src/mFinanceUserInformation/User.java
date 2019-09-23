@@ -1,5 +1,8 @@
-package nFinanceUserInformation;
+package mFinanceUserInformation;
 
+/**
+ * @author Roberto Gonzales
+ */
 public class User {
 
     private String firstName;

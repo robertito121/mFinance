@@ -1,4 +1,4 @@
-package nFinanceLoanManagement;
+package mFinanceLoanManagement;
 
 
 public class Payment {
