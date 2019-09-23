@@ -1,4 +1,4 @@
-package mfinance;
+package mFinanceUserInformation;
 
 /**
  *

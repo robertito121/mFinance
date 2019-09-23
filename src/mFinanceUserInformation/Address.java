@@ -1,5 +1,8 @@
-package nFinanceUserInformation;
+package mFinanceUserInformation;
 
+/**
+ * @author Roberto Gonzales
+ */
 public class Address {
 
     private int streetNumber;

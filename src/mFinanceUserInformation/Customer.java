@@ -1,5 +1,8 @@
-package nFinanceUserInformation;
+package mFinanceUserInformation;
 
+/**
+ * @author Roberto Gonzales
+ */
 public class Customer extends User {
 
     private Address address;
