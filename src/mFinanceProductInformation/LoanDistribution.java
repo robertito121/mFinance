@@ -1,59 +1,62 @@
-package nFinanceProductInformation;
+package mFinanceProductInformation;
 
-public class LoanApplication {
+public class LoanDistribution {
     
-    private Loan loan;
-    private Double amount;
+    private int loanNumber;
+    private int distributionAccount;
     private String status;
 
     /**
-     * @param loan
-     * @param amount
-     * @param status 
+     * Constructor
+     * @param loanNumber
+     * @param distributionAccount;
+     * @param status
      */
-    public LoanApplication(Loan loan, Double amount, String status) {
-        this.loan = loan;
-        this.amount = amount;
+    public LoanDistribution(int loanNumber, int distributionAccount, String status) {
+        this.loanNumber = loanNumber;
+        this.distributionAccount = distributionAccount;
         this.status = status;
     }
 
     /**
-     * Gets the Loan attribute of the LoanApplication
-     * @return the LoanApplications Loan
-     * @see Loan
+     * Gets the loanNumber attribute of the loanDistribution
+     * @return loanNumber
+     * @see loanNumber
      */
-    public Loan getLoan() {
-        return loan;
+    public int getLoanNumber() {
+        return loanNumber;
     }
 
     /**
-     * Sets the Loan attribute of the LoanApplication
-     * @param Loan
+     * Sets the loanNumber attribute of the loanDistribution
+     * @param int object
+     * @see loanNumber
      */
-    public void setLoan(Loan loan) {
-        this.loan = loan;
+    public void setLoanNumber(int loanNumber) {
+        this.loanNumber = loanNumber;
     }
 
     /**
-     * Gets the amount attribute of the LoanApplication
-     * @return the LoanApplication amount
-     * @see amount
+     * Gets the distributionAccount attribute of the loanDistribution
+     * @return distributionAccount
+     * @see distributionAccount
      */
-    public Double getAmount() {
-        return amount;
+    public int getDistributionAccount() {
+        return distributionAccount;
     }
 
     /**
-     * Sets the amount attribute of the LoanApplication
-     * @param Double
+     * Sets the distributionAccount attribute of the loanDistribution
+     * @param int object
+     * @see distributionAccount
      */
-    public void setAmount(Double amount) {
-        this.amount = amount;
+    public void setDistributionAccount(int distributionAccount) {
+        this.distributionAccount = distributionAccount;
     }
 
     /**
-     * Gets the status attribute of the LoanApplication
-     * @return the LoanApplication status
+     * Gets the status attribute of the loanDistribution
+     * @return status
      * @see status
      */
     public String getStatus() {
@@ -61,13 +64,13 @@ public class LoanApplication {
     }
 
     /**
-     * Sets the status attribute of the LoanApplication
-     * @param String
+     * Sets the status attribute of the loanDistribution
+     * @param String object
+     * @see status
      */
     public void setStatus(String status) {
         this.status = status;
     }
-    
     
     
 }
