@@ -4,27 +4,26 @@ package mFinanceUserInformation;
  *
  * @author julian
  */
-public class Employee extends User {
-    private String emailAddress;
+public class Employee extends User  {
     private String employeeId;
-    private String phoneNumber;
     private String department;
     private String jobTitle;
 
     /**
-     *Retrieves an employee's email address
-     * @return
-     */
-    public String getEmailAddress() {
-        return emailAddress;
-    }
-
-    /**
-     *Sets an employee's email address
+     *Used to create a new employee
      * @param emailAddress
+     * @param employeeId
+     * @param phoneNumber
+     * @param department
+     * @param jobTitle
+     * @param firstName
+     * @param lastName
      */
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
+    public Employee(String emailAddress, String employeeId, String phoneNumber, String department, String jobTitle, String firstName, String lastName) {
+        super(firstName, lastName, phoneNumber, emailAddress);
+        this.employeeId = employeeId;
+        this.department = department;
+        this.jobTitle = jobTitle;
     }
 
     /**
@@ -41,22 +40,6 @@ public class Employee extends User {
      */
     public void setEmployeeId(String employeeId) {
         this.employeeId = employeeId;
-    }
-
-    /**
-     *Retrieves an employee's phone number
-     * @return
-     */
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    /**
-     *Sets an employee's phone number
-     * @param phoneNumber
-     */
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
     }
 
     /**
@@ -90,27 +73,4 @@ public class Employee extends User {
     public void setJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
     }
-
-    /**
-     *Used to create a new employee
-     * @param emailAddress
-     * @param employeeId
-     * @param phoneNumber
-     * @param department
-     * @param jobTitle
-     * @param firstName
-     * @param lastName
-     */
-    public Employee(String emailAddress, String employeeId, String phoneNumber, String department, String jobTitle, String firstName, String lastName) {
-        super(firstName, lastName);
-        this.emailAddress = emailAddress;
-        this.employeeId = employeeId;
-        this.phoneNumber = phoneNumber;
-        this.department = department;
-        this.jobTitle = jobTitle;
-    }
-    
-    
-    
-
 }

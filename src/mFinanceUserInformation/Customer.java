@@ -5,8 +5,8 @@ package mFinanceUserInformation;
  */
 public class Customer extends User {
 
+    private String customerId;
     private Address address;
-    private String phoneNumber;
 
     /**
      * Constructor
@@ -15,10 +15,10 @@ public class Customer extends User {
      * @param address
      * @param phoneNumber
      */
-    public Customer(String firstName, String lastName, Address address, String phoneNumber) {
-        super(firstName, lastName);
+    public Customer(String firstName, String lastName, String customerId, Address address, String phoneNumber, String emailAddress) {
+        super(firstName, lastName, phoneNumber, emailAddress);
+        this.customerId = customerId;
         this.address = address;
-        this.phoneNumber = phoneNumber;
     }
 
     /**
@@ -40,18 +40,18 @@ public class Customer extends User {
     }
 
     /**
-     * Gets the phone number attribute of the user
-     * @return the users phone number
+     * sets the customerId attribute
+     * @param customerId
      */
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
     }
 
     /**
-     * sets the phone number attribute of the user
-     * @param phoneNumber
+     * gets the customerId attribute
+     * @return String
      */
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public String getCustomerId() {
+        return customerId;
     }
 }
