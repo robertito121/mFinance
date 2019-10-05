@@ -1,27 +1,62 @@
 package mFinanceLoanManagement;
 
 
+import mFinanceUserInformation.Address;
+
 public class Payment {
 
     //Payment: Loan_number, amount, account, type
     private int loanNumber;
     private double amount;
-    private String account;
-    private String type;
 
 
     /**
      * Constructor
      * @param loanNumber
-     * @param amount
-     * @param account
-     * @param type
+     * @param paymentAmount
      */
-    public Payment (int loanNumber, double amount, String account, String type){
+    public Payment (int loanNumber, double paymentAmount){
         this.loanNumber = loanNumber;
         this.amount = amount;
-        this.account = account;
-        this.type = type;
+    }
+
+    /**
+     * submits a payment using a bank account and returns a payment confirmation to the user
+     * @param accountNumber
+     * @param routingNumber
+     * @return PaymentConfirmation object
+     * @see
+     */
+    public PaymentConfirmation payLoanByAccountDebit(String accountNumber, String routingNumber) {
+
+        return new PaymentConfirmation();
+
+    }
+
+    /**
+     * submits a payment using a debit card and returns a payment confirmation to the user
+     * @param cardType
+     * @param cardNumber
+     * @param cvvNumber
+     * @param expirationDate
+     * @param nameOnCard
+     * @param billingAddress
+     * @return PaymentConfirmation object
+     */
+    public PaymentConfirmation payLoanByCard(String cardType, String cardNumber, String cvvNumber, String expirationDate, String nameOnCard, Address billingAddress) {
+
+        return new PaymentConfirmation();
+    }
+
+    /**
+     * submits the actual payment
+     * @param payment
+     * @return boolean
+     */
+    public boolean submitPayment(PaymentProcessor payment) {
+
+        return true;
+
     }
 
     /**
@@ -56,36 +91,5 @@ public class Payment {
         this.amount = amount;
     }
 
-    /**
-     * Get the account attribute of the user
-     * @return account of the user
-     */
-    public String getAccount() {
-        return account;
-    }
-
-    /**
-     * Set the account attribute of the user
-     * @param account
-     */
-    public void setAccount(String account) {
-        this.account = account;
-    }
-
-    /**
-     * Get the type attribute of the user
-     * @return type of the user
-     */
-    public String getType() {
-        return type;
-    }
-
-    /**
-     * Set the type attribute of the user
-     * @param type
-     */
-    public void setType(String type) {
-        this.type = type;
-    }
 }
 
