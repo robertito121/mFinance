@@ -29,7 +29,13 @@ public class Payment {
      */
     public PaymentConfirmation payLoanByAccountDebit(String accountNumber, String routingNumber) {
 
-        return new PaymentConfirmation();
+        PaymentConfirmation paymentConfirmation = null;
+        PaymentProcessor paymentProcessor = new PaymentProcessor();
+        boolean isPaymentSubmitted = submitPayment(paymentProcessor);
+        if (isPaymentSubmitted) {
+            paymentConfirmation = new PaymentConfirmation();
+        }
+        return paymentConfirmation;
 
     }
 
@@ -45,7 +51,13 @@ public class Payment {
      */
     public PaymentConfirmation payLoanByCard(String cardType, String cardNumber, String cvvNumber, String expirationDate, String nameOnCard, Address billingAddress) {
 
-        return new PaymentConfirmation();
+        PaymentConfirmation paymentConfirmation = null;
+        PaymentProcessor paymentProcessor = new PaymentProcessor();
+        boolean isPaymentSubmitted = submitPayment(paymentProcessor);
+        if (isPaymentSubmitted) {
+             paymentConfirmation = new PaymentConfirmation();
+        }
+        return paymentConfirmation;
     }
 
     /**
