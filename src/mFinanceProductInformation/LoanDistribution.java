@@ -3,8 +3,9 @@ package mFinanceProductInformation;
 public class LoanDistribution {
     
     private int loanNumber;
-    private int distributionAccount;
+    private String distributionAccount;
     private String status;
+    private boolean distributed;
 
     /**
      * Constructor
@@ -12,10 +13,11 @@ public class LoanDistribution {
      * @param distributionAccount;
      * @param status
      */
-    public LoanDistribution(int loanNumber, int distributionAccount, String status) {
+    public LoanDistribution(int loanNumber, String distributionAccount, String status) {
         this.loanNumber = loanNumber;
         this.distributionAccount = distributionAccount;
         this.status = status;
+        distributed = false;
     }
 
     /**
@@ -41,16 +43,16 @@ public class LoanDistribution {
      * @return distributionAccount
      * @see distributionAccount
      */
-    public int getDistributionAccount() {
+    public String getDistributionAccount() {
         return distributionAccount;
     }
 
     /**
      * Sets the distributionAccount attribute of the loanDistribution
-     * @param int object
+     * @param String object
      * @see distributionAccount
      */
-    public void setDistributionAccount(int distributionAccount) {
+    public void setDistributionAccount(String distributionAccount) {
         this.distributionAccount = distributionAccount;
     }
 
@@ -70,6 +72,28 @@ public class LoanDistribution {
      */
     public void setStatus(String status) {
         this.status = status;
+    }
+    
+    
+    /*
+    * stub of transfering loan into distribution account
+    */
+    public void distributeLoan() {
+        
+        //loan distribution
+        boolean loandistributed = true;
+        if(loandistributed) {
+            status = "active";
+            distributed = true;
+        }
+    }
+    
+    /*
+    * confirming loan distribution
+    * @return boolean
+    */
+    public boolean distributionConfirmation() {        
+        return distributed;
     }
     
     
