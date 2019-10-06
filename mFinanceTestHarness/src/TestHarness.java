@@ -1,6 +1,7 @@
 import mFinanceLoanManagement.Payment;
 import mFinanceLoanManagement.PaymentConfirmation;
 import mFinanceUserInformation.Address;
+import mFinanceProductInformation.LoanDistribution;
 
 public class TestHarness {
 
@@ -68,4 +69,23 @@ public class TestHarness {
        }
         
     }
+    
+    public static void testLoanDistribution() {
+        System.out.println("starting test for LoanDistribution");
+        System.out.println("Instantiating LoanDistribution object");     
+        LoanDistribution loanDistribution = new LoanDistribution(1234, "1a4", "pending");
+        System.out.println(loanDistribution);
+        System.out.println("Testing loan distribution");
+        loanDistribution.distributeLoan();
+        System.out.println("getting payment confirmation number and transaction date");
+        System.out.println("Distribution account: " + loanDistribution.getDistributionAccount());
+        System.out.println("Loan Status: " + loanDistribution.getStatus());
+        
+        if (loanDistribution.distributionConfirmation() && loanDistribution.getStatus().equalsIgnoreCase("active")) {
+            System.out.println("LoanDistribution test passed");
+        }
+        else {
+            System.out.println("LoanDistribution test failed");
+        }
+    }    
 }
