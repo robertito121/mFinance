@@ -34,6 +34,7 @@ public class TestHarness {
         else {
             System.out.println("payLoanByCard test failed");
         }
+        System.out.println();
     }
     public static void testAuthentication(){
         Authentication user1 = new Authentication("jsmith","p@55word1");
@@ -47,8 +48,9 @@ public class TestHarness {
         }
         else{
             System.out.println("Authentication Test Passed");
-            System.out.println();
-        }  
+
+        }
+        System.out.println();
     }
 
      public static void testLoanApplication(){
@@ -68,9 +70,9 @@ public class TestHarness {
        }
        else{
            System.out.println("Loan Application Test Passed");
-           System.out.println();
+
        }
-        
+       System.out.println();
     }
     
     public static void testLoanDistribution() {
@@ -80,7 +82,6 @@ public class TestHarness {
         System.out.println(loanDistribution);
         System.out.println("Testing loan distribution");
         loanDistribution.distributeLoan();
-        System.out.println("getting payment confirmation number and transaction date");
         System.out.println("Distribution account: " + loanDistribution.getDistributionAccount());
         System.out.println("Loan Status: " + loanDistribution.getStatus());
         
@@ -90,5 +91,6 @@ public class TestHarness {
         else {
             System.out.println("LoanDistribution test failed");
         }
-    }    
+        System.out.println();
+    }
 }
