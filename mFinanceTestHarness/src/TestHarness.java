@@ -1,7 +1,10 @@
 import mFinanceLoanManagement.Payment;
 import mFinanceLoanManagement.PaymentConfirmation;
+import mFinanceProductInformation.Loan;
+import mFinanceProductInformation.LoanApplication;
 import mFinanceUserInformation.Address;
 import mFinanceProductInformation.LoanDistribution;
+import mFinanceUserInformation.Authentication;
 
 public class TestHarness {
 
