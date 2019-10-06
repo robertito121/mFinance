@@ -5,6 +5,7 @@ public class Main {
         System.out.println("Running TestHarness");
         TestHarness.testLoanPayment();
 	TestHarness.testAuthentication();
+	TestHarness.testLoanDistribution();
         TestHarness.testLoanApplication();
     }
 }
