@@ -82,7 +82,6 @@ public class TestHarness {
         System.out.println(loanDistribution);
         System.out.println("Testing loan distribution");
         loanDistribution.distributeLoan();
-        System.out.println("getting payment confirmation number and transaction date");
         System.out.println("Distribution account: " + loanDistribution.getDistributionAccount());
         System.out.println("Loan Status: " + loanDistribution.getStatus());
         
