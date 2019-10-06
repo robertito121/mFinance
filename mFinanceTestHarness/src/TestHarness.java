@@ -31,4 +31,41 @@ public class TestHarness {
             System.out.println("payLoanByCard test failed");
         }
     }
+    public static void testAuthentication(){
+        Authentication user1 = new Authentication("jsmith","p@55word1");
+        System.out.println("Running Authentication Test....");
+        System.out.println("Test User Name");
+        System.out.println(user1.getUserName());
+        System.out.println("Test Password");
+        System.out.println(user1.getPassword());
+        if(user1.getUserName() == null || user1.getPassword() == null){
+            System.out.println("Authentication Test Failed");
+        }
+        else{
+            System.out.println("Authentication Test Passed");
+            System.out.println();
+        }  
+    }
+
+     public static void testLoanApplication(){
+        Loan loan1 = new Loan("Auto",1351354931);
+        LoanApplication loanApp1 = new LoanApplication(loan1,25000.00,"Approved");
+        System.out.println("Running Loan Application Test......");
+        System.out.println("Test Loan Type");
+        System.out.println(loanApp1.getLoan().getLoanType());
+        System.out.println("Test Loan Number");
+        System.out.println(loanApp1.getLoan().getLoanNumber());
+        System.out.println("Test Loan Amount");
+        System.out.println(loanApp1.getAmount());
+        System.out.println("Test Loan Status");
+        System.out.println(loanApp1.getStatus());
+       if(loanApp1.getLoan().getLoanType() == null || loanApp1.getLoan().getLoanNumber() < 1 || loanApp1.getAmount() == null ||loanApp1.getStatus() == null){
+           System.out.println("Loan Application Test Failed");
+       }
+       else{
+           System.out.println("Loan Application Test Passed");
+           System.out.println();
+       }
+        
+    }
 }
