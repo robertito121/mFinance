@@ -75,6 +75,23 @@ public class TestHarness {
        System.out.println();
     }
     
+    public static void testLoanStatusChange() {
+        System.out.println("starting test for LoanStatusChange");
+        System.out.println("Instantiating Loan object");
+        Loan loan1 = new Loan("Auto",1351354931);
+        System.out.println("Instantiating LoanApplication object");
+        LoanApplication loanApp1 = new LoanApplication(loan1,25000.00,"Approved");
+        System.out.println("Testing loan status change from Approved to Pending");
+        loanApp1.setStatus("Pending");
+        if(loanApp1.getStatus()=="Pending"){
+            System.out.println("Loan Status Change Test Passed");
+        }
+        else{
+            System.out.println("Loan Status Change Test Failed");
+        }
+        System.out.println();
+    }
+    
     public static void testLoanDistribution() {
         System.out.println("starting test for LoanDistribution");
         System.out.println("Instantiating LoanDistribution object");     
