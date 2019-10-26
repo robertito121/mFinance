@@ -19,8 +19,8 @@ public class Employee extends User  {
      * @param firstName
      * @param lastName
      */
-    public Employee(String emailAddress, String employeeId, String phoneNumber, String department, String jobTitle, String firstName, String lastName) {
-        super(firstName, lastName, phoneNumber, emailAddress);
+    public Employee(String emailAddress, String employeeId, String phoneNumber, String department, String jobTitle, String firstName, String lastName, UserCredentials credentials) {
+        super(firstName, lastName, phoneNumber, emailAddress, credentials);
         this.employeeId = employeeId;
         this.department = department;
         this.jobTitle = jobTitle;

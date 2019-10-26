@@ -15,8 +15,8 @@ public class Customer extends User {
      * @param address
      * @param phoneNumber
      */
-    public Customer(String firstName, String lastName, String customerId, Address address, String phoneNumber, String emailAddress) {
-        super(firstName, lastName, phoneNumber, emailAddress);
+    public Customer(String firstName, String lastName, String customerId, Address address, String phoneNumber, String emailAddress, UserCredentials credentials) {
+        super(firstName, lastName, phoneNumber, emailAddress, credentials);
         this.customerId = customerId;
         this.address = address;
     }

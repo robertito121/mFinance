@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class CustomerList {
 
-    private static HashMap<String, Customer> customersMap;
+    private static HashMap<String, Customer> customersMap = new HashMap<>();
 
     /**
      * return a list of Customers given a set of customer Ids
@@ -19,6 +19,11 @@ public class CustomerList {
             customers.add(customersMap.get(id));
         }
         return customers;
+    }
+    
+    public static void addCustomerToList(Customer customer) {
+        customersMap.put(customer.getCustomerId(), customer);
+        
     }
 
     /**
