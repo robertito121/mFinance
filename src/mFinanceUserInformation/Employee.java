@@ -2,17 +2,14 @@ package mFinanceUserInformation;
 
 /**
  *
- * @author julia
+ * @author julian
  */
-public class Employee extends User {
-  
-
+public class Employee extends User  {
     private String employeeId;
     private String department;
     private String jobTitle;
 
     /**
-<<<<<<< Updated upstream
      *Used to create a new employee
      * @param emailAddress
      * @param employeeId
@@ -21,7 +18,6 @@ public class Employee extends User {
      * @param jobTitle
      * @param firstName
      * @param lastName
-     * @param credentials
      */
     public Employee(String emailAddress, String employeeId, String phoneNumber, String department, String jobTitle, String firstName, String lastName, UserCredentials credentials) {
         super(firstName, lastName, phoneNumber, emailAddress, credentials);
@@ -31,8 +27,6 @@ public class Employee extends User {
     }
 
     /**
-=======
->>>>>>> Stashed changes
      *Retrieves an employee's ID
      * @return
      */
@@ -80,4 +74,3 @@ public class Employee extends User {
         this.jobTitle = jobTitle;
     }
 }
-

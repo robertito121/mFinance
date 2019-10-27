@@ -1,6 +1,6 @@
 
 import java.util.Map;
-import mFinanceUI.mFinanceFrame;
+import mFinanceUI.LoginUI;
 import mFinanceUserInformation.Address;
 import mFinanceUserInformation.Customer;
 import mFinanceUserInformation.CustomerList;
@@ -10,7 +10,8 @@ import mFinanceUserInformation.UserCredentials;
 public class Main {
 
     public static void main(String[] args) {
-        mFinanceFrame jFrame = new mFinanceFrame();
+        LoginUI loginUI = new LoginUI();
+        loginUI.setVisible(true);
         Address address = new Address(12345, "test street", "test city", "test state", 12445);
         String userId = "testuser";
         UserCredentials credentials = new UserCredentials(userId, "password");
