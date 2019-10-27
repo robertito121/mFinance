@@ -41,7 +41,7 @@ public class LoginUI extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Callisto mFinance System");
+        setTitle("Callisto mFinance System Log In");
         setAutoRequestFocus(false);
         setBackground(new java.awt.Color(255, 255, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -128,7 +128,9 @@ public class LoginUI extends javax.swing.JFrame {
             jLabel2.setText("Incorrect Password");
         }
         else {
-            //TODO: tie to main screen
+            MainUI mainUI = new MainUI();
+            mainUI.setVisible(true);
+            this.dispose();
         }
         
         
