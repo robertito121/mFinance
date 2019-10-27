@@ -5,7 +5,6 @@
  */
 package mFinanceUI;
 
-import java.awt.image.BufferedImage;
 import mFinanceUserInformation.CustomerList;
 
 /**
@@ -20,9 +19,7 @@ public class LoginUI extends javax.swing.JFrame {
     public LoginUI() {
         initComponents();
         passwordField.setEchoChar((char)0);
-        
-        
-        
+        getRootPane().setDefaultButton(logInButton);    
     }
 
     /**
