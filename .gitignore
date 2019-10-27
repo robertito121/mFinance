@@ -3,3 +3,6 @@
 output/*
 *.iml
 build/*
+nbproject/*
+
+/dist/
