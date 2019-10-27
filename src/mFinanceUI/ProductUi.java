@@ -16,6 +16,7 @@ public class ProductUi extends javax.swing.JPanel {
      */
     public ProductUi() {
         initComponents();
+        setVisible(true);
     }
 
     /**

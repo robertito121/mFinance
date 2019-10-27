@@ -5,6 +5,8 @@
  */
 package mFinanceUI;
 
+import java.awt.CardLayout;
+
 /**
  *
  * @author Gonzales
@@ -28,6 +30,8 @@ public class MainUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenu1 = new javax.swing.JMenu();
+        jLayeredPane1 = new javax.swing.JLayeredPane();
+        productPanel = new javax.swing.JPanel();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         loanProductsMenu = new javax.swing.JMenu();
@@ -37,6 +41,21 @@ public class MainUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Callisto mFinance System");
+
+        jLayeredPane1.setLayout(new java.awt.CardLayout());
+
+        javax.swing.GroupLayout productPanelLayout = new javax.swing.GroupLayout(productPanel);
+        productPanel.setLayout(productPanelLayout);
+        productPanelLayout.setHorizontalGroup(
+            productPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 693, Short.MAX_VALUE)
+        );
+        productPanelLayout.setVerticalGroup(
+            productPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 487, Short.MAX_VALUE)
+        );
+
+        jLayeredPane1.add(productPanel, "card2");
 
         fileMenu.setText("File");
         fileMenu.setToolTipText("Application Settings");
@@ -62,25 +81,33 @@ public class MainUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 693, Short.MAX_VALUE)
+            .addComponent(jLayeredPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 487, Short.MAX_VALUE)
+            .addComponent(jLayeredPane1)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void viewProductsMenyItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewProductsMenyItemActionPerformed
-        // TODO add your handling code to show the Products panel here
+
+        ProductUi productsUi = new ProductUi();
+        jLayeredPane1.removeAll();
+        jLayeredPane1.add(productsUi);
+        jLayeredPane1.repaint();
+        jLayeredPane1.revalidate();
+
     }//GEN-LAST:event_viewProductsMenyItemActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu fileMenu;
+    private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu loanProductsMenu;
     private javax.swing.JMenuBar menuBar;
+    private javax.swing.JPanel productPanel;
     private javax.swing.JMenuItem viewProductsMenyItem;
     // End of variables declaration//GEN-END:variables
 }
