@@ -16,16 +16,19 @@
         <Menu class="javax.swing.JMenu" name="fileMenu">
           <Properties>
             <Property name="text" type="java.lang.String" value="File"/>
+            <Property name="toolTipText" type="java.lang.String" value="Application Settings"/>
           </Properties>
         </Menu>
         <Menu class="javax.swing.JMenu" name="loanProductsMenu">
           <Properties>
             <Property name="text" type="java.lang.String" value="Loan Products"/>
+            <Property name="toolTipText" type="java.lang.String" value="Menu that contains everything related to all&#xa;the Loan Products that Callisto has to offer"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="viewProductsMenyItem">
               <Properties>
                 <Property name="text" type="java.lang.String" value="View Loan Products"/>
+                <Property name="toolTipText" type="java.lang.String" value="Displays all the Loan Products that Callisto has to offer"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="viewProductsMenyItemActionPerformed"/>

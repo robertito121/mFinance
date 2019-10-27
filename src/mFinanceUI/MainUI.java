@@ -39,11 +39,14 @@ public class MainUI extends javax.swing.JFrame {
         setTitle("Callisto mFinance System");
 
         fileMenu.setText("File");
+        fileMenu.setToolTipText("Application Settings");
         menuBar.add(fileMenu);
 
         loanProductsMenu.setText("Loan Products");
+        loanProductsMenu.setToolTipText("Menu that contains everything related to all\nthe Loan Products that Callisto has to offer");
 
         viewProductsMenyItem.setText("View Loan Products");
+        viewProductsMenyItem.setToolTipText("Displays all the Loan Products that Callisto has to offer");
         viewProductsMenyItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewProductsMenyItemActionPerformed(evt);
