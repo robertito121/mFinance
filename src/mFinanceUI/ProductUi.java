@@ -5,18 +5,23 @@
  */
 package mFinanceUI;
 
+import javax.swing.JLayeredPane;
+
 /**
  *
  * @author Joey
  */
 public class ProductUi extends javax.swing.JPanel {
 
+    private JLayeredPane jLayeredPane1;
     /**
      * Creates new form ProductUi
      */
-    public ProductUi() {
+    public ProductUi(JLayeredPane j) {
+        
         initComponents();
         setVisible(true);
+        jLayeredPane1 = j;
     }
 
     /**
@@ -127,6 +132,11 @@ public class ProductUi extends javax.swing.JPanel {
 
     private void vehicleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vehicleButtonActionPerformed
         // TODO add your handling code here:
+        AutoLoanCategories auto = new AutoLoanCategories(jLayeredPane1);
+        jLayeredPane1.removeAll();
+        jLayeredPane1.add(auto);
+        jLayeredPane1.repaint();
+        jLayeredPane1.revalidate();
     }//GEN-LAST:event_vehicleButtonActionPerformed
 
     private void studentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentButtonActionPerformed
@@ -135,6 +145,11 @@ public class ProductUi extends javax.swing.JPanel {
 
     private void mortgageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mortgageButtonActionPerformed
         // TODO add your handling code here:
+        MortgageLoanCategories mortgage = new MortgageLoanCategories( jLayeredPane1);
+        jLayeredPane1.removeAll();
+        jLayeredPane1.add(mortgage);
+        jLayeredPane1.repaint();
+        jLayeredPane1.revalidate();
     }//GEN-LAST:event_mortgageButtonActionPerformed
 
 
