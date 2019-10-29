@@ -2,6 +2,7 @@
 package mFinanceUI;
 
 import java.awt.*;
+import javax.swing.JLayeredPane;
 
 /**
  *
@@ -12,8 +13,8 @@ public class MortgageLoanCategories extends javax.swing.JPanel {
     /**
      * Creates new form MortgageLoanCategories
      */
-    public MortgageLoanCategories() {
-        jLabel1.setFont(new Font("TimesRoman", Font.PLAIN, 45));
+    public MortgageLoanCategories(JLayeredPane j) {
+        //jLabel1.setFont(new Font("TimesRoman", Font.PLAIN, 45));
         initComponents();
     }
 

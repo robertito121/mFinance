@@ -93,7 +93,7 @@ public class MainUI extends javax.swing.JFrame {
 
     private void viewProductsMenyItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewProductsMenyItemActionPerformed
 
-        ProductUi productsUi = new ProductUi();
+        ProductUi productsUi = new ProductUi(jLayeredPane1);
         jLayeredPane1.removeAll();
         jLayeredPane1.add(productsUi);
         jLayeredPane1.repaint();

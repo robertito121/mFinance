@@ -1,13 +1,14 @@
 
 package mFinanceUI;
 import java.awt.*;
+import javax.swing.JLayeredPane;
 public class AutoLoanCategories extends javax.swing.JPanel {
 
     /**
      * Creates new form AutoLoanCategories
      */
-    public AutoLoanCategories() {
-        jLabel1.setFont(new Font("TimesRoman", Font.PLAIN, 45)); 
+    public AutoLoanCategories(JLayeredPane j) {
+        //jLabel1.setFont(new Font("TimesRoman", Font.PLAIN, 45)); 
         initComponents();
     }
 
