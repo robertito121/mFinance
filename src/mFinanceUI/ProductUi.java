@@ -124,10 +124,20 @@ public class ProductUi extends javax.swing.JPanel {
 
     private void personalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personalButtonActionPerformed
         // TODO add your handling code here:
+        PersonalLoanCategories personalPanel = new PersonalLoanCategories(jLayeredPane1);
+        jLayeredPane1.removeAll();
+        jLayeredPane1.add(personalPanel);
+        jLayeredPane1.repaint();
+        jLayeredPane1.revalidate();
     }//GEN-LAST:event_personalButtonActionPerformed
 
     private void businessButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_businessButtonActionPerformed
         // TODO add your handling code here:
+        BusinessLoanCategories businessPanel = new BusinessLoanCategories(jLayeredPane1);
+        jLayeredPane1.removeAll();
+        jLayeredPane1.add(businessPanel);
+        jLayeredPane1.repaint();
+        jLayeredPane1.revalidate();
     }//GEN-LAST:event_businessButtonActionPerformed
 
     private void vehicleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vehicleButtonActionPerformed
@@ -141,6 +151,11 @@ public class ProductUi extends javax.swing.JPanel {
 
     private void studentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentButtonActionPerformed
         // TODO add your handling code here:
+        StudentLoanCategories studentPanel = new StudentLoanCategories(jLayeredPane1);
+        jLayeredPane1.removeAll();
+        jLayeredPane1.add(studentPanel);
+        jLayeredPane1.repaint();
+        jLayeredPane1.revalidate();
     }//GEN-LAST:event_studentButtonActionPerformed
 
     private void mortgageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mortgageButtonActionPerformed
