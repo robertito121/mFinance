@@ -12,12 +12,14 @@ package mFinanceUI;
  */
 import javax.swing.JLayeredPane;
 public class PersonalLoanCategories extends javax.swing.JPanel {
-
+    private JLayeredPane jLayeredPane;
     /**
      * Creates new form PersonalLoanCategories
      */
     public PersonalLoanCategories(JLayeredPane j) {
         initComponents();
+        setVisible(true);
+        jLayeredPane = j;
     }
 
     /**
@@ -30,16 +32,13 @@ public class PersonalLoanCategories extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        fixedRateLoanApplyButton = new javax.swing.JButton();
-        variableRateLoanApplyButton = new javax.swing.JButton();
-        debtConsolidationLoanApplyButton = new javax.swing.JButton();
-        coSignLoanApplyButton = new javax.swing.JButton();
         personalLineOfCreditLoanApplyButton = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jRadioButton5 = new javax.swing.JRadioButton();
+        PersonalLoanBackButton = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(600, 600));
         setRequestFocusEnabled(false);
@@ -51,34 +50,7 @@ public class PersonalLoanCategories extends javax.swing.JPanel {
         jLabel1.setFocusable(false);
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        fixedRateLoanApplyButton.setText("Apply Now");
-        fixedRateLoanApplyButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fixedRateLoanApplyButtonActionPerformed(evt);
-            }
-        });
-
-        variableRateLoanApplyButton.setText("Apply Now");
-        variableRateLoanApplyButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                variableRateLoanApplyButtonActionPerformed(evt);
-            }
-        });
-
-        debtConsolidationLoanApplyButton.setText("Apply Now");
-        debtConsolidationLoanApplyButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                debtConsolidationLoanApplyButtonActionPerformed(evt);
-            }
-        });
-
-        coSignLoanApplyButton.setText("Apply Now");
-        coSignLoanApplyButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                coSignLoanApplyButtonActionPerformed(evt);
-            }
-        });
-
+        personalLineOfCreditLoanApplyButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         personalLineOfCreditLoanApplyButton.setText("Apply Now");
         personalLineOfCreditLoanApplyButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,111 +58,108 @@ public class PersonalLoanCategories extends javax.swing.JPanel {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setText("Variable-Rate Loan");
+        jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButton1.setText("Fixed-Rate Loan");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel4.setText("Debt Consolidation Loan");
+        jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButton2.setText("Variable-Rate Loan");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel5.setText("Co-Sign Loan");
+        jRadioButton3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButton3.setText("Debt Consolidation Loan");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel6.setText("Personal Line of Credit");
+        jRadioButton4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButton4.setText("Co-Sign Loan");
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel7.setText("Fixed-Rate Loan");
+        jRadioButton5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButton5.setText("Personal Line of Credit");
+
+        PersonalLoanBackButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        PersonalLoanBackButton.setText("Back");
+        PersonalLoanBackButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PersonalLoanBackButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(288, 288, 288)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(fixedRateLoanApplyButton)
-                                    .addComponent(variableRateLoanApplyButton)
-                                    .addComponent(debtConsolidationLoanApplyButton)
-                                    .addComponent(coSignLoanApplyButton)
-                                    .addComponent(personalLineOfCreditLoanApplyButton))))
-                        .addGap(0, 182, Short.MAX_VALUE)))
+                            .addComponent(jRadioButton1)
+                            .addComponent(jRadioButton2)
+                            .addComponent(jRadioButton3)
+                            .addComponent(jRadioButton4)
+                            .addComponent(jRadioButton5))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(PersonalLoanBackButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 888, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(personalLineOfCreditLoanApplyButton)
+                .addGap(108, 108, 108))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jLabel7)
-                                            .addComponent(fixedRateLoanApplyButton))
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel3))
-                                    .addComponent(variableRateLoanApplyButton))
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel4))
-                            .addComponent(debtConsolidationLoanApplyButton))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel5))
-                    .addComponent(coSignLoanApplyButton))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel6)
-                    .addComponent(personalLineOfCreditLoanApplyButton))
-                .addContainerGap(252, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(PersonalLoanBackButton))
+                .addGap(34, 34, 34)
+                .addComponent(jRadioButton1)
+                .addGap(48, 48, 48)
+                .addComponent(jRadioButton2)
+                .addGap(50, 50, 50)
+                .addComponent(jRadioButton3)
+                .addGap(49, 49, 49)
+                .addComponent(jRadioButton4)
+                .addGap(52, 52, 52)
+                .addComponent(jRadioButton5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
+                .addComponent(personalLineOfCreditLoanApplyButton)
+                .addGap(72, 72, 72))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void fixedRateLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fixedRateLoanApplyButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fixedRateLoanApplyButtonActionPerformed
-
-    private void variableRateLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_variableRateLoanApplyButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_variableRateLoanApplyButtonActionPerformed
-
-    private void debtConsolidationLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_debtConsolidationLoanApplyButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_debtConsolidationLoanApplyButtonActionPerformed
-
-    private void coSignLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coSignLoanApplyButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_coSignLoanApplyButtonActionPerformed
 
     private void personalLineOfCreditLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personalLineOfCreditLoanApplyButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_personalLineOfCreditLoanApplyButtonActionPerformed
 
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void PersonalLoanBackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PersonalLoanBackButtonActionPerformed
+        // TODO add your handling code here:
+        ProductUi productUI = new ProductUi(jLayeredPane);
+        jLayeredPane.removeAll();
+        jLayeredPane.add(productUI);
+        jLayeredPane.repaint();
+        jLayeredPane.revalidate();
+    }//GEN-LAST:event_PersonalLoanBackButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton coSignLoanApplyButton;
-    private javax.swing.JButton debtConsolidationLoanApplyButton;
-    private javax.swing.JButton fixedRateLoanApplyButton;
+    private javax.swing.JButton PersonalLoanBackButton;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JButton personalLineOfCreditLoanApplyButton;
-    private javax.swing.JButton variableRateLoanApplyButton;
     // End of variables declaration//GEN-END:variables
 }

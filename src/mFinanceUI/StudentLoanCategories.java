@@ -11,12 +11,14 @@ package mFinanceUI;
  */
 import javax.swing.JLayeredPane;
 public class StudentLoanCategories extends javax.swing.JPanel {
-
+    private JLayeredPane jLayeredPane;
     /**
      * Creates new form StudentLoansCategories
      */
     public StudentLoanCategories(JLayeredPane j) {
         initComponents();
+        setVisible(true);
+        jLayeredPane = j;
     }
 
     /**
@@ -29,16 +31,13 @@ public class StudentLoanCategories extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        directSubsidizedLoanApplyButton = new javax.swing.JButton();
-        directUnsubsidizedLoanApplyButton = new javax.swing.JButton();
-        directPLUSLoanApplyButton = new javax.swing.JButton();
-        directConsolidationLoanApplyButton = new javax.swing.JButton();
         privateStudentLoanApplyButton = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jRadioButton5 = new javax.swing.JRadioButton();
+        StudentLoanBackButton = new javax.swing.JButton();
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -47,46 +46,7 @@ public class StudentLoanCategories extends javax.swing.JPanel {
         jLabel2.setFocusable(false);
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel4.setText("Direct PLUS Loan");
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel5.setText("Direct Consolidation Loan");
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel6.setText("Private Student Loan");
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel7.setText("Direct Subsidized Loan");
-
-        directSubsidizedLoanApplyButton.setText("Apply Now");
-        directSubsidizedLoanApplyButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                directSubsidizedLoanApplyButtonActionPerformed(evt);
-            }
-        });
-
-        directUnsubsidizedLoanApplyButton.setText("Apply Now");
-        directUnsubsidizedLoanApplyButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                directUnsubsidizedLoanApplyButtonActionPerformed(evt);
-            }
-        });
-
-        directPLUSLoanApplyButton.setText("Apply Now");
-        directPLUSLoanApplyButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                directPLUSLoanApplyButtonActionPerformed(evt);
-            }
-        });
-
-        directConsolidationLoanApplyButton.setText("Apply Now");
-        directConsolidationLoanApplyButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                directConsolidationLoanApplyButtonActionPerformed(evt);
-            }
-        });
-
+        privateStudentLoanApplyButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         privateStudentLoanApplyButton.setText("Apply Now");
         privateStudentLoanApplyButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,99 +54,114 @@ public class StudentLoanCategories extends javax.swing.JPanel {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setText("Direct Unsubsidized Loan");
+        jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButton1.setText("Direct Subsidized Loan");
+
+        jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButton2.setText("Direct Unsubsidied Loan");
+
+        jRadioButton3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButton3.setText("Direct PLUS Loan");
+
+        jRadioButton4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButton4.setText("Direct Consolidation Loan");
+        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton4ActionPerformed(evt);
+            }
+        });
+
+        jRadioButton5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButton5.setText("Private Student Loan");
+        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton5ActionPerformed(evt);
+            }
+        });
+
+        StudentLoanBackButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        StudentLoanBackButton.setText("Back");
+        StudentLoanBackButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StudentLoanBackButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(privateStudentLoanApplyButton)
+                .addGap(113, 113, 113))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(55, 55, 55)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(288, 288, 288)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(directSubsidizedLoanApplyButton)
-                                    .addComponent(directUnsubsidizedLoanApplyButton)
-                                    .addComponent(directPLUSLoanApplyButton)
-                                    .addComponent(directConsolidationLoanApplyButton)
-                                    .addComponent(privateStudentLoanApplyButton))))
-                        .addGap(0, 131, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(StudentLoanBackButton)
+                        .addGap(145, 145, 145)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jRadioButton5)
+                    .addComponent(jRadioButton2)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton3)
+                    .addComponent(jRadioButton4))
+                .addContainerGap(209, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jLabel7)
-                                            .addComponent(directSubsidizedLoanApplyButton))
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel3))
-                                    .addComponent(directUnsubsidizedLoanApplyButton))
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel4))
-                            .addComponent(directPLUSLoanApplyButton))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel5))
-                    .addComponent(directConsolidationLoanApplyButton))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel6)
-                    .addComponent(privateStudentLoanApplyButton))
-                .addContainerGap(253, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(StudentLoanBackButton))
+                .addGap(45, 45, 45)
+                .addComponent(jRadioButton1)
+                .addGap(53, 53, 53)
+                .addComponent(jRadioButton2)
+                .addGap(55, 55, 55)
+                .addComponent(jRadioButton3)
+                .addGap(53, 53, 53)
+                .addComponent(jRadioButton4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addComponent(jRadioButton5)
+                .addGap(46, 46, 46)
+                .addComponent(privateStudentLoanApplyButton)
+                .addGap(97, 97, 97))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void directSubsidizedLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_directSubsidizedLoanApplyButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_directSubsidizedLoanApplyButtonActionPerformed
-
-    private void directUnsubsidizedLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_directUnsubsidizedLoanApplyButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_directUnsubsidizedLoanApplyButtonActionPerformed
-
-    private void directPLUSLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_directPLUSLoanApplyButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_directPLUSLoanApplyButtonActionPerformed
-
-    private void directConsolidationLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_directConsolidationLoanApplyButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_directConsolidationLoanApplyButtonActionPerformed
 
     private void privateStudentLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privateStudentLoanApplyButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_privateStudentLoanApplyButtonActionPerformed
 
+    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton4ActionPerformed
+
+    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton5ActionPerformed
+
+    private void StudentLoanBackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StudentLoanBackButtonActionPerformed
+        // TODO add your handling code here:
+        ProductUi productUI = new ProductUi(jLayeredPane);
+        jLayeredPane.removeAll();
+        jLayeredPane.add(productUI);
+        jLayeredPane.repaint();
+        jLayeredPane.revalidate();
+    }//GEN-LAST:event_StudentLoanBackButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton directConsolidationLoanApplyButton;
-    private javax.swing.JButton directPLUSLoanApplyButton;
-    private javax.swing.JButton directSubsidizedLoanApplyButton;
-    private javax.swing.JButton directUnsubsidizedLoanApplyButton;
+    private javax.swing.JButton StudentLoanBackButton;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JButton privateStudentLoanApplyButton;
     // End of variables declaration//GEN-END:variables
 }
