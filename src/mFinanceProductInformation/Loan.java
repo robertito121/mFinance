@@ -3,18 +3,21 @@ package mFinanceProductInformation;
 public class Loan {
     
     //Loan: loanType, loanNumber
-    private String loanType;
     private int loanNumber;
+    private String loanType;
+    private Double amount;
     
     
     /**
      * Constructor
      * @param loanType;
      * @param loanNumber;
+     * 
      */
-    public Loan(String loanType, int loanNumber) {
+    public Loan(int loanNumber, String loanType, Double amount) {
         this.loanType= loanType;
         this.loanNumber = loanNumber;
+        this.amount = amount;
     }
     
     /**
