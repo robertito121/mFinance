@@ -46,7 +46,7 @@
                   </Group>
               </Group>
               <Component id="jLabel1" min="-2" pref="582" max="-2" attributes="0"/>
-              <EmptySpace pref="203" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
@@ -75,7 +75,7 @@
               <Component id="jRadioButton4" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
               <Component id="jRadioButton5" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="57" max="32767" attributes="0"/>
+              <EmptySpace pref="108" max="32767" attributes="0"/>
               <Component id="BusinessLoanApplyButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
           </Group>
@@ -164,8 +164,11 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Merchang Cash Advances"/>
+        <Property name="text" type="java.lang.String" value="Merchant Cash Advances"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton5ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

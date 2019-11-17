@@ -19,10 +19,6 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="264" max="-2" attributes="0"/>
-                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
@@ -36,40 +32,52 @@
                               </Group>
                               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jComboBox1" min="-2" pref="141" max="-2" attributes="0"/>
-                                  <Component id="jTextField1" min="-2" pref="141" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxLoanType" min="-2" pref="141" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldLoanAmount" min="-2" pref="141" max="-2" attributes="0"/>
                               </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                              <Component id="jLabelProposedCollaterals" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTextFieldProposedCollaterals" min="-2" pref="141" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                              <Component id="jLabelDate" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jTextFieldDateDay" min="-2" pref="43" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jTextFieldDateMonth" min="-2" pref="43" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jTextFieldDateYear" min="-2" pref="66" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                       <Component id="jSeparator1" min="-2" pref="19" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel4" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel7" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel4" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel7" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jComboBoxMaritalStatus" pref="151" max="32767" attributes="0"/>
+                                      <Component id="jTextFieldSocialSecurityNumber" max="32767" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="jComboBox3" pref="151" max="32767" attributes="0"/>
-                                              <Component id="jTextField2" max="32767" attributes="0"/>
-                                          </Group>
-                                          <Component id="jTextField3" alignment="0" min="-2" pref="151" max="-2" attributes="0"/>
-                                          <Component id="jComboBox2" alignment="0" min="-2" pref="151" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="jTextField5" min="-2" pref="237" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jTextFieldHouseholdIncome" alignment="0" min="-2" pref="151" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxPropertyOwnership" alignment="0" min="-2" pref="151" max="-2" attributes="0"/>
                               </Group>
                           </Group>
+                          <Component id="jTextFieldPlaceOfEmployment" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
@@ -77,40 +85,56 @@
                                   <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                              <Component id="jTextField4" max="32767" attributes="0"/>
+                              <Component id="jTextFieldJobTitle" min="-2" pref="150" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton1" min="-2" pref="97" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxSignature" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="183" max="-2" attributes="0"/>
+                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="165" max="32767" attributes="0"/>
+              <EmptySpace pref="82" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jSeparator1" max="32767" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxLoanType" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldLoanAmount" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelProposedCollaterals" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldProposedCollaterals" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldDateDay" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldDateMonth" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldDateYear" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -118,38 +142,38 @@
                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldSocialSecurityNumber" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldHouseholdIncome" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxMaritalStatus" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxPropertyOwnership" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldPlaceOfEmployment" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldJobTitle" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="89" max="32767" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="47" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                      <Component id="jCheckBoxSignature" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="74" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -165,19 +189,38 @@
         <Property name="text" type="java.lang.String" value="Personal Information"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox1">
+    <Component class="javax.swing.JComboBox" name="jComboBoxLoanType">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="23">
+            <StringItem index="0" value="Business &#x2013; Term Loan"/>
+            <StringItem index="1" value="Business &#x2013; SBA Loan"/>
+            <StringItem index="2" value="Business &#x2013; Line Of Credit"/>
+            <StringItem index="3" value="Business &#x2013; Financing Loan"/>
+            <StringItem index="4" value="Business &#x2013; Merchant Cash Advances"/>
+            <StringItem index="5" value="Auto &#x2013; New Car Loan"/>
+            <StringItem index="6" value="Auto &#x2013; Used Car Loan"/>
+            <StringItem index="7" value="Auto -Motorcycle/Boat"/>
+            <StringItem index="8" value="Auto -Refinance Loan"/>
+            <StringItem index="9" value="Student &#x2013; Direct Subsidized"/>
+            <StringItem index="10" value="Student &#x2013; Direct Unsubsidized"/>
+            <StringItem index="11" value="Student &#x2013; Direct PLUS"/>
+            <StringItem index="12" value="Student &#x2013; Direct Consolidation"/>
+            <StringItem index="13" value="Student &#x2013; Private Student Loan"/>
+            <StringItem index="14" value="Mortgage &#x2013; Fixed Rate"/>
+            <StringItem index="15" value="Mortgage &#x2013; Variable Rate"/>
+            <StringItem index="16" value="Mortgage &#x2013; First Time Buyer"/>
+            <StringItem index="17" value="Mortgage &#x2013; VA Loan"/>
+            <StringItem index="18" value="Personal &#x2013; Fixed Rate"/>
+            <StringItem index="19" value="Personal &#x2013; Variable Rate"/>
+            <StringItem index="20" value="Personal &#x2013; Debt Consolidation"/>
+            <StringItem index="21" value="Personal &#x2013; Co-Sign"/>
+            <StringItem index="22" value="Personal &#x2013; Line of Credit"/>
           </StringArray>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxLoanTypeActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -199,9 +242,9 @@
         <Property name="text" type="java.lang.String" value="Loan Type"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="jTextFieldLoanAmount">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldLoanAmountActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
@@ -212,9 +255,9 @@
         <Property name="text" type="java.lang.String" value="Social Security Number"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField2">
+    <Component class="javax.swing.JTextField" name="jTextFieldSocialSecurityNumber">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldSocialSecurityNumberActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
@@ -241,7 +284,7 @@
         <Property name="text" type="java.lang.String" value="Marital Status"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField3">
+    <Component class="javax.swing.JTextField" name="jTextFieldHouseholdIncome">
     </Component>
     <Component class="javax.swing.JSeparator" name="jSeparator1">
       <Properties>
@@ -256,19 +299,20 @@
         <Property name="text" type="java.lang.String" value="HouseHold Income"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox2">
+    <Component class="javax.swing.JComboBox" name="jComboBoxPropertyOwnership">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="5">
+            <StringItem index="0" value="Sole Ownership"/>
+            <StringItem index="1" value="Joint Tenancy"/>
+            <StringItem index="2" value="Joint Tenancy with Survivorship"/>
+            <StringItem index="3" value="Tenancy in Common"/>
+            <StringItem index="4" value="Community Property"/>
           </StringArray>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxPropertyOwnershipActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -282,14 +326,15 @@
         <Property name="text" type="java.lang.String" value="Job Title"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox3">
+    <Component class="javax.swing.JComboBox" name="jComboBoxMaritalStatus">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="5">
+            <StringItem index="0" value="Single"/>
+            <StringItem index="1" value="Married"/>
+            <StringItem index="2" value="Widowed"/>
+            <StringItem index="3" value="Divorced"/>
+            <StringItem index="4" value="Separated"/>
           </StringArray>
         </Property>
       </Properties>
@@ -305,9 +350,9 @@
         <Property name="text" type="java.lang.String" value="Property Ownership"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField4">
+    <Component class="javax.swing.JTextField" name="jTextFieldJobTitle">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField4ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldJobTitleActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel11">
@@ -318,21 +363,54 @@
         <Property name="text" type="java.lang.String" value="Place of Employment"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField5">
+    <Component class="javax.swing.JTextField" name="jTextFieldPlaceOfEmployment">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField5ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldPlaceOfEmploymentActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JLabel" name="jLabelProposedCollaterals">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="14" style="1"/>
+          <Font name="Times New Roman" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Submit"/>
+        <Property name="text" type="java.lang.String" value="Proposed Collaterals"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldProposedCollaterals">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldProposedCollateralsActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelDate">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="18" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Date (dd/mm/yyyy):"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldDateDay">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldDateDayActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldDateMonth">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldDateMonthActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldDateYear">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldDateYearActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="jCheckBoxSignature">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="18" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Signature Check Box"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

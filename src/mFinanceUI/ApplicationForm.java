@@ -5,22 +5,17 @@
  */
 package mFinanceUI;
 
-import javax.swing.JLayeredPane;
-
 /**
  *
  * @author Gonzales
  */
 public class ApplicationForm extends javax.swing.JPanel {
-    private JLayeredPane jLayeredPane;
+
     /**
      * Creates new form ApplicationForm
      */
-    public ApplicationForm(JLayeredPane j) {
-         initComponents();
-        setVisible(true);
-        jLayeredPane = j;
-        
+    public ApplicationForm() {
+        initComponents();
     }
 
     /**
@@ -33,34 +28,40 @@ public class ApplicationForm extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBoxLoanType = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTextFieldLoanAmount = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jTextFieldSocialSecurityNumber = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        jTextFieldHouseholdIncome = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel8 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBoxPropertyOwnership = new javax.swing.JComboBox<>();
         jLabel9 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBoxMaritalStatus = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        jTextFieldJobTitle = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jTextFieldPlaceOfEmployment = new javax.swing.JTextField();
+        jLabelProposedCollaterals = new javax.swing.JLabel();
+        jTextFieldProposedCollaterals = new javax.swing.JTextField();
+        jLabelDate = new javax.swing.JLabel();
+        jTextFieldDateDay = new javax.swing.JTextField();
+        jTextFieldDateMonth = new javax.swing.JTextField();
+        jTextFieldDateYear = new javax.swing.JTextField();
+        jCheckBoxSignature = new javax.swing.JCheckBox();
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         jLabel1.setText("Personal Information");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jComboBoxLoanType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Business – Term Loan", "Business – SBA Loan", "Business – Line Of Credit", "Business – Financing Loan", "Business – Merchant Cash Advances", "Auto – New Car Loan", "Auto – Used Car Loan", "Auto -Motorcycle/Boat", "Auto -Refinance Loan", "Student – Direct Subsidized", "Student – Direct Unsubsidized", "Student – Direct PLUS", "Student – Direct Consolidation", "Student – Private Student Loan", "Mortgage – Fixed Rate", "Mortgage – Variable Rate", "Mortgage – First Time Buyer", "Mortgage – VA Loan", "Personal – Fixed Rate", "Personal – Variable Rate", "Personal – Debt Consolidation", "Personal – Co-Sign", "Personal – Line of Credit" }));
+        jComboBoxLoanType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                jComboBoxLoanTypeActionPerformed(evt);
             }
         });
 
@@ -70,18 +71,18 @@ public class ApplicationForm extends javax.swing.JPanel {
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel3.setText("Loan Type");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldLoanAmount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jTextFieldLoanAmountActionPerformed(evt);
             }
         });
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel4.setText("Social Security Number");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldSocialSecurityNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jTextFieldSocialSecurityNumberActionPerformed(evt);
             }
         });
 
@@ -99,43 +100,68 @@ public class ApplicationForm extends javax.swing.JPanel {
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel8.setText("HouseHold Income");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        jComboBoxPropertyOwnership.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sole Ownership", "Joint Tenancy", "Joint Tenancy with Survivorship", "Tenancy in Common", "Community Property" }));
+        jComboBoxPropertyOwnership.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                jComboBoxPropertyOwnershipActionPerformed(evt);
             }
         });
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel9.setText("Job Title");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxMaritalStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Single", "Married", "Widowed", "Divorced", "Separated" }));
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel10.setText("Property Ownership");
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldJobTitle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                jTextFieldJobTitleActionPerformed(evt);
             }
         });
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel11.setText("Place of Employment");
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldPlaceOfEmployment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                jTextFieldPlaceOfEmploymentActionPerformed(evt);
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setText("Submit");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jLabelProposedCollaterals.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabelProposedCollaterals.setText("Proposed Collaterals");
+
+        jTextFieldProposedCollaterals.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jTextFieldProposedCollateralsActionPerformed(evt);
             }
         });
+
+        jLabelDate.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabelDate.setText("Date (dd/mm/yyyy):");
+
+        jTextFieldDateDay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldDateDayActionPerformed(evt);
+            }
+        });
+
+        jTextFieldDateMonth.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldDateMonthActionPerformed(evt);
+            }
+        });
+
+        jTextFieldDateYear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldDateYearActionPerformed(evt);
+            }
+        });
+
+        jCheckBoxSignature.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jCheckBoxSignature.setText("Signature Check Box");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -143,9 +169,6 @@ public class ApplicationForm extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(264, 264, 264)
-                        .addComponent(jLabel5))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -158,48 +181,63 @@ public class ApplicationForm extends javax.swing.JPanel {
                                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(34, 34, 34)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(42, 42, 42)
+                                    .addComponent(jComboBoxLoanType, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldLoanAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(19, 19, 19)
+                                .addComponent(jLabelProposedCollaterals)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldProposedCollaterals, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(19, 19, 19)
+                                .addComponent(jLabelDate)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextFieldDateDay, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTextFieldDateMonth, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTextFieldDateYear, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(48, 48, 48)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addComponent(jLabel1)
-                                    .addGap(57, 57, 57))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel8)
-                                        .addComponent(jLabel4)
-                                        .addComponent(jLabel7)
-                                        .addComponent(jLabel10))
-                                    .addGap(37, 37, 37)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(jComboBox3, 0, 151, Short.MAX_VALUE)
-                                                .addComponent(jTextField2))
-                                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(57, 57, 57))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel10))
+                                .addGap(37, 37, 37)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jComboBoxMaritalStatus, 0, 151, Short.MAX_VALUE)
+                                        .addComponent(jTextFieldSocialSecurityNumber))
+                                    .addComponent(jTextFieldHouseholdIncome, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBoxPropertyOwnership, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTextFieldPlaceOfEmployment, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(27, 27, 27)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel9)
                                     .addComponent(jLabel11))
                                 .addGap(28, 28, 28)
-                                .addComponent(jTextField4))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(165, Short.MAX_VALUE))
+                                .addComponent(jTextFieldJobTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(90, 90, 90)
+                                .addComponent(jCheckBoxSignature))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(183, 183, 183)
+                        .addComponent(jLabel5)))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(63, 63, 63)
+                .addGap(58, 58, 58)
                 .addComponent(jLabel5)
-                .addGap(45, 45, 45)
+                .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSeparator1)
                     .addGroup(layout.createSequentialGroup()
@@ -208,83 +246,100 @@ public class ApplicationForm extends javax.swing.JPanel {
                                 .addComponent(jLabel6)
                                 .addGap(27, 27, 27)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBoxLoanType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel3))
                                 .addGap(16, 16, 16)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel2)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jTextFieldLoanAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabelProposedCollaterals)
+                                    .addComponent(jTextFieldProposedCollaterals, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabelDate)
+                                    .addComponent(jTextFieldDateDay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldDateMonth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldDateYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(28, 28, 28)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel4)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTextFieldSocialSecurityNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldHouseholdIncome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel8))
                                 .addGap(20, 20, 20)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBoxMaritalStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel7))
                                 .addGap(17, 17, 17)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBoxPropertyOwnership, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel10))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldPlaceOfEmployment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel11))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldJobTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel9))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(60, 60, 60))))
+                        .addGap(44, 44, 44)
+                        .addComponent(jCheckBoxSignature)
+                        .addContainerGap(74, Short.MAX_VALUE))))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jComboBoxLoanTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxLoanTypeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_jComboBoxLoanTypeActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jTextFieldLoanAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldLoanAmountActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jTextFieldLoanAmountActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jTextFieldSocialSecurityNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldSocialSecurityNumberActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jTextFieldSocialSecurityNumberActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void jComboBoxPropertyOwnershipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxPropertyOwnershipActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_jComboBoxPropertyOwnershipActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void jTextFieldJobTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldJobTitleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_jTextFieldJobTitleActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void jTextFieldPlaceOfEmploymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPlaceOfEmploymentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_jTextFieldPlaceOfEmploymentActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jTextFieldProposedCollateralsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldProposedCollateralsActionPerformed
         // TODO add your handling code here:
-        LoanCompletedPage loanPage = new LoanCompletedPage(jLayeredPane);
-        jLayeredPane.removeAll();
-        jLayeredPane.add(loanPage);
-        jLayeredPane.repaint();
-        jLayeredPane.revalidate();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jTextFieldProposedCollateralsActionPerformed
+
+    private void jTextFieldDateDayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDateDayActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldDateDayActionPerformed
+
+    private void jTextFieldDateMonthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDateMonthActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldDateMonthActionPerformed
+
+    private void jTextFieldDateYearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDateYearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldDateYearActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JCheckBox jCheckBoxSignature;
+    private javax.swing.JComboBox<String> jComboBoxLoanType;
+    private javax.swing.JComboBox<String> jComboBoxMaritalStatus;
+    private javax.swing.JComboBox<String> jComboBoxPropertyOwnership;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -296,11 +351,17 @@ public class ApplicationForm extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelDate;
+    private javax.swing.JLabel jLabelProposedCollaterals;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextFieldDateDay;
+    private javax.swing.JTextField jTextFieldDateMonth;
+    private javax.swing.JTextField jTextFieldDateYear;
+    private javax.swing.JTextField jTextFieldHouseholdIncome;
+    private javax.swing.JTextField jTextFieldJobTitle;
+    private javax.swing.JTextField jTextFieldLoanAmount;
+    private javax.swing.JTextField jTextFieldPlaceOfEmployment;
+    private javax.swing.JTextField jTextFieldProposedCollaterals;
+    private javax.swing.JTextField jTextFieldSocialSecurityNumber;
     // End of variables declaration//GEN-END:variables
 }

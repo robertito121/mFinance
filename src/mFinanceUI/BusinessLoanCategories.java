@@ -79,7 +79,12 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
         jRadioButton4.setText("Invoice Financing Loan");
 
         jRadioButton5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton5.setText("Merchang Cash Advances");
+        jRadioButton5.setText("Merchant Cash Advances");
+        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -105,7 +110,7 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
                         .addComponent(BusinessLoanBackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(80, 80, 80)))
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(203, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(BusinessLoanApplyButton)
@@ -130,7 +135,7 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
                 .addComponent(jRadioButton4)
                 .addGap(53, 53, 53)
                 .addComponent(jRadioButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
                 .addComponent(BusinessLoanApplyButton)
                 .addGap(101, 101, 101))
         );
@@ -138,11 +143,6 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
 
     private void BusinessLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BusinessLoanApplyButtonActionPerformed
         // TODO add your handling code here:
-        ApplicationForm applyForm = new ApplicationForm(jLayeredPane);
-        jLayeredPane.removeAll();
-        jLayeredPane.add(applyForm);
-        jLayeredPane.repaint();
-        jLayeredPane.revalidate();
     }//GEN-LAST:event_BusinessLoanApplyButtonActionPerformed
 
     private void BusinessLoanBackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BusinessLoanBackButtonActionPerformed
@@ -153,6 +153,10 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
         jLayeredPane.repaint();
         jLayeredPane.revalidate();
     }//GEN-LAST:event_BusinessLoanBackButtonActionPerformed
+
+    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton5ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
