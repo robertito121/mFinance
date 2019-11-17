@@ -18,16 +18,16 @@ public class LoanList {
     public LoanList() {
         //initialize loanlist
         loanList = new ArrayList<>();
-         this.readLoanListFile();
+        this.readLoanListFile();
         if (loanList.isEmpty()) {
-            initializeList();
+//            initializeList();
         }
     }
     
-     public void initializeList() {
+ /*    public void initializeList() {
          Loan testData = new Loan(0, "Test", 4321.00);
-         loanList.add(testData);
-     }
+         addLoan(testData);
+     }*/
 
     
     /**
