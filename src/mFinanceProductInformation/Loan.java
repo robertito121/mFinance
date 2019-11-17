@@ -1,6 +1,8 @@
 package mFinanceProductInformation;
 
-public class Loan {
+import java.io.Serializable;
+
+public class Loan implements Serializable{
     
     //Loan: loanType, loanNumber
     private int loanNumber;
@@ -52,6 +54,20 @@ public class Loan {
      */
     public void setLoanNumber(int loanNumber) {
         this.loanNumber = loanNumber;
+    }
+
+    /**
+     * @return the amount
+     */
+    public Double getAmount() {
+        return amount;
+    }
+
+    /**
+     * @param amount the amount to set
+     */
+    public void setAmount(Double amount) {
+        this.amount = amount;
     }
     
     

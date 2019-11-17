@@ -5,7 +5,11 @@
  */
 package mFinanceUI;
 
+import java.util.ArrayList;
 import javax.swing.JLayeredPane;
+import javax.swing.table.DefaultTableModel;
+import mFinanceProductInformation.Loan;
+import mFinanceProductInformation.LoanList;
 
 /**
  *
@@ -14,14 +18,29 @@ import javax.swing.JLayeredPane;
 public class MyLoansUI extends javax.swing.JPanel {
     
     private JLayeredPane JLayeredPanel;
+    private String[] columnNames= {"Loan Number", "Type", "Amount"};
 
     /**
      * Creates new form MyLoansUI
      */
     public MyLoansUI(JLayeredPane j) {
         initComponents();
+        addRowToJTable();
         setVisible(true);
         JLayeredPanel = j;
+    }
+    
+    public void addRowToJTable() {
+        DefaultTableModel model = (DefaultTableModel) loansTable.getModel();
+        LoanList loanList = new LoanList();
+        ArrayList<Loan> list = loanList.getLoanList();
+        Object[] rowData = new Object[3];
+        for(int i = 0; i < list.size(); i++) {
+            rowData[0] = list.get(i).getLoanNumber();
+            rowData[1] = list.get(i).getLoanType();
+            rowData[2] = list.get(i).getAmount();
+            model.addRow(rowData);
+        }
     }
 
     /**
@@ -42,15 +61,27 @@ public class MyLoansUI extends javax.swing.JPanel {
 
         loansTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Number", "Type", "Amount"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Double.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, true, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         loansTableJScrollPane.setViewportView(loansTable);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -80,7 +111,6 @@ public class MyLoansUI extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable loansTable;
     private javax.swing.JScrollPane loansTableJScrollPane;
     private javax.swing.JLabel myLoansLabel;
