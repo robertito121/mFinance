@@ -19,15 +19,8 @@ public class LoanList {
         //initialize loanlist
         loanList = new ArrayList<>();
         this.readLoanListFile();
-        if (loanList.isEmpty()) {
-//            initializeList();
-        }
     }
     
- /*    public void initializeList() {
-         Loan testData = new Loan(0, "Test", 4321.00);
-         addLoan(testData);
-     }*/
 
     
     /**
