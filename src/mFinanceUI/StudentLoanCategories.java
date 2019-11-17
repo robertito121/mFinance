@@ -58,7 +58,12 @@ public class StudentLoanCategories extends javax.swing.JPanel {
         jRadioButton1.setText("Direct Subsidized Loan");
 
         jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton2.setText("Direct Unsubsidied Loan");
+        jRadioButton2.setText("Direct Unsubsidized Loan");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
 
         jRadioButton3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRadioButton3.setText("Direct PLUS Loan");
@@ -152,6 +157,10 @@ public class StudentLoanCategories extends javax.swing.JPanel {
         jLayeredPane.repaint();
         jLayeredPane.revalidate();
     }//GEN-LAST:event_StudentLoanBackButtonActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
