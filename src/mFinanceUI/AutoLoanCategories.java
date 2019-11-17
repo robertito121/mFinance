@@ -51,11 +51,6 @@ public class AutoLoanCategories extends javax.swing.JPanel {
 
         AutoLoanApplyButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         AutoLoanApplyButton.setText("Apply Now");
-        AutoLoanApplyButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AutoLoanApplyButtonActionPerformed(evt);
-            }
-        });
 
         AutoRefinanceRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         AutoRefinanceRadioButton.setText("Refinance Auto Loan");
@@ -123,15 +118,6 @@ public class AutoLoanCategories extends javax.swing.JPanel {
         jLayeredPane.repaint();
         jLayeredPane.revalidate();
     }//GEN-LAST:event_AutoLoanBackButtonActionPerformed
-
-    private void AutoLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AutoLoanApplyButtonActionPerformed
-        // TODO add your handling code here:
-        ApplicationForm applyForm = new ApplicationForm(jLayeredPane);
-        jLayeredPane.removeAll();
-        jLayeredPane.add(applyForm);
-        jLayeredPane.repaint();
-        jLayeredPane.revalidate();
-    }//GEN-LAST:event_AutoLoanApplyButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
