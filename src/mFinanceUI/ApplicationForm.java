@@ -6,6 +6,8 @@
 package mFinanceUI;
 
 import javax.swing.JLayeredPane;
+import mFinanceProductInformation.Loan;
+import mFinanceProductInformation.LoanList;
 
 /**
  *
@@ -359,6 +361,21 @@ public class ApplicationForm extends javax.swing.JPanel {
 
     private void SubmitLoanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitLoanButtonActionPerformed
         // TODO add your handling code here:
+        
+        
+        LoanList list = new LoanList();
+        list.getLoanList();
+        
+        String loanType;
+        loanType = jComboBoxLoanType.getSelectedItem().toString();
+        
+        String amountString;
+        double amount;
+        amountString = jTextFieldLoanAmount.getText();
+        amount = Double.parseDouble(amountString);
+        
+        Loan loan = new Loan(list.getLastLoanNumber(), loanType, amount);
+        list.addLoan(loan);
         LoanCompleteForm loanCompleteForm = new LoanCompleteForm(jLayeredPane);
         jLayeredPane.removeAll();
         jLayeredPane.add(loanCompleteForm);

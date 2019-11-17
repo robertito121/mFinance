@@ -69,4 +69,18 @@ public class LoanList {
         }
     }
     
+    public int getLastLoanNumber() {
+        int number;
+        int index;
+        
+        if (!loanList.isEmpty()){
+            index = loanList.size()-1;
+            number = loanList.get(index).getLoanNumber()+1;
+        }
+        else {
+            number = 1;
+        }
+        return number;
+    }
+    
 }
