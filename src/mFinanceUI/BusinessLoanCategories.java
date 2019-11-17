@@ -130,7 +130,7 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
                 .addComponent(jRadioButton4)
                 .addGap(53, 53, 53)
                 .addComponent(jRadioButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                 .addComponent(BusinessLoanApplyButton)
                 .addGap(101, 101, 101))
         );
@@ -138,6 +138,11 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
 
     private void BusinessLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BusinessLoanApplyButtonActionPerformed
         // TODO add your handling code here:
+        ApplicationForm applyForm = new ApplicationForm(jLayeredPane);
+        jLayeredPane.removeAll();
+        jLayeredPane.add(applyForm);
+        jLayeredPane.repaint();
+        jLayeredPane.revalidate();
     }//GEN-LAST:event_BusinessLoanApplyButtonActionPerformed
 
     private void BusinessLoanBackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BusinessLoanBackButtonActionPerformed
