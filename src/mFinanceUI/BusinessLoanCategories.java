@@ -110,7 +110,7 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
                         .addComponent(BusinessLoanBackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(80, 80, 80)))
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(204, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(BusinessLoanApplyButton)
@@ -143,6 +143,11 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
 
     private void BusinessLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BusinessLoanApplyButtonActionPerformed
         // TODO add your handling code here:
+        ApplicationForm applicationForm = new ApplicationForm(jLayeredPane);
+        jLayeredPane.removeAll();
+        jLayeredPane.add(applicationForm);
+        jLayeredPane.repaint();
+        jLayeredPane.revalidate();
     }//GEN-LAST:event_BusinessLoanApplyButtonActionPerformed
 
     private void BusinessLoanBackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BusinessLoanBackButtonActionPerformed
