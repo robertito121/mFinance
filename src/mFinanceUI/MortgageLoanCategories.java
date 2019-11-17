@@ -120,6 +120,11 @@ public class MortgageLoanCategories extends javax.swing.JPanel {
 
     private void MortgageLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MortgageLoanApplyButtonActionPerformed
         // TODO add your handling code here:
+        ApplicationForm applicationForm = new ApplicationForm(jLayeredPane);
+        jLayeredPane.removeAll();
+        jLayeredPane.add(applicationForm);
+        jLayeredPane.repaint();
+        jLayeredPane.revalidate();
     }//GEN-LAST:event_MortgageLoanApplyButtonActionPerformed
 
     private void MortgageLoanBackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MortgageLoanBackButtonActionPerformed

@@ -136,6 +136,11 @@ public class PersonalLoanCategories extends javax.swing.JPanel {
 
     private void personalLineOfCreditLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personalLineOfCreditLoanApplyButtonActionPerformed
         // TODO add your handling code here:
+        ApplicationForm applicationForm = new ApplicationForm(jLayeredPane);
+        jLayeredPane.removeAll();
+        jLayeredPane.add(applicationForm);
+        jLayeredPane.repaint();
+        jLayeredPane.revalidate();
     }//GEN-LAST:event_personalLineOfCreditLoanApplyButtonActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
