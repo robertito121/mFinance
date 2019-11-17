@@ -211,6 +211,12 @@ public class MainUI extends javax.swing.JFrame {
         myLoansButton.setBorder(null);
         myProfileButton.setBackground(null);
         paymentsButton.setBackground(null);
+        MyLoansUI myLoans = new MyLoansUI(jLayeredPane1);
+        jLayeredPane1.removeAll();
+        jLayeredPane1.add(myLoans);
+        jLayeredPane1.repaint();
+        jLayeredPane1.revalidate();
+        
     }//GEN-LAST:event_myLoansButtonMouseClicked
 
     private void myLoansButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_myLoansButtonMouseEntered
