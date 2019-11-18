@@ -25,7 +25,7 @@ public class AutoLoanCategories extends javax.swing.JPanel {
     private void initComponents() {
 
         AutoLoanHeader = new javax.swing.JLabel();
-        NerCarLoanRadioButton = new javax.swing.JRadioButton();
+        NewCarLoanRadioButton = new javax.swing.JRadioButton();
         UsedCarRadioButton = new javax.swing.JRadioButton();
         OtherLoanRadioButton = new javax.swing.JRadioButton();
         AutoLoanApplyButton = new javax.swing.JButton();
@@ -37,12 +37,12 @@ public class AutoLoanCategories extends javax.swing.JPanel {
         AutoLoanHeader.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         AutoLoanHeader.setText("Auto Loans");
 
-        NerCarLoanRadioButton.setBackground(new java.awt.Color(255, 255, 255));
-        NerCarLoanRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        NerCarLoanRadioButton.setText("New Car Loan");
-        NerCarLoanRadioButton.addActionListener(new java.awt.event.ActionListener() {
+        NewCarLoanRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        NewCarLoanRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        NewCarLoanRadioButton.setText("New Car Loan");
+        NewCarLoanRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NerCarLoanRadioButtonActionPerformed(evt);
+                NewCarLoanRadioButtonActionPerformed(evt);
             }
         });
 
@@ -90,7 +90,7 @@ public class AutoLoanCategories extends javax.swing.JPanel {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(OtherLoanRadioButton)
                         .addComponent(UsedCarRadioButton, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(NerCarLoanRadioButton, javax.swing.GroupLayout.Alignment.LEADING)))
+                        .addComponent(NewCarLoanRadioButton, javax.swing.GroupLayout.Alignment.LEADING)))
                 .addContainerGap(311, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -105,7 +105,7 @@ public class AutoLoanCategories extends javax.swing.JPanel {
                     .addComponent(AutoLoanBackButton)
                     .addComponent(AutoLoanHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
-                .addComponent(NerCarLoanRadioButton)
+                .addComponent(NewCarLoanRadioButton)
                 .addGap(58, 58, 58)
                 .addComponent(UsedCarRadioButton)
                 .addGap(59, 59, 59)
@@ -118,9 +118,9 @@ public class AutoLoanCategories extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void NerCarLoanRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NerCarLoanRadioButtonActionPerformed
+    private void NewCarLoanRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewCarLoanRadioButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_NerCarLoanRadioButtonActionPerformed
+    }//GEN-LAST:event_NewCarLoanRadioButtonActionPerformed
 
     private void AutoLoanBackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AutoLoanBackButtonActionPerformed
         // TODO add your handling code here:
@@ -146,7 +146,7 @@ public class AutoLoanCategories extends javax.swing.JPanel {
     private javax.swing.JButton AutoLoanBackButton;
     private javax.swing.JLabel AutoLoanHeader;
     private javax.swing.JRadioButton AutoRefinanceRadioButton;
-    private javax.swing.JRadioButton NerCarLoanRadioButton;
+    private javax.swing.JRadioButton NewCarLoanRadioButton;
     private javax.swing.JRadioButton OtherLoanRadioButton;
     private javax.swing.JRadioButton UsedCarRadioButton;
     // End of variables declaration//GEN-END:variables

@@ -33,7 +33,7 @@
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="OtherLoanRadioButton" alignment="1" min="-2" max="-2" attributes="0"/>
                       <Component id="UsedCarRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="NerCarLoanRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="NewCarLoanRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="311" max="32767" attributes="0"/>
@@ -54,7 +54,7 @@
                   <Component id="AutoLoanHeader" min="-2" pref="58" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-              <Component id="NerCarLoanRadioButton" min="-2" max="-2" attributes="0"/>
+              <Component id="NewCarLoanRadioButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
               <Component id="UsedCarRadioButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
@@ -77,7 +77,7 @@
         <Property name="text" type="java.lang.String" value="Auto Loans"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="NerCarLoanRadioButton">
+    <Component class="javax.swing.JRadioButton" name="NewCarLoanRadioButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -88,7 +88,7 @@
         <Property name="text" type="java.lang.String" value="New Car Loan"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NerCarLoanRadioButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NewCarLoanRadioButtonActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="UsedCarRadioButton">
