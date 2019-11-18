@@ -5,7 +5,11 @@
  */
 package mFinanceUI;
 
+import java.util.ArrayList;
 import javax.swing.JLayeredPane;
+import javax.swing.table.DefaultTableModel;
+import mFinanceProductInformation.Loan;
+import mFinanceProductInformation.LoanList;
 
 /**
  *
@@ -14,14 +18,30 @@ import javax.swing.JLayeredPane;
 public class MyLoansUI extends javax.swing.JPanel {
     
     private JLayeredPane JLayeredPanel;
+    private String[] columnNames= {"Loan Number", "Type", "Amount"};
 
     /**
      * Creates new form MyLoansUI
      */
     public MyLoansUI(JLayeredPane j) {
         initComponents();
+        addRowToJTable();
         setVisible(true);
         JLayeredPanel = j;
+    }
+    
+    public void addRowToJTable() {
+        DefaultTableModel model = (DefaultTableModel) loansTable.getModel();
+        LoanList loanList = new LoanList();
+        ArrayList<Loan> list = loanList.getLoanList();
+        Object[] rowData = new Object[4];
+        for(int i = 0; i < list.size(); i++) {
+            rowData[0] = list.get(i).getLoanNumber();
+            rowData[1] = list.get(i).getLoanType();
+            rowData[2] = list.get(i).getAmount();
+            rowData[3] = list.get(i).getStatus();
+            model.addRow(rowData);
+        }
     }
 
     /**
@@ -42,16 +62,34 @@ public class MyLoansUI extends javax.swing.JPanel {
 
         loansTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Number", "Type", "Amount", "Status"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        loansTable.getTableHeader().setReorderingAllowed(false);
         loansTableJScrollPane.setViewportView(loansTable);
+        if (loansTable.getColumnModel().getColumnCount() > 0) {
+            loansTable.getColumnModel().getColumn(0).setResizable(false);
+            loansTable.getColumnModel().getColumn(1).setResizable(false);
+            loansTable.getColumnModel().getColumn(3).setResizable(false);
+        }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
