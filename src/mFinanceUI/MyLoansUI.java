@@ -80,7 +80,6 @@ public class MyLoansUI extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable loansTable;
     private javax.swing.JScrollPane loansTableJScrollPane;
     private javax.swing.JLabel myLoansLabel;

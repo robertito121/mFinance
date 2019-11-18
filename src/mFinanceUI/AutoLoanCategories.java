@@ -32,9 +32,12 @@ public class AutoLoanCategories extends javax.swing.JPanel {
         AutoRefinanceRadioButton = new javax.swing.JRadioButton();
         AutoLoanBackButton = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+
         AutoLoanHeader.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         AutoLoanHeader.setText("Auto Loans");
 
+        NerCarLoanRadioButton.setBackground(new java.awt.Color(255, 255, 255));
         NerCarLoanRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         NerCarLoanRadioButton.setText("New Car Loan");
         NerCarLoanRadioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -43,12 +46,15 @@ public class AutoLoanCategories extends javax.swing.JPanel {
             }
         });
 
+        UsedCarRadioButton.setBackground(new java.awt.Color(255, 255, 255));
         UsedCarRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         UsedCarRadioButton.setText("Used Car Loan");
 
+        OtherLoanRadioButton.setBackground(new java.awt.Color(255, 255, 255));
         OtherLoanRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         OtherLoanRadioButton.setText("Motorcycle, Boat, Other Loans");
 
+        AutoLoanApplyButton.setBackground(new java.awt.Color(255, 255, 255));
         AutoLoanApplyButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         AutoLoanApplyButton.setText("Apply Now");
         AutoLoanApplyButton.addActionListener(new java.awt.event.ActionListener() {
@@ -57,6 +63,7 @@ public class AutoLoanCategories extends javax.swing.JPanel {
             }
         });
 
+        AutoRefinanceRadioButton.setBackground(new java.awt.Color(255, 255, 255));
         AutoRefinanceRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         AutoRefinanceRadioButton.setText("Refinance Auto Loan");
 

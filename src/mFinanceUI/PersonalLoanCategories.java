@@ -33,13 +33,14 @@ public class PersonalLoanCategories extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         personalLineOfCreditLoanApplyButton = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
+        FixedRateRadioButton = new javax.swing.JRadioButton();
+        VariableRateRadioButton = new javax.swing.JRadioButton();
+        DebtConsolidationRadioButton = new javax.swing.JRadioButton();
+        CoSignRadioButton = new javax.swing.JRadioButton();
+        LineOfCreditRadioButton = new javax.swing.JRadioButton();
         PersonalLoanBackButton = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(600, 600));
         setRequestFocusEnabled(false);
 
@@ -58,25 +59,30 @@ public class PersonalLoanCategories extends javax.swing.JPanel {
             }
         });
 
-        jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton1.setText("Fixed-Rate Loan");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        FixedRateRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        FixedRateRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        FixedRateRadioButton.setText("Fixed-Rate Loan");
+        FixedRateRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                FixedRateRadioButtonActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton2.setText("Variable-Rate Loan");
+        VariableRateRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        VariableRateRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        VariableRateRadioButton.setText("Variable-Rate Loan");
 
-        jRadioButton3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton3.setText("Debt Consolidation Loan");
+        DebtConsolidationRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        DebtConsolidationRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        DebtConsolidationRadioButton.setText("Debt Consolidation Loan");
 
-        jRadioButton4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton4.setText("Co-Sign Loan");
+        CoSignRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        CoSignRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        CoSignRadioButton.setText("Co-Sign Loan");
 
-        jRadioButton5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton5.setText("Personal Line of Credit");
+        LineOfCreditRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        LineOfCreditRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        LineOfCreditRadioButton.setText("Personal Line of Credit");
 
         PersonalLoanBackButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         PersonalLoanBackButton.setText("Back");
@@ -95,11 +101,11 @@ public class PersonalLoanCategories extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton1)
-                            .addComponent(jRadioButton2)
-                            .addComponent(jRadioButton3)
-                            .addComponent(jRadioButton4)
-                            .addComponent(jRadioButton5))
+                            .addComponent(FixedRateRadioButton)
+                            .addComponent(VariableRateRadioButton)
+                            .addComponent(DebtConsolidationRadioButton)
+                            .addComponent(CoSignRadioButton)
+                            .addComponent(LineOfCreditRadioButton))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(PersonalLoanBackButton)
@@ -119,16 +125,16 @@ public class PersonalLoanCategories extends javax.swing.JPanel {
                     .addComponent(jLabel1)
                     .addComponent(PersonalLoanBackButton))
                 .addGap(34, 34, 34)
-                .addComponent(jRadioButton1)
+                .addComponent(FixedRateRadioButton)
                 .addGap(48, 48, 48)
-                .addComponent(jRadioButton2)
-                .addGap(50, 50, 50)
-                .addComponent(jRadioButton3)
-                .addGap(49, 49, 49)
-                .addComponent(jRadioButton4)
+                .addComponent(VariableRateRadioButton)
+                .addGap(54, 54, 54)
+                .addComponent(DebtConsolidationRadioButton)
+                .addGap(45, 45, 45)
+                .addComponent(CoSignRadioButton)
                 .addGap(52, 52, 52)
-                .addComponent(jRadioButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
+                .addComponent(LineOfCreditRadioButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                 .addComponent(personalLineOfCreditLoanApplyButton)
                 .addGap(72, 72, 72))
         );
@@ -143,9 +149,9 @@ public class PersonalLoanCategories extends javax.swing.JPanel {
         jLayeredPane.revalidate();
     }//GEN-LAST:event_personalLineOfCreditLoanApplyButtonActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void FixedRateRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FixedRateRadioButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_FixedRateRadioButtonActionPerformed
 
     private void PersonalLoanBackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PersonalLoanBackButtonActionPerformed
         // TODO add your handling code here:
@@ -158,13 +164,13 @@ public class PersonalLoanCategories extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton CoSignRadioButton;
+    private javax.swing.JRadioButton DebtConsolidationRadioButton;
+    private javax.swing.JRadioButton FixedRateRadioButton;
+    private javax.swing.JRadioButton LineOfCreditRadioButton;
     private javax.swing.JButton PersonalLoanBackButton;
+    private javax.swing.JRadioButton VariableRateRadioButton;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JButton personalLineOfCreditLoanApplyButton;
     // End of variables declaration//GEN-END:variables
 }

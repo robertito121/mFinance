@@ -40,6 +40,8 @@ public class ProductUi extends javax.swing.JPanel {
         personalButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+
         businessButton.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         businessButton.setText("Business");
         businessButton.addActionListener(new java.awt.event.ActionListener() {

@@ -35,12 +35,13 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
         BusinessLoanApplyButton = new javax.swing.JButton();
         BusinessLoanBackButton = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
+        TermLoanRadioButton = new javax.swing.JRadioButton();
+        SBALoanRadioButton = new javax.swing.JRadioButton();
+        LineOfCreditRadioButton = new javax.swing.JRadioButton();
+        InvoiceFinancingRadioButton = new javax.swing.JRadioButton();
+        MerchantCashAdvancesRadioButton = new javax.swing.JRadioButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(700, 700));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
@@ -66,23 +67,28 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
             }
         });
 
-        jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton1.setText("Term Loan");
+        TermLoanRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        TermLoanRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        TermLoanRadioButton.setText("Term Loan");
 
-        jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton2.setText("Small Business Administration (SBA) Loan");
+        SBALoanRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        SBALoanRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        SBALoanRadioButton.setText("Small Business Administration (SBA) Loan");
 
-        jRadioButton3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton3.setText("Business Line of Credit");
+        LineOfCreditRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        LineOfCreditRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        LineOfCreditRadioButton.setText("Business Line of Credit");
 
-        jRadioButton4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton4.setText("Invoice Financing Loan");
+        InvoiceFinancingRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        InvoiceFinancingRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        InvoiceFinancingRadioButton.setText("Invoice Financing Loan");
 
-        jRadioButton5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton5.setText("Merchant Cash Advances");
-        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+        MerchantCashAdvancesRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        MerchantCashAdvancesRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        MerchantCashAdvancesRadioButton.setText("Merchant Cash Advances");
+        MerchantCashAdvancesRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton5ActionPerformed(evt);
+                MerchantCashAdvancesRadioButtonActionPerformed(evt);
             }
         });
 
@@ -93,11 +99,11 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jRadioButton5))
+                    .addComponent(SBALoanRadioButton)
+                    .addComponent(TermLoanRadioButton)
+                    .addComponent(LineOfCreditRadioButton)
+                    .addComponent(InvoiceFinancingRadioButton)
+                    .addComponent(MerchantCashAdvancesRadioButton))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,7 +116,7 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
                         .addComponent(BusinessLoanBackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(80, 80, 80)))
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(204, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(BusinessLoanApplyButton)
@@ -126,16 +132,16 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
-                .addComponent(jRadioButton1)
+                .addComponent(TermLoanRadioButton)
                 .addGap(44, 44, 44)
-                .addComponent(jRadioButton2)
+                .addComponent(SBALoanRadioButton)
                 .addGap(53, 53, 53)
-                .addComponent(jRadioButton3)
+                .addComponent(LineOfCreditRadioButton)
                 .addGap(51, 51, 51)
-                .addComponent(jRadioButton4)
+                .addComponent(InvoiceFinancingRadioButton)
                 .addGap(53, 53, 53)
-                .addComponent(jRadioButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
+                .addComponent(MerchantCashAdvancesRadioButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(BusinessLoanApplyButton)
                 .addGap(101, 101, 101))
         );
@@ -159,20 +165,20 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
         jLayeredPane.revalidate();
     }//GEN-LAST:event_BusinessLoanBackButtonActionPerformed
 
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+    private void MerchantCashAdvancesRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MerchantCashAdvancesRadioButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
+    }//GEN-LAST:event_MerchantCashAdvancesRadioButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BusinessLoanApplyButton;
     private javax.swing.JButton BusinessLoanBackButton;
+    private javax.swing.JRadioButton InvoiceFinancingRadioButton;
+    private javax.swing.JRadioButton LineOfCreditRadioButton;
+    private javax.swing.JRadioButton MerchantCashAdvancesRadioButton;
+    private javax.swing.JRadioButton SBALoanRadioButton;
+    private javax.swing.JRadioButton TermLoanRadioButton;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
     // End of variables declaration//GEN-END:variables
 }

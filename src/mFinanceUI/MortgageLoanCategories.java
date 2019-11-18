@@ -32,10 +32,12 @@ public class MortgageLoanCategories extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         MortgageLoanBackButton = new javax.swing.JButton();
         MortgageLoanApplyButton = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        FixedRateRadioButton = new javax.swing.JRadioButton();
+        VariableRateRadioButton = new javax.swing.JRadioButton();
+        FirstTimeBuyerRadioButton = new javax.swing.JRadioButton();
+        VAMortgageRadioButton = new javax.swing.JRadioButton();
+
+        setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setText("Mortgage Loan");
@@ -56,20 +58,24 @@ public class MortgageLoanCategories extends javax.swing.JPanel {
             }
         });
 
-        jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton1.setText("Fixed Rate 30/20/15 Year Loan");
+        FixedRateRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        FixedRateRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        FixedRateRadioButton.setText("Fixed Rate 30/20/15 Year Loan");
 
-        jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton2.setText("Variable Rate Loan");
+        VariableRateRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        VariableRateRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        VariableRateRadioButton.setText("Variable Rate Loan");
 
-        jRadioButton3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton3.setText("First Time Buyer FHA Loan");
+        FirstTimeBuyerRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        FirstTimeBuyerRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        FirstTimeBuyerRadioButton.setText("First Time Buyer FHA Loan");
 
-        jRadioButton4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton4.setText("VA Mortgage Loan");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        VAMortgageRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        VAMortgageRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        VAMortgageRadioButton.setText("VA Mortgage Loan");
+        VAMortgageRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                VAMortgageRadioButtonActionPerformed(evt);
             }
         });
 
@@ -80,10 +86,10 @@ public class MortgageLoanCategories extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton1)
+                    .addComponent(VAMortgageRadioButton)
+                    .addComponent(FirstTimeBuyerRadioButton)
+                    .addComponent(VariableRateRadioButton)
+                    .addComponent(FixedRateRadioButton)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(MortgageLoanBackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(239, 239, 239)
@@ -105,13 +111,13 @@ public class MortgageLoanCategories extends javax.swing.JPanel {
                         .addGap(30, 30, 30)
                         .addComponent(MortgageLoanBackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(44, 44, 44)
-                .addComponent(jRadioButton1)
+                .addComponent(FixedRateRadioButton)
                 .addGap(47, 47, 47)
-                .addComponent(jRadioButton2)
+                .addComponent(VariableRateRadioButton)
                 .addGap(55, 55, 55)
-                .addComponent(jRadioButton3)
+                .addComponent(FirstTimeBuyerRadioButton)
                 .addGap(57, 57, 57)
-                .addComponent(jRadioButton4)
+                .addComponent(VAMortgageRadioButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 152, Short.MAX_VALUE)
                 .addComponent(MortgageLoanApplyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(81, 81, 81))
@@ -136,18 +142,18 @@ public class MortgageLoanCategories extends javax.swing.JPanel {
         jLayeredPane.revalidate();
     }//GEN-LAST:event_MortgageLoanBackButtonActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+    private void VAMortgageRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VAMortgageRadioButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    }//GEN-LAST:event_VAMortgageRadioButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton FirstTimeBuyerRadioButton;
+    private javax.swing.JRadioButton FixedRateRadioButton;
     private javax.swing.JButton MortgageLoanApplyButton;
     private javax.swing.JButton MortgageLoanBackButton;
+    private javax.swing.JRadioButton VAMortgageRadioButton;
+    private javax.swing.JRadioButton VariableRateRadioButton;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
     // End of variables declaration//GEN-END:variables
 }

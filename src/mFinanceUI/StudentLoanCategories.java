@@ -32,12 +32,14 @@ public class StudentLoanCategories extends javax.swing.JPanel {
 
         jLabel2 = new javax.swing.JLabel();
         privateStudentLoanApplyButton = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
+        DirectSubsidizedRadioButton = new javax.swing.JRadioButton();
+        DirectUnsubsidizedRadioButton = new javax.swing.JRadioButton();
+        DirectPlusRadioButton = new javax.swing.JRadioButton();
+        DirectConsolidationRadioButton = new javax.swing.JRadioButton();
+        PrivateStudentRadioButton = new javax.swing.JRadioButton();
         StudentLoanBackButton = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -54,33 +56,38 @@ public class StudentLoanCategories extends javax.swing.JPanel {
             }
         });
 
-        jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton1.setText("Direct Subsidized Loan");
+        DirectSubsidizedRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        DirectSubsidizedRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        DirectSubsidizedRadioButton.setText("Direct Subsidized Loan");
 
-        jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton2.setText("Direct Unsubsidized Loan");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        DirectUnsubsidizedRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        DirectUnsubsidizedRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        DirectUnsubsidizedRadioButton.setText("Direct Unsubsidized Loan");
+        DirectUnsubsidizedRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                DirectUnsubsidizedRadioButtonActionPerformed(evt);
             }
         });
 
-        jRadioButton3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton3.setText("Direct PLUS Loan");
+        DirectPlusRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        DirectPlusRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        DirectPlusRadioButton.setText("Direct PLUS Loan");
 
-        jRadioButton4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton4.setText("Direct Consolidation Loan");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        DirectConsolidationRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        DirectConsolidationRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        DirectConsolidationRadioButton.setText("Direct Consolidation Loan");
+        DirectConsolidationRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                DirectConsolidationRadioButtonActionPerformed(evt);
             }
         });
 
-        jRadioButton5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton5.setText("Private Student Loan");
-        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+        PrivateStudentRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        PrivateStudentRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        PrivateStudentRadioButton.setText("Private Student Loan");
+        PrivateStudentRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton5ActionPerformed(evt);
+                PrivateStudentRadioButtonActionPerformed(evt);
             }
         });
 
@@ -107,11 +114,11 @@ public class StudentLoanCategories extends javax.swing.JPanel {
                         .addComponent(StudentLoanBackButton)
                         .addGap(145, 145, 145)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jRadioButton5)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4))
+                    .addComponent(PrivateStudentRadioButton)
+                    .addComponent(DirectUnsubsidizedRadioButton)
+                    .addComponent(DirectSubsidizedRadioButton)
+                    .addComponent(DirectPlusRadioButton)
+                    .addComponent(DirectConsolidationRadioButton))
                 .addContainerGap(209, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -122,15 +129,15 @@ public class StudentLoanCategories extends javax.swing.JPanel {
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(StudentLoanBackButton))
                 .addGap(45, 45, 45)
-                .addComponent(jRadioButton1)
+                .addComponent(DirectSubsidizedRadioButton)
                 .addGap(53, 53, 53)
-                .addComponent(jRadioButton2)
+                .addComponent(DirectUnsubsidizedRadioButton)
                 .addGap(55, 55, 55)
-                .addComponent(jRadioButton3)
+                .addComponent(DirectPlusRadioButton)
                 .addGap(53, 53, 53)
-                .addComponent(jRadioButton4)
+                .addComponent(DirectConsolidationRadioButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addComponent(jRadioButton5)
+                .addComponent(PrivateStudentRadioButton)
                 .addGap(46, 46, 46)
                 .addComponent(privateStudentLoanApplyButton)
                 .addGap(97, 97, 97))
@@ -146,13 +153,13 @@ public class StudentLoanCategories extends javax.swing.JPanel {
         jLayeredPane.revalidate();
     }//GEN-LAST:event_privateStudentLoanApplyButtonActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+    private void DirectConsolidationRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DirectConsolidationRadioButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    }//GEN-LAST:event_DirectConsolidationRadioButtonActionPerformed
 
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+    private void PrivateStudentRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrivateStudentRadioButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
+    }//GEN-LAST:event_PrivateStudentRadioButtonActionPerformed
 
     private void StudentLoanBackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StudentLoanBackButtonActionPerformed
         // TODO add your handling code here:
@@ -163,19 +170,19 @@ public class StudentLoanCategories extends javax.swing.JPanel {
         jLayeredPane.revalidate();
     }//GEN-LAST:event_StudentLoanBackButtonActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void DirectUnsubsidizedRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DirectUnsubsidizedRadioButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_DirectUnsubsidizedRadioButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton DirectConsolidationRadioButton;
+    private javax.swing.JRadioButton DirectPlusRadioButton;
+    private javax.swing.JRadioButton DirectSubsidizedRadioButton;
+    private javax.swing.JRadioButton DirectUnsubsidizedRadioButton;
+    private javax.swing.JRadioButton PrivateStudentRadioButton;
     private javax.swing.JButton StudentLoanBackButton;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JButton privateStudentLoanApplyButton;
     // End of variables declaration//GEN-END:variables
 }
