@@ -8,18 +8,21 @@ public class Loan implements Serializable{
     private int loanNumber;
     private String loanType;
     private Double amount;
+    private String status;
     
     
     /**
      * Constructor
      * @param loanType;
      * @param loanNumber;
-     * 
+     * @param amount
+     * @param status
      */
-    public Loan(int loanNumber, String loanType, Double amount) {
+    public Loan(int loanNumber, String loanType, Double amount, String status) {
         this.loanType= loanType;
         this.loanNumber = loanNumber;
         this.amount = amount;
+        this.status = status;
     }
     
     /**
@@ -68,6 +71,20 @@ public class Loan implements Serializable{
      */
     public void setAmount(Double amount) {
         this.amount = amount;
+    }
+
+    /**
+     * @return the status
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * @param status the status to set
+     */
+    public void setStatus(String status) {
+        this.status = status;
     }
     
     

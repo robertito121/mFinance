@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="ff" green="ff" id="white" palette="1" red="ff" type="palette"/>
+    </Property>
+  </Properties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -46,9 +51,13 @@
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
-                                              <Component id="vehicleButton" min="-2" pref="129" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                                              <Component id="filler2" min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <EmptySpace min="-2" pref="206" max="-2" attributes="0"/>
+                                                      <Component id="filler2" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="vehicleButton" alignment="0" min="-2" pref="129" max="-2" attributes="0"/>
+                                              </Group>
                                               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                                               <Component id="filler3" min="-2" max="-2" attributes="0"/>
                                           </Group>
@@ -104,16 +113,15 @@
                   <Component id="filler3" min="-2" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                              <Component id="businessButton" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="vehicleButton" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="businessButton" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="filler2" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="vehicleButton" min="-2" max="-2" attributes="0"/>
+                                  <Component id="filler2" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="mortgageButton" min="-2" max="-2" attributes="0"/>
                           <Component id="studentButton" min="-2" max="-2" attributes="0"/>
@@ -127,7 +135,7 @@
                   <Component id="filler5" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="filler6" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="83" max="32767" attributes="0"/>
+              <EmptySpace pref="82" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

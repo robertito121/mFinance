@@ -34,11 +34,12 @@ public class MyLoansUI extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) loansTable.getModel();
         LoanList loanList = new LoanList();
         ArrayList<Loan> list = loanList.getLoanList();
-        Object[] rowData = new Object[3];
+        Object[] rowData = new Object[4];
         for(int i = 0; i < list.size(); i++) {
             rowData[0] = list.get(i).getLoanNumber();
             rowData[1] = list.get(i).getLoanType();
             rowData[2] = list.get(i).getAmount();
+            rowData[3] = list.get(i).getStatus();
             model.addRow(rowData);
         }
     }
@@ -64,14 +65,14 @@ public class MyLoansUI extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Number", "Type", "Amount"
+                "Number", "Type", "Amount", "Status"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Double.class
+                java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, true, false
+                false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -82,7 +83,13 @@ public class MyLoansUI extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        loansTable.getTableHeader().setReorderingAllowed(false);
         loansTableJScrollPane.setViewportView(loansTable);
+        if (loansTable.getColumnModel().getColumnCount() > 0) {
+            loansTable.getColumnModel().getColumn(0).setResizable(false);
+            loansTable.getColumnModel().getColumn(1).setResizable(false);
+            loansTable.getColumnModel().getColumn(3).setResizable(false);
+        }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

@@ -5,9 +5,17 @@
  */
 package mFinanceUI;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JLayeredPane;
 import mFinanceProductInformation.Loan;
+import mFinanceProductInformation.LoanApplication;
+import mFinanceProductInformation.LoanInformationApplication;
 import mFinanceProductInformation.LoanList;
+import mFinanceProductInformation.PersonalDataApplication;
 
 /**
  *
@@ -362,7 +370,7 @@ public class ApplicationForm extends javax.swing.JPanel {
     private void SubmitLoanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitLoanButtonActionPerformed
         // TODO add your handling code here:
         
-        
+        //Making loanlist
         LoanList list = new LoanList();
         list.getLoanList();
         
@@ -374,8 +382,42 @@ public class ApplicationForm extends javax.swing.JPanel {
         amountString = jTextFieldLoanAmount.getText();
         amount = Double.parseDouble(amountString);
         
-        Loan loan = new Loan(list.getLastLoanNumber(), loanType, amount);
+        //making loan object
+        Loan loan = new Loan(list.getLastLoanNumber(), loanType, amount, "Pending Approval");
         list.addLoan(loan);
+        
+        String collateral = jTextFieldProposedCollaterals.getText();
+        String stringDate = jTextFieldDateDay.getText() + "/" + jTextFieldDateMonth.getText() + "/" +
+                jTextFieldDateYear.getText();
+        
+        //making loan information object
+        LoanInformationApplication loanInfo = new LoanInformationApplication(loanType, collateral);
+        Date date;
+        try {
+            date = new SimpleDateFormat("dd/MM/yyyy").parse(stringDate);
+            loanInfo.setDate(date);
+        } catch (ParseException ex) {
+            Logger.getLogger(ApplicationForm.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        //making personal data object
+        String socialSecurity = jTextFieldSocialSecurityNumber.getText();
+        String income = jTextFieldHouseholdIncome.getText();
+        String maritalStatus = jComboBoxMaritalStatus.getSelectedItem().toString();
+        String propertyOwnership = jComboBoxPropertyOwnership.getSelectedItem().toString();
+        String employment = jTextFieldPlaceOfEmployment.getText();
+        String jobTitle = jTextFieldJobTitle.getText();
+        
+        PersonalDataApplication personalData = new PersonalDataApplication(socialSecurity, income, maritalStatus, propertyOwnership,employment
+                , jobTitle);
+        
+        //creating loan application
+        LoanApplication loanApplication = new LoanApplication(loan, amount, "Pending Approval", loanInfo, personalData);
+        
+        //code to add loan application to loan application list
+        
+        
         LoanCompleteForm loanCompleteForm = new LoanCompleteForm(jLayeredPane);
         jLayeredPane.removeAll();
         jLayeredPane.add(loanCompleteForm);
