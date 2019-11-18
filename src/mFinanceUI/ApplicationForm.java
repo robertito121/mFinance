@@ -5,7 +5,17 @@
  */
 package mFinanceUI;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JLayeredPane;
+import mFinanceProductInformation.Loan;
+import mFinanceProductInformation.LoanApplication;
+import mFinanceProductInformation.LoanInformationApplication;
+import mFinanceProductInformation.LoanList;
+import mFinanceProductInformation.PersonalDataApplication;
 
 /**
  *
@@ -59,6 +69,8 @@ public class ApplicationForm extends javax.swing.JPanel {
         jTextFieldDateYear = new javax.swing.JTextField();
         jCheckBoxSignature = new javax.swing.JCheckBox();
         SubmitLoanButton = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         jLabel1.setText("Personal Information");
@@ -224,25 +236,22 @@ public class ApplicationForm extends javax.swing.JPanel {
                                 .addGap(57, 57, 57))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel10)
-                                            .addComponent(jLabel7)
-                                            .addComponent(jLabel8)
-                                            .addComponent(jLabel4)
-                                            .addComponent(jLabel11))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextFieldSocialSecurityNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBoxMaritalStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(jComboBoxPropertyOwnership, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jTextFieldJobTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
-                                                .addComponent(jTextFieldPlaceOfEmployment))
-                                            .addComponent(jTextFieldHouseholdIncome, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel9)
-                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                    .addComponent(jLabel10)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel11))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextFieldSocialSecurityNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBoxMaritalStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jComboBoxPropertyOwnership, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextFieldJobTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                                        .addComponent(jTextFieldPlaceOfEmployment))
+                                    .addComponent(jTextFieldHouseholdIncome, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel9)
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -359,6 +368,55 @@ public class ApplicationForm extends javax.swing.JPanel {
 
     private void SubmitLoanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitLoanButtonActionPerformed
         // TODO add your handling code here:
+        
+        //Making loanlist
+        LoanList list = new LoanList();
+        list.getLoanList();
+        
+        String loanType;
+        loanType = jComboBoxLoanType.getSelectedItem().toString();
+        
+        String amountString;
+        double amount;
+        amountString = jTextFieldLoanAmount.getText();
+        amount = Double.parseDouble(amountString);
+        
+        //making loan object
+        Loan loan = new Loan(list.getLastLoanNumber(), loanType, amount, "Pending Approval");
+        list.addLoan(loan);
+        
+        String collateral = jTextFieldProposedCollaterals.getText();
+        String stringDate = jTextFieldDateDay.getText() + "/" + jTextFieldDateMonth.getText() + "/" +
+                jTextFieldDateYear.getText();
+        
+        //making loan information object
+        LoanInformationApplication loanInfo = new LoanInformationApplication(loanType, collateral);
+        Date date;
+        try {
+            date = new SimpleDateFormat("dd/MM/yyyy").parse(stringDate);
+            loanInfo.setDate(date);
+        } catch (ParseException ex) {
+            Logger.getLogger(ApplicationForm.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        //making personal data object
+        String socialSecurity = jTextFieldSocialSecurityNumber.getText();
+        String income = jTextFieldHouseholdIncome.getText();
+        String maritalStatus = jComboBoxMaritalStatus.getSelectedItem().toString();
+        String propertyOwnership = jComboBoxPropertyOwnership.getSelectedItem().toString();
+        String employment = jTextFieldPlaceOfEmployment.getText();
+        String jobTitle = jTextFieldJobTitle.getText();
+        
+        PersonalDataApplication personalData = new PersonalDataApplication(socialSecurity, income, maritalStatus, propertyOwnership,employment
+                , jobTitle);
+        
+        //creating loan application
+        LoanApplication loanApplication = new LoanApplication(loan, amount, "Pending Approval", loanInfo, personalData);
+        
+        //code to add loan application to loan application list
+        
+        
         LoanCompleteForm loanCompleteForm = new LoanCompleteForm(jLayeredPane);
         jLayeredPane.removeAll();
         jLayeredPane.add(loanCompleteForm);

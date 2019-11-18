@@ -5,16 +5,22 @@ public class LoanApplication {
     private Loan loan;
     private Double amount;
     private String status;
+    private LoanInformationApplication loanInformation;
+    private PersonalDataApplication personalDataApp;
 
     /**
      * @param loan
      * @param amount
      * @param status 
+     * @param LoanInformationApplication
+     * @param PersonalDataApplication
      */
-    public LoanApplication(Loan loan, Double amount, String status) {
+    public LoanApplication(Loan loan, Double amount, String status, LoanInformationApplication loanInfo, PersonalDataApplication personalData) {
         this.loan = loan;
         this.amount = amount;
         this.status = status;
+        this.loanInformation = loanInfo;
+        this.personalDataApp = personalData;
     }
 
     /**
@@ -66,6 +72,34 @@ public class LoanApplication {
      */
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    /**
+     * @return the loanInformation
+     */
+    public LoanInformationApplication getLoanInformation() {
+        return loanInformation;
+    }
+
+    /**
+     * @param loanInformation the loanInformation to set
+     */
+    public void setLoanInformation(LoanInformationApplication loanInformation) {
+        this.loanInformation = loanInformation;
+    }
+
+    /**
+     * @return the personalDataApp
+     */
+    public PersonalDataApplication getPersonalDataApp() {
+        return personalDataApp;
+    }
+
+    /**
+     * @param personalDataApp the personalDataApp to set
+     */
+    public void setPersonalDataApp(PersonalDataApplication personalDataApp) {
+        this.personalDataApp = personalDataApp;
     }
     
     

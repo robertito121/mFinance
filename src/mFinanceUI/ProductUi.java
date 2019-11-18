@@ -5,6 +5,7 @@
  */
 package mFinanceUI;
 
+import java.awt.Component;
 import javax.swing.JLayeredPane;
 
 /**
@@ -13,7 +14,7 @@ import javax.swing.JLayeredPane;
  */
 public class ProductUi extends javax.swing.JPanel {
 
-    private JLayeredPane jLayeredPane1;
+    private JLayeredPane mainPanel;
     /**
      * Creates new form ProductUi
      */
@@ -21,7 +22,7 @@ public class ProductUi extends javax.swing.JPanel {
         
         initComponents();
         setVisible(true);
-        jLayeredPane1 = j;
+        mainPanel = j;
     }
 
     /**
@@ -39,6 +40,8 @@ public class ProductUi extends javax.swing.JPanel {
         mortgageButton = new javax.swing.JButton();
         personalButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(255, 255, 255));
 
         businessButton.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         businessButton.setText("Business");
@@ -124,49 +127,47 @@ public class ProductUi extends javax.swing.JPanel {
 
     private void personalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personalButtonActionPerformed
         // TODO add your handling code here:
-        PersonalLoanCategories personalPanel = new PersonalLoanCategories(jLayeredPane1);
-        jLayeredPane1.removeAll();
-        jLayeredPane1.add(personalPanel);
-        jLayeredPane1.repaint();
-        jLayeredPane1.revalidate();
+        PersonalLoanCategories personalPanel = new PersonalLoanCategories(mainPanel);
+        changeScreen(personalPanel);
     }//GEN-LAST:event_personalButtonActionPerformed
 
     private void businessButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_businessButtonActionPerformed
         // TODO add your handling code here:
-        BusinessLoanCategories businessPanel = new BusinessLoanCategories(jLayeredPane1);
-        jLayeredPane1.removeAll();
-        jLayeredPane1.add(businessPanel);
-        jLayeredPane1.repaint();
-        jLayeredPane1.revalidate();
+        BusinessLoanCategories businessPanel = new BusinessLoanCategories(mainPanel);
+        changeScreen(businessPanel);
     }//GEN-LAST:event_businessButtonActionPerformed
 
     private void vehicleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vehicleButtonActionPerformed
         // TODO add your handling code here:
-        AutoLoanCategories auto = new AutoLoanCategories(jLayeredPane1);
-        jLayeredPane1.removeAll();
-        jLayeredPane1.add(auto);
-        jLayeredPane1.repaint();
-        jLayeredPane1.revalidate();
+        AutoLoanCategories auto = new AutoLoanCategories(mainPanel);
+        changeScreen(auto);
     }//GEN-LAST:event_vehicleButtonActionPerformed
 
     private void studentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentButtonActionPerformed
         // TODO add your handling code here:
-        StudentLoanCategories studentPanel = new StudentLoanCategories(jLayeredPane1);
-        jLayeredPane1.removeAll();
-        jLayeredPane1.add(studentPanel);
-        jLayeredPane1.repaint();
-        jLayeredPane1.revalidate();
+        StudentLoanCategories studentPanel = new StudentLoanCategories(mainPanel);
+        changeScreen(studentPanel);
     }//GEN-LAST:event_studentButtonActionPerformed
 
     private void mortgageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mortgageButtonActionPerformed
         // TODO add your handling code here:
-        MortgageLoanCategories mortgage = new MortgageLoanCategories( jLayeredPane1);
-        jLayeredPane1.removeAll();
-        jLayeredPane1.add(mortgage);
-        jLayeredPane1.repaint();
-        jLayeredPane1.revalidate();
+        MortgageLoanCategories mortgage = new MortgageLoanCategories( mainPanel);
+        changeScreen(mortgage);
     }//GEN-LAST:event_mortgageButtonActionPerformed
 
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+        // TODO add your handling code here:
+        mainPanel.removeAll();
+        mainPanel.repaint();
+        mainPanel.revalidate();
+    }//GEN-LAST:event_backButtonActionPerformed
+
+    private void changeScreen(Component o) {
+        mainPanel.removeAll();
+        mainPanel.add(o);
+        mainPanel.repaint();
+        mainPanel.revalidate();
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton businessButton;
