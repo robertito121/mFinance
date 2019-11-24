@@ -231,7 +231,7 @@ public class ApplicationForm extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(0, 248, Short.MAX_VALUE)
+                                .addGap(0, 147, Short.MAX_VALUE)
                                 .addComponent(jLabel1)
                                 .addGap(57, 57, 57))
                             .addGroup(layout.createSequentialGroup()
