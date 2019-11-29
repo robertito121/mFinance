@@ -31,6 +31,7 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        businessLoanRadioButtons = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
         BusinessLoanApplyButton = new javax.swing.JButton();
@@ -68,22 +69,27 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
         });
 
         TermLoanRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        businessLoanRadioButtons.add(TermLoanRadioButton);
         TermLoanRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         TermLoanRadioButton.setText("Term Loan");
 
         SBALoanRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        businessLoanRadioButtons.add(SBALoanRadioButton);
         SBALoanRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         SBALoanRadioButton.setText("Small Business Administration (SBA) Loan");
 
         LineOfCreditRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        businessLoanRadioButtons.add(LineOfCreditRadioButton);
         LineOfCreditRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         LineOfCreditRadioButton.setText("Business Line of Credit");
 
         InvoiceFinancingRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        businessLoanRadioButtons.add(InvoiceFinancingRadioButton);
         InvoiceFinancingRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         InvoiceFinancingRadioButton.setText("Invoice Financing Loan");
 
         MerchantCashAdvancesRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        businessLoanRadioButtons.add(MerchantCashAdvancesRadioButton);
         MerchantCashAdvancesRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         MerchantCashAdvancesRadioButton.setText("Merchant Cash Advances");
         MerchantCashAdvancesRadioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -116,7 +122,7 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
                         .addComponent(BusinessLoanBackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(80, 80, 80)))
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(203, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(BusinessLoanApplyButton)
@@ -141,7 +147,7 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
                 .addComponent(InvoiceFinancingRadioButton)
                 .addGap(53, 53, 53)
                 .addComponent(MerchantCashAdvancesRadioButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 409, Short.MAX_VALUE)
                 .addComponent(BusinessLoanApplyButton)
                 .addGap(101, 101, 101))
         );
@@ -178,6 +184,7 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
     private javax.swing.JRadioButton MerchantCashAdvancesRadioButton;
     private javax.swing.JRadioButton SBALoanRadioButton;
     private javax.swing.JRadioButton TermLoanRadioButton;
+    private javax.swing.ButtonGroup businessLoanRadioButtons;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables

@@ -24,6 +24,7 @@ public class AutoLoanCategories extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        autoLoanRadioButtons = new javax.swing.ButtonGroup();
         AutoLoanHeader = new javax.swing.JLabel();
         NewCarLoanRadioButton = new javax.swing.JRadioButton();
         UsedCarRadioButton = new javax.swing.JRadioButton();
@@ -38,6 +39,7 @@ public class AutoLoanCategories extends javax.swing.JPanel {
         AutoLoanHeader.setText("Auto Loans");
 
         NewCarLoanRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        autoLoanRadioButtons.add(NewCarLoanRadioButton);
         NewCarLoanRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         NewCarLoanRadioButton.setText("New Car Loan");
         NewCarLoanRadioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -47,10 +49,17 @@ public class AutoLoanCategories extends javax.swing.JPanel {
         });
 
         UsedCarRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        autoLoanRadioButtons.add(UsedCarRadioButton);
         UsedCarRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         UsedCarRadioButton.setText("Used Car Loan");
+        UsedCarRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UsedCarRadioButtonActionPerformed(evt);
+            }
+        });
 
         OtherLoanRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        autoLoanRadioButtons.add(OtherLoanRadioButton);
         OtherLoanRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         OtherLoanRadioButton.setText("Motorcycle, Boat, Other Loans");
 
@@ -64,6 +73,7 @@ public class AutoLoanCategories extends javax.swing.JPanel {
         });
 
         AutoRefinanceRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        autoLoanRadioButtons.add(AutoRefinanceRadioButton);
         AutoRefinanceRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         AutoRefinanceRadioButton.setText("Refinance Auto Loan");
 
@@ -93,9 +103,9 @@ public class AutoLoanCategories extends javax.swing.JPanel {
                         .addComponent(NewCarLoanRadioButton, javax.swing.GroupLayout.Alignment.LEADING)))
                 .addContainerGap(311, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(AutoLoanApplyButton)
-                .addGap(118, 118, 118))
+                .addGap(138, 138, 138))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,9 +122,9 @@ public class AutoLoanCategories extends javax.swing.JPanel {
                 .addComponent(OtherLoanRadioButton)
                 .addGap(60, 60, 60)
                 .addComponent(AutoRefinanceRadioButton)
-                .addGap(120, 120, 120)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 440, Short.MAX_VALUE)
                 .addComponent(AutoLoanApplyButton)
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addGap(118, 118, 118))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -140,6 +150,10 @@ public class AutoLoanCategories extends javax.swing.JPanel {
         jLayeredPane.revalidate();
     }//GEN-LAST:event_AutoLoanApplyButtonActionPerformed
 
+    private void UsedCarRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsedCarRadioButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UsedCarRadioButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AutoLoanApplyButton;
@@ -149,5 +163,6 @@ public class AutoLoanCategories extends javax.swing.JPanel {
     private javax.swing.JRadioButton NewCarLoanRadioButton;
     private javax.swing.JRadioButton OtherLoanRadioButton;
     private javax.swing.JRadioButton UsedCarRadioButton;
+    private javax.swing.ButtonGroup autoLoanRadioButtons;
     // End of variables declaration//GEN-END:variables
 }

@@ -30,6 +30,7 @@ public class StudentLoanCategories extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        studentLoanRadioButtons = new javax.swing.ButtonGroup();
         jLabel2 = new javax.swing.JLabel();
         privateStudentLoanApplyButton = new javax.swing.JButton();
         DirectSubsidizedRadioButton = new javax.swing.JRadioButton();
@@ -57,10 +58,12 @@ public class StudentLoanCategories extends javax.swing.JPanel {
         });
 
         DirectSubsidizedRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        studentLoanRadioButtons.add(DirectSubsidizedRadioButton);
         DirectSubsidizedRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         DirectSubsidizedRadioButton.setText("Direct Subsidized Loan");
 
         DirectUnsubsidizedRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        studentLoanRadioButtons.add(DirectUnsubsidizedRadioButton);
         DirectUnsubsidizedRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         DirectUnsubsidizedRadioButton.setText("Direct Unsubsidized Loan");
         DirectUnsubsidizedRadioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -70,10 +73,17 @@ public class StudentLoanCategories extends javax.swing.JPanel {
         });
 
         DirectPlusRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        studentLoanRadioButtons.add(DirectPlusRadioButton);
         DirectPlusRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         DirectPlusRadioButton.setText("Direct PLUS Loan");
+        DirectPlusRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DirectPlusRadioButtonActionPerformed(evt);
+            }
+        });
 
         DirectConsolidationRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        studentLoanRadioButtons.add(DirectConsolidationRadioButton);
         DirectConsolidationRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         DirectConsolidationRadioButton.setText("Direct Consolidation Loan");
         DirectConsolidationRadioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -83,6 +93,7 @@ public class StudentLoanCategories extends javax.swing.JPanel {
         });
 
         PrivateStudentRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        studentLoanRadioButtons.add(PrivateStudentRadioButton);
         PrivateStudentRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         PrivateStudentRadioButton.setText("Private Student Loan");
         PrivateStudentRadioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -136,9 +147,9 @@ public class StudentLoanCategories extends javax.swing.JPanel {
                 .addComponent(DirectPlusRadioButton)
                 .addGap(53, 53, 53)
                 .addComponent(DirectConsolidationRadioButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addGap(64, 64, 64)
                 .addComponent(PrivateStudentRadioButton)
-                .addGap(46, 46, 46)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 375, Short.MAX_VALUE)
                 .addComponent(privateStudentLoanApplyButton)
                 .addGap(97, 97, 97))
         );
@@ -174,6 +185,10 @@ public class StudentLoanCategories extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_DirectUnsubsidizedRadioButtonActionPerformed
 
+    private void DirectPlusRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DirectPlusRadioButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DirectPlusRadioButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton DirectConsolidationRadioButton;
@@ -184,5 +199,6 @@ public class StudentLoanCategories extends javax.swing.JPanel {
     private javax.swing.JButton StudentLoanBackButton;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JButton privateStudentLoanApplyButton;
+    private javax.swing.ButtonGroup studentLoanRadioButtons;
     // End of variables declaration//GEN-END:variables
 }
