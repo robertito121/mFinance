@@ -36,6 +36,7 @@ public class LoanCompleteForm extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(1000, 1000));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setText("mFinance");
@@ -51,28 +52,29 @@ public class LoanCompleteForm extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(336, Short.MAX_VALUE)
+                .addContainerGap(193, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(364, 364, 364))
+                        .addComponent(jLabel3)
+                        .addGap(141, 141, 141))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addGap(285, 285, 285))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(113, 113, 113))))
+                        .addGap(335, 335, 335))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(406, 406, 406)
+                .addComponent(jLabel1)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(51, 51, 51)
                 .addComponent(jLabel1)
-                .addGap(89, 89, 89)
+                .addGap(136, 136, 136)
                 .addComponent(jLabel2)
-                .addGap(111, 111, 111)
+                .addGap(126, 126, 126)
                 .addComponent(jLabel3)
-                .addContainerGap(317, Short.MAX_VALUE))
+                .addContainerGap(585, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
