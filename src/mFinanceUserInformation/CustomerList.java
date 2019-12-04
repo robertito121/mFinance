@@ -5,13 +5,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class CustomerList {
+public class CustomerList implements Serializable {
 
     private HashMap<String, Customer> customersMap;
-    private final String USERS_LIST_FILE_NAME = "customerList.ser";
+    private String USERS_LIST_FILE_NAME = "customerList.ser";
     
     public CustomerList() {
         customersMap = new HashMap<String, Customer>();
@@ -35,6 +36,7 @@ public class CustomerList {
     public void addCustomerToList(Customer customer) {
         customersMap.put(customer.getCustomerId(), customer);
         this.writeUserListFile();
+        
         
         
     }
