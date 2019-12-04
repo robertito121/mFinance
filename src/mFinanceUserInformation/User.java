@@ -1,9 +1,11 @@
 package mFinanceUserInformation;
 
+import java.io.Serializable;
+
 /**
  * @author Roberto Gonzales
  */
-public class User {
+public class User implements Serializable {
 
     private String firstName;
     private String lastName;

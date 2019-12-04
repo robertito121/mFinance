@@ -1,9 +1,11 @@
 package mFinanceUserInformation;
 
+import java.io.Serializable;
+
 /**
  * @author Roberto Gonzales
  */
-public class Customer extends User {
+public class Customer extends User implements Serializable {
 
     private String customerId;
     private Address address;

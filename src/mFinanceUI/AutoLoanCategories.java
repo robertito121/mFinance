@@ -24,6 +24,7 @@ public class AutoLoanCategories extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        autoLoanRadioButtons = new javax.swing.ButtonGroup();
         AutoLoanHeader = new javax.swing.JLabel();
         NewCarLoanRadioButton = new javax.swing.JRadioButton();
         UsedCarRadioButton = new javax.swing.JRadioButton();
@@ -31,6 +32,14 @@ public class AutoLoanCategories extends javax.swing.JPanel {
         AutoLoanApplyButton = new javax.swing.JButton();
         AutoRefinanceRadioButton = new javax.swing.JRadioButton();
         AutoLoanBackButton = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea4 = new javax.swing.JTextArea();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -38,6 +47,7 @@ public class AutoLoanCategories extends javax.swing.JPanel {
         AutoLoanHeader.setText("Auto Loans");
 
         NewCarLoanRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        autoLoanRadioButtons.add(NewCarLoanRadioButton);
         NewCarLoanRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         NewCarLoanRadioButton.setText("New Car Loan");
         NewCarLoanRadioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -47,14 +57,20 @@ public class AutoLoanCategories extends javax.swing.JPanel {
         });
 
         UsedCarRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        autoLoanRadioButtons.add(UsedCarRadioButton);
         UsedCarRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         UsedCarRadioButton.setText("Used Car Loan");
+        UsedCarRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UsedCarRadioButtonActionPerformed(evt);
+            }
+        });
 
         OtherLoanRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        autoLoanRadioButtons.add(OtherLoanRadioButton);
         OtherLoanRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         OtherLoanRadioButton.setText("Motorcycle, Boat, Other Loans");
 
-        AutoLoanApplyButton.setBackground(new java.awt.Color(255, 255, 255));
         AutoLoanApplyButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         AutoLoanApplyButton.setText("Apply Now");
         AutoLoanApplyButton.addActionListener(new java.awt.event.ActionListener() {
@@ -64,6 +80,7 @@ public class AutoLoanCategories extends javax.swing.JPanel {
         });
 
         AutoRefinanceRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        autoLoanRadioButtons.add(AutoRefinanceRadioButton);
         AutoRefinanceRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         AutoRefinanceRadioButton.setText("Refinance Auto Loan");
 
@@ -75,46 +92,93 @@ public class AutoLoanCategories extends javax.swing.JPanel {
             }
         });
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Rates as low as 2.99%\n**Rates vary depending on credit score and loan term");
+        jScrollPane1.setViewportView(jTextArea1);
+        jTextArea1.setEditable(false);
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea2.setRows(5);
+        jTextArea2.setText("Rates as low as 3.99%");
+        jScrollPane2.setViewportView(jTextArea2);
+        jTextArea2.setEditable(false);
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea3.setRows(5);
+        jTextArea3.setText("Rates as low as 6.25%");
+        jScrollPane3.setViewportView(jTextArea3);
+        jTextArea3.setEditable(false);
+
+        jTextArea4.setColumns(20);
+        jTextArea4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea4.setRows(5);
+        jTextArea4.setText("Save on your monthly payments by refinancing your auto loan. Rates as low as 3.25%");
+        jScrollPane4.setViewportView(jTextArea4);
+        jTextArea4.setEditable(false);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(66, 66, 66)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(AutoLoanBackButton)
-                        .addGap(315, 315, 315)
-                        .addComponent(AutoLoanHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(AutoRefinanceRadioButton)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(OtherLoanRadioButton)
-                        .addComponent(UsedCarRadioButton, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(NewCarLoanRadioButton, javax.swing.GroupLayout.Alignment.LEADING)))
-                .addContainerGap(311, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(AutoLoanApplyButton)
-                .addGap(118, 118, 118))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(AutoLoanApplyButton)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(24, 24, 24)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(AutoRefinanceRadioButton)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(24, 24, 24)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(24, 24, 24)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(40, 40, 40)
+                            .addComponent(AutoLoanBackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(178, 178, 178)
+                            .addComponent(AutoLoanHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(OtherLoanRadioButton)
+                            .addComponent(UsedCarRadioButton, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(NewCarLoanRadioButton, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(24, 24, 24)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(190, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(AutoLoanBackButton)
-                    .addComponent(AutoLoanHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AutoLoanHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AutoLoanBackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
                 .addComponent(NewCarLoanRadioButton)
-                .addGap(58, 58, 58)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(UsedCarRadioButton)
-                .addGap(59, 59, 59)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(OtherLoanRadioButton)
-                .addGap(60, 60, 60)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(AutoRefinanceRadioButton)
-                .addGap(120, 120, 120)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
                 .addComponent(AutoLoanApplyButton)
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(257, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -140,6 +204,10 @@ public class AutoLoanCategories extends javax.swing.JPanel {
         jLayeredPane.revalidate();
     }//GEN-LAST:event_AutoLoanApplyButtonActionPerformed
 
+    private void UsedCarRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsedCarRadioButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UsedCarRadioButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AutoLoanApplyButton;
@@ -149,5 +217,14 @@ public class AutoLoanCategories extends javax.swing.JPanel {
     private javax.swing.JRadioButton NewCarLoanRadioButton;
     private javax.swing.JRadioButton OtherLoanRadioButton;
     private javax.swing.JRadioButton UsedCarRadioButton;
+    private javax.swing.ButtonGroup autoLoanRadioButtons;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextArea jTextArea4;
     // End of variables declaration//GEN-END:variables
 }
