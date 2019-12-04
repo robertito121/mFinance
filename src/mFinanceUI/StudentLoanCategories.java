@@ -30,6 +30,7 @@ public class StudentLoanCategories extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        studentLoanRadioButtons = new javax.swing.ButtonGroup();
         jLabel2 = new javax.swing.JLabel();
         privateStudentLoanApplyButton = new javax.swing.JButton();
         DirectSubsidizedRadioButton = new javax.swing.JRadioButton();
@@ -38,6 +39,16 @@ public class StudentLoanCategories extends javax.swing.JPanel {
         DirectConsolidationRadioButton = new javax.swing.JRadioButton();
         PrivateStudentRadioButton = new javax.swing.JRadioButton();
         StudentLoanBackButton = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea4 = new javax.swing.JTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextArea5 = new javax.swing.JTextArea();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -57,10 +68,12 @@ public class StudentLoanCategories extends javax.swing.JPanel {
         });
 
         DirectSubsidizedRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        studentLoanRadioButtons.add(DirectSubsidizedRadioButton);
         DirectSubsidizedRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         DirectSubsidizedRadioButton.setText("Direct Subsidized Loan");
 
         DirectUnsubsidizedRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        studentLoanRadioButtons.add(DirectUnsubsidizedRadioButton);
         DirectUnsubsidizedRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         DirectUnsubsidizedRadioButton.setText("Direct Unsubsidized Loan");
         DirectUnsubsidizedRadioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -70,10 +83,17 @@ public class StudentLoanCategories extends javax.swing.JPanel {
         });
 
         DirectPlusRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        studentLoanRadioButtons.add(DirectPlusRadioButton);
         DirectPlusRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         DirectPlusRadioButton.setText("Direct PLUS Loan");
+        DirectPlusRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DirectPlusRadioButtonActionPerformed(evt);
+            }
+        });
 
         DirectConsolidationRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        studentLoanRadioButtons.add(DirectConsolidationRadioButton);
         DirectConsolidationRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         DirectConsolidationRadioButton.setText("Direct Consolidation Loan");
         DirectConsolidationRadioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -83,6 +103,7 @@ public class StudentLoanCategories extends javax.swing.JPanel {
         });
 
         PrivateStudentRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        studentLoanRadioButtons.add(PrivateStudentRadioButton);
         PrivateStudentRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         PrivateStudentRadioButton.setText("Private Student Loan");
         PrivateStudentRadioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -99,26 +120,65 @@ public class StudentLoanCategories extends javax.swing.JPanel {
             }
         });
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+        jTextArea1.setEditable(false);
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea2.setRows(5);
+        jScrollPane2.setViewportView(jTextArea2);
+        jTextArea2.setEditable(false);
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea3.setRows(5);
+        jScrollPane3.setViewportView(jTextArea3);
+        jTextArea3.setEditable(false);
+
+        jTextArea4.setColumns(20);
+        jTextArea4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea4.setRows(5);
+        jScrollPane4.setViewportView(jTextArea4);
+        jTextArea4.setEditable(false);
+
+        jTextArea5.setColumns(20);
+        jTextArea5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea5.setRows(5);
+        jScrollPane5.setViewportView(jTextArea5);
+        jTextArea5.setEditable(false);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(privateStudentLoanApplyButton)
-                .addGap(113, 113, 113))
             .addGroup(layout.createSequentialGroup()
-                .addGap(55, 55, 55)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(89, 89, 89)
                         .addComponent(StudentLoanBackButton)
-                        .addGap(145, 145, 145)
+                        .addGap(111, 111, 111)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(PrivateStudentRadioButton)
-                    .addComponent(DirectUnsubsidizedRadioButton)
-                    .addComponent(DirectSubsidizedRadioButton)
-                    .addComponent(DirectPlusRadioButton)
-                    .addComponent(DirectConsolidationRadioButton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(DirectConsolidationRadioButton)
+                            .addComponent(DirectPlusRadioButton)
+                            .addComponent(PrivateStudentRadioButton)
+                            .addComponent(DirectUnsubsidizedRadioButton)
+                            .addComponent(DirectSubsidizedRadioButton)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(privateStudentLoanApplyButton)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                 .addContainerGap(209, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -130,17 +190,27 @@ public class StudentLoanCategories extends javax.swing.JPanel {
                     .addComponent(StudentLoanBackButton))
                 .addGap(45, 45, 45)
                 .addComponent(DirectSubsidizedRadioButton)
-                .addGap(53, 53, 53)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
                 .addComponent(DirectUnsubsidizedRadioButton)
-                .addGap(55, 55, 55)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(DirectPlusRadioButton)
-                .addGap(53, 53, 53)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
                 .addComponent(DirectConsolidationRadioButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(PrivateStudentRadioButton)
-                .addGap(46, 46, 46)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(privateStudentLoanApplyButton)
-                .addGap(97, 97, 97))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -174,6 +244,10 @@ public class StudentLoanCategories extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_DirectUnsubsidizedRadioButtonActionPerformed
 
+    private void DirectPlusRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DirectPlusRadioButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DirectPlusRadioButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton DirectConsolidationRadioButton;
@@ -183,6 +257,17 @@ public class StudentLoanCategories extends javax.swing.JPanel {
     private javax.swing.JRadioButton PrivateStudentRadioButton;
     private javax.swing.JButton StudentLoanBackButton;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JTextArea jTextArea5;
     private javax.swing.JButton privateStudentLoanApplyButton;
+    private javax.swing.ButtonGroup studentLoanRadioButtons;
     // End of variables declaration//GEN-END:variables
 }

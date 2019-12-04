@@ -31,6 +31,11 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        businessLoanRadioButtons = new javax.swing.ButtonGroup();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea4 = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
         BusinessLoanApplyButton = new javax.swing.JButton();
@@ -40,6 +45,23 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
         LineOfCreditRadioButton = new javax.swing.JRadioButton();
         InvoiceFinancingRadioButton = new javax.swing.JRadioButton();
         MerchantCashAdvancesRadioButton = new javax.swing.JRadioButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextArea5 = new javax.swing.JTextArea();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jTextArea7 = new javax.swing.JTextArea();
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jScrollPane2.setViewportView(jTextArea2);
+
+        jTextArea4.setColumns(20);
+        jTextArea4.setRows(5);
+        jScrollPane4.setViewportView(jTextArea4);
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(700, 700));
@@ -68,22 +90,27 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
         });
 
         TermLoanRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        businessLoanRadioButtons.add(TermLoanRadioButton);
         TermLoanRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         TermLoanRadioButton.setText("Term Loan");
 
         SBALoanRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        businessLoanRadioButtons.add(SBALoanRadioButton);
         SBALoanRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         SBALoanRadioButton.setText("Small Business Administration (SBA) Loan");
 
         LineOfCreditRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        businessLoanRadioButtons.add(LineOfCreditRadioButton);
         LineOfCreditRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         LineOfCreditRadioButton.setText("Business Line of Credit");
 
         InvoiceFinancingRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        businessLoanRadioButtons.add(InvoiceFinancingRadioButton);
         InvoiceFinancingRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         InvoiceFinancingRadioButton.setText("Invoice Financing Loan");
 
         MerchantCashAdvancesRadioButton.setBackground(new java.awt.Color(255, 255, 255));
+        businessLoanRadioButtons.add(MerchantCashAdvancesRadioButton);
         MerchantCashAdvancesRadioButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         MerchantCashAdvancesRadioButton.setText("Merchant Cash Advances");
         MerchantCashAdvancesRadioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -92,35 +119,76 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
             }
         });
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setText("SBA loans are business loans guaranteed by the Small Business Administration. With their multiple SBA funding \nprograms, this government agency provides SBA loan guarantees of up to 85% of the loan amount.");
+        jScrollPane1.setViewportView(jTextArea1);
+        jTextArea1.setEditable(false);
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea3.setRows(5);
+        jTextArea3.setText("Apply for a term loan for as short as six months or as long as 10 years.  Rates a low as 3.25%");
+        jScrollPane3.setViewportView(jTextArea3);
+        jTextArea3.setEditable(false);
+
+        jTextArea5.setColumns(20);
+        jTextArea5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea5.setRows(5);
+        jTextArea5.setText("A small business line of credit is subject to credit review and annual renewal, and is revolving, like a credit card: \nInterest begins to accumulate once you draw funds, and the amount you pay (except for interest) is again available \nto be borrowed as you pay down your balance.");
+        jScrollPane5.setViewportView(jTextArea5);
+        jTextArea5.setEditable(false);
+
+        jTextArea6.setColumns(20);
+        jTextArea6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea6.setRows(5);
+        jTextArea6.setText("A merchant cash advance (MCA) isn’t technically a loan, but rather a cash advance based upon the credit card sales \nof a business. A small business can apply for an MCA and have an advance deposited into its account quickly.");
+        jScrollPane6.setViewportView(jTextArea6);
+        jTextArea6.getAccessibleContext().setAccessibleName("");
+        jTextArea6.getAccessibleContext().setAccessibleDescription("");
+        jTextArea6.setEditable(false);
+
+        jTextArea7.setColumns(20);
+        jTextArea7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea7.setRows(5);
+        jTextArea7.setText("Invoice financing is a way for businesses to borrow money against the amounts due from customers. Invoice \nfinancing helps businesses improve cash flow, pay employees and suppliers, and reinvest in operations and growth \nearlier than they could if they had to wait until their customers paid their balances in full.");
+        jScrollPane7.setViewportView(jTextArea7);
+        jTextArea7.setEditable(false);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(SBALoanRadioButton)
-                    .addComponent(TermLoanRadioButton)
-                    .addComponent(LineOfCreditRadioButton)
-                    .addComponent(InvoiceFinancingRadioButton)
-                    .addComponent(MerchantCashAdvancesRadioButton))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
+                .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(96, 96, 96))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(BusinessLoanBackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(80, 80, 80)))
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(36, 36, 36)
+                                .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(BusinessLoanBackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(91, 91, 91)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TermLoanRadioButton)
+                    .addComponent(SBALoanRadioButton)
+                    .addComponent(LineOfCreditRadioButton)
+                    .addComponent(InvoiceFinancingRadioButton)
+                    .addComponent(MerchantCashAdvancesRadioButton)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jScrollPane7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane6)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING))))
+                .addContainerGap(203, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(BusinessLoanApplyButton)
-                .addGap(134, 134, 134))
+                .addGap(66, 66, 66))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,22 +196,32 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(BusinessLoanBackButton))
-                .addGap(18, 18, 18)
+                    .addComponent(BusinessLoanBackButton, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
+                .addGap(16, 16, 16)
                 .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
+                .addGap(35, 35, 35)
                 .addComponent(TermLoanRadioButton)
-                .addGap(44, 44, 44)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addComponent(SBALoanRadioButton)
-                .addGap(53, 53, 53)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
                 .addComponent(LineOfCreditRadioButton)
-                .addGap(51, 51, 51)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
                 .addComponent(InvoiceFinancingRadioButton)
-                .addGap(53, 53, 53)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addComponent(MerchantCashAdvancesRadioButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(BusinessLoanApplyButton)
-                .addGap(101, 101, 101))
+                .addGap(82, 82, 82))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -178,7 +256,22 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
     private javax.swing.JRadioButton MerchantCashAdvancesRadioButton;
     private javax.swing.JRadioButton SBALoanRadioButton;
     private javax.swing.JRadioButton TermLoanRadioButton;
+    private javax.swing.ButtonGroup businessLoanRadioButtons;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JTextArea jTextArea5;
+    private final javax.swing.JTextArea jTextArea6 = new javax.swing.JTextArea();
+    private javax.swing.JTextArea jTextArea7;
     // End of variables declaration//GEN-END:variables
 }
