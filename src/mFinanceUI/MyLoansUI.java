@@ -10,6 +10,7 @@ import javax.swing.JLayeredPane;
 import javax.swing.table.DefaultTableModel;
 import mFinanceProductInformation.Loan;
 import mFinanceProductInformation.LoanList;
+import mFinanceUserInformation.Customer;
 
 /**
  *
@@ -19,28 +20,32 @@ public class MyLoansUI extends javax.swing.JPanel {
     
     private JLayeredPane JLayeredPanel;
     private String[] columnNames= {"Loan Number", "Type", "Amount"};
+    private String username;
 
     /**
      * Creates new form MyLoansUI
      */
-    public MyLoansUI(JLayeredPane j) {
-        initComponents();
-        addRowToJTable();
+    public MyLoansUI(JLayeredPane j, String user) {
+        initComponents();        
         setVisible(true);
         JLayeredPanel = j;
+        username = user;
+        addRowToJTable();
     }
     
     public void addRowToJTable() {
         DefaultTableModel model = (DefaultTableModel) loansTable.getModel();
         LoanList loanList = new LoanList();
-        ArrayList<Loan> list = loanList.getLoanList();
+        ArrayList<Loan> list = loanList.getLoanList(username);
         Object[] rowData = new Object[4];
-        for(int i = 0; i < list.size(); i++) {
-            rowData[0] = list.get(i).getLoanNumber();
-            rowData[1] = list.get(i).getLoanType();
-            rowData[2] = list.get(i).getAmount();
-            rowData[3] = list.get(i).getStatus();
-            model.addRow(rowData);
+        if(list != null){
+            for(int i = 0; i < list.size(); i++) {
+                rowData[0] = list.get(i).getLoanNumber();
+                rowData[1] = list.get(i).getLoanType();
+                rowData[2] = list.get(i).getAmount();
+                rowData[3] = list.get(i).getStatus();
+                model.addRow(rowData);
+            }
         }
     }
 
@@ -56,6 +61,8 @@ public class MyLoansUI extends javax.swing.JPanel {
         myLoansLabel = new javax.swing.JLabel();
         loansTableJScrollPane = new javax.swing.JScrollPane();
         loansTable = new javax.swing.JTable();
+
+        setBackground(java.awt.Color.white);
 
         myLoansLabel.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
         myLoansLabel.setText("My Loans");

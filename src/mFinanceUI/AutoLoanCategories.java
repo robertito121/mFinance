@@ -4,15 +4,16 @@ import java.awt.*;
 import javax.swing.JLayeredPane;
 public class AutoLoanCategories extends javax.swing.JPanel {
     private JLayeredPane jLayeredPane;
+    private String username;
 
     /**
      * Creates new form AutoLoanCategories
      */
-    public AutoLoanCategories(JLayeredPane j) {
+    public AutoLoanCategories(JLayeredPane j, String user) {
         initComponents();
         setVisible(true);
         jLayeredPane = j;
-    
+        username = user;
     }
 
     /**
@@ -188,7 +189,7 @@ public class AutoLoanCategories extends javax.swing.JPanel {
 
     private void AutoLoanBackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AutoLoanBackButtonActionPerformed
         // TODO add your handling code here:
-        ProductUi productUI = new ProductUi(jLayeredPane);
+        ProductUi productUI = new ProductUi(jLayeredPane, username);
         jLayeredPane.removeAll();
         jLayeredPane.add(productUI);
         jLayeredPane.repaint();
@@ -197,7 +198,7 @@ public class AutoLoanCategories extends javax.swing.JPanel {
 
     private void AutoLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AutoLoanApplyButtonActionPerformed
         // TODO add your handling code here:
-        ApplicationForm applicationForm = new ApplicationForm(jLayeredPane);
+        ApplicationForm applicationForm = new ApplicationForm(jLayeredPane, username);
         jLayeredPane.removeAll();
         jLayeredPane.add(applicationForm);
         jLayeredPane.repaint();

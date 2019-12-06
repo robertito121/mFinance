@@ -23,13 +23,15 @@ import mFinanceProductInformation.PersonalDataApplication;
  */
 public class ApplicationForm extends javax.swing.JPanel {
     private JLayeredPane jLayeredPane;
+    private String username;
     /**
      * Creates new form ApplicationForm
      */
-    public ApplicationForm(JLayeredPane j) {
+    public ApplicationForm(JLayeredPane j, String user) {
         initComponents();
         setVisible(true);
         jLayeredPane = j;
+        username = user;
     }
 
     /**
@@ -380,7 +382,6 @@ public class ApplicationForm extends javax.swing.JPanel {
         
         //Making loanlist
         LoanList list = new LoanList();
-        list.getLoanList();
         
         String loanType;
         loanType = jComboBoxLoanType.getSelectedItem().toString();
@@ -391,8 +392,8 @@ public class ApplicationForm extends javax.swing.JPanel {
         amount = Double.parseDouble(amountString);
         
         //making loan object
-        Loan loan = new Loan(list.getLastLoanNumber(), loanType, amount, "Pending Approval");
-        list.addLoan(loan);
+        Loan loan = new Loan(list.getLastLoanNumber(username), loanType, amount, "Pending Approval");
+        list.addLoan(username ,loan);
         
         String collateral = jTextFieldProposedCollaterals.getText();
         String stringDate = jTextFieldDateDay.getText() + "/" + jTextFieldDateMonth.getText() + "/" +

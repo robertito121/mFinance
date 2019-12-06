@@ -10,14 +10,16 @@ import javax.swing.JLayeredPane;
  */
 public class MortgageLoanCategories extends javax.swing.JPanel {
     private JLayeredPane jLayeredPane;
+    private String username;
     /**
      * Creates new form MortgageLoanCategories
      */
-    public MortgageLoanCategories(JLayeredPane j) {
+    public MortgageLoanCategories(JLayeredPane j, String user) {
         //jLabel1.setFont(new Font("TimesRoman", Font.PLAIN, 45));
         initComponents();
         setVisible(true);
         jLayeredPane = j;
+        username = user;
     }
 
     /**
@@ -183,7 +185,7 @@ public class MortgageLoanCategories extends javax.swing.JPanel {
 
     private void MortgageLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MortgageLoanApplyButtonActionPerformed
         // TODO add your handling code here:
-        ApplicationForm applicationForm = new ApplicationForm(jLayeredPane);
+        ApplicationForm applicationForm = new ApplicationForm(jLayeredPane, username);
         jLayeredPane.removeAll();
         jLayeredPane.add(applicationForm);
         jLayeredPane.repaint();
@@ -192,7 +194,7 @@ public class MortgageLoanCategories extends javax.swing.JPanel {
 
     private void MortgageLoanBackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MortgageLoanBackButtonActionPerformed
         // TODO add your handling code here:
-        ProductUi productUI = new ProductUi(jLayeredPane);
+        ProductUi productUI = new ProductUi(jLayeredPane, username);
         jLayeredPane.removeAll();
         jLayeredPane.add(productUI);
         jLayeredPane.repaint();

@@ -12,13 +12,15 @@ package mFinanceUI;
 import javax.swing.JLayeredPane;
 public class StudentLoanCategories extends javax.swing.JPanel {
     private JLayeredPane jLayeredPane;
+    private String username;
     /**
      * Creates new form StudentLoansCategories
      */
-    public StudentLoanCategories(JLayeredPane j) {
+    public StudentLoanCategories(JLayeredPane j, String user) {
         initComponents();
         setVisible(true);
         jLayeredPane = j;
+        username = user;
     }
 
     /**
@@ -216,7 +218,7 @@ public class StudentLoanCategories extends javax.swing.JPanel {
 
     private void privateStudentLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_privateStudentLoanApplyButtonActionPerformed
         // TODO add your handling code here:
-        ApplicationForm applicationForm = new ApplicationForm(jLayeredPane);
+        ApplicationForm applicationForm = new ApplicationForm(jLayeredPane, username);
         jLayeredPane.removeAll();
         jLayeredPane.add(applicationForm);
         jLayeredPane.repaint();
@@ -233,7 +235,7 @@ public class StudentLoanCategories extends javax.swing.JPanel {
 
     private void StudentLoanBackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StudentLoanBackButtonActionPerformed
         // TODO add your handling code here:
-        ProductUi productUI = new ProductUi(jLayeredPane);
+        ProductUi productUI = new ProductUi(jLayeredPane, username);
         jLayeredPane.removeAll();
         jLayeredPane.add(productUI);
         jLayeredPane.repaint();

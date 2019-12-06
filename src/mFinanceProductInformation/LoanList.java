@@ -7,18 +7,17 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 
 public class LoanList {
-
-
-    private ArrayList<Loan> loanList;
+    
+    private HashMap<String, ArrayList<Loan>> loanMap;
     private final String listOfLoans = "listOfLoans.ser";
 
     public LoanList() {
-        //initialize loanlist
-        loanList = new ArrayList<>();
-        this.readLoanListFile();
+        loanMap = new HashMap<String, ArrayList<Loan>>();
+        this.readLoanMapFile();
     }
     
 
@@ -28,8 +27,10 @@ public class LoanList {
      *
      * @return the value of loanList
      */
-    public ArrayList<Loan> getLoanList() {
-        return loanList;
+    public ArrayList<Loan> getLoanList(String user) {
+        ArrayList<Loan> loans = new ArrayList<Loan>();
+        loans = loanMap.get(user);
+        return loans;
     }
 
     /**
@@ -37,50 +38,73 @@ public class LoanList {
      *
      * @param loanList new value of loanList
      */
-    public void addLoan(Loan loan) {
-        loanList.add(loan);
-        writeLoanListFile();
+    public void addLoan(String userId ,Loan loan) {
+        ArrayList<Loan> loans = new ArrayList<Loan>();
+        System.out.println("Loan Added to " + userId);
+        if (loanMap.get(userId) != null){
+            loans = loanMap.get(userId);
+        }
+        loans.add(loan);
+        loanMap.put(userId, loans);
+        this.writeLoanMapFile();
     }
     
-     private void readLoanListFile() {
+     private void readLoanMapFile() {
         FileInputStream fis = null;
         ObjectInputStream in = null;
         try {
             fis = new FileInputStream(listOfLoans);
             in = new ObjectInputStream(fis);
-            loanList = (ArrayList<Loan>) in.readObject();
+            setLoanMap((HashMap<String, ArrayList<Loan>>) in.readObject());
             in.close();
-            if (!loanList.isEmpty()) {
-            }
         } catch (IOException | ClassNotFoundException ex) {
         }
     }
     
-    public void writeLoanListFile() {
+    public void writeLoanMapFile() {
         FileOutputStream fos = null;
         ObjectOutputStream out = null;
         try {
             fos = new FileOutputStream(listOfLoans);
             out = new ObjectOutputStream(fos);
-            out.writeObject(loanList);
+            out.writeObject(loanMap);
             out.close();
         } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
     
-    public int getLastLoanNumber() {
+    public int getLastLoanNumber(String userId) {
         int number;
         int index;
-        
-        if (!loanList.isEmpty()){
+        Loan loan;
+        ArrayList<Loan> loanList = new  ArrayList<Loan>();
+        loanList = getLoanList(userId);
+        System.out.println(loanList);
+        if (loanList != null){
             index = loanList.size()-1;
-            number = loanList.get(index).getLoanNumber()+1;
+            number = loanList.get(index).getLoanNumber()+1;            
         }
         else {
             number = 1;
         }
         return number;
+    }
+    
+
+
+    /**
+     * @return the loanMap
+     */
+    public HashMap<String, ArrayList<Loan>> getLoanMap() {
+        return loanMap;
+    }
+
+    /**
+     * @param loanMap the loanMap to set
+     */
+    public void setLoanMap(HashMap<String, ArrayList<Loan>> loanMap) {
+        this.loanMap = loanMap;
     }
     
 }
