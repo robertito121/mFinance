@@ -186,7 +186,7 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
                             .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane6)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING))))
-                .addContainerGap(203, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(BusinessLoanApplyButton)
@@ -205,7 +205,7 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
                 .addComponent(TermLoanRadioButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(SBALoanRadioButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -217,7 +217,7 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
                 .addComponent(InvoiceFinancingRadioButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(MerchantCashAdvancesRadioButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -230,6 +230,22 @@ public class BusinessLoanCategories extends javax.swing.JPanel {
     private void BusinessLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BusinessLoanApplyButtonActionPerformed
         // TODO add your handling code here:
         ApplicationForm applicationForm = new ApplicationForm(jLayeredPane, username);
+        if(TermLoanRadioButton.isSelected()){
+           applicationForm.getjComboBoxLoanType().setSelectedIndex(0); 
+        }
+        if(SBALoanRadioButton.isSelected()){
+           applicationForm.getjComboBoxLoanType().setSelectedIndex(1); 
+        }
+        if(MerchantCashAdvancesRadioButton.isSelected()){
+           applicationForm.getjComboBoxLoanType().setSelectedIndex(4); 
+        }
+        if(LineOfCreditRadioButton.isSelected()){
+           applicationForm.getjComboBoxLoanType().setSelectedIndex(2); 
+        }
+        if(InvoiceFinancingRadioButton.isSelected()){
+           applicationForm.getjComboBoxLoanType().setSelectedIndex(3); 
+        }
+        
         jLayeredPane.removeAll();
         jLayeredPane.add(applicationForm);
         jLayeredPane.repaint();

@@ -27,6 +27,8 @@ public class ApplicationForm extends javax.swing.JPanel {
     /**
      * Creates new form ApplicationForm
      */
+    
+    
     public ApplicationForm(JLayeredPane j, String user) {
         initComponents();
         setVisible(true);
@@ -77,7 +79,7 @@ public class ApplicationForm extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         jLabel1.setText("Personal Information");
 
-        jComboBoxLoanType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Business – Term Loan", "Business – SBA Loan", "Business – Line Of Credit", "Business – Financing Loan", "Business – Merchant Cash Advances", "Auto – New Car Loan", "Auto – Used Car Loan", "Auto -Motorcycle/Boat", "Auto -Refinance Loan", "Student – Direct Subsidized", "Student – Direct Unsubsidized", "Student – Direct PLUS", "Student – Direct Consolidation", "Student – Private Student Loan", "Mortgage – Fixed Rate", "Mortgage – Variable Rate", "Mortgage – First Time Buyer", "Mortgage – VA Loan", "Personal – Fixed Rate", "Personal – Variable Rate", "Personal – Debt Consolidation", "Personal – Co-Sign", "Personal – Line of Credit" }));
+        jComboBoxLoanType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Business – Term Loan", "Business – SBA Loan", "Business – Line Of Credit", "Business – Invoice Financing Loan", "Business – Merchant Cash Advances", "Auto – New Car Loan", "Auto – Used Car Loan", "Auto -Motorcycle/Boat", "Auto -Refinance Loan", "Student – Refinance", "Student – Private Student Loan", "Mortgage – Fixed Rate", "Mortgage – Variable Rate", "Mortgage – First Time Buyer", "Mortgage – VA Loan", "Personal – Fixed Rate", "Personal – Variable Rate", "Personal – Debt Consolidation", "Personal – Co-Sign", "Personal – Line of Credit" }));
         jComboBoxLoanType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxLoanTypeActionPerformed(evt);
@@ -203,32 +205,26 @@ public class ApplicationForm extends javax.swing.JPanel {
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(57, 57, 57)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jComboBoxLoanType, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextFieldLoanAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jTextFieldLoanAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBoxLoanType, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(76, 76, 76)
-                                .addComponent(jLabel6))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(jLabelDate)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextFieldDateDay, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextFieldDateMonth, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextFieldDateYear, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(jLabelProposedCollaterals)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextFieldProposedCollaterals, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(48, 48, 48)))
+                        .addGap(76, 76, 76)
+                        .addComponent(jLabel6))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jLabelDate)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextFieldDateDay, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextFieldDateMonth, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextFieldDateYear, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jLabelProposedCollaterals)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextFieldProposedCollaterals, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -465,4 +461,12 @@ public class ApplicationForm extends javax.swing.JPanel {
     private javax.swing.JTextField jTextFieldProposedCollaterals;
     private javax.swing.JTextField jTextFieldSocialSecurityNumber;
     // End of variables declaration//GEN-END:variables
+
+    public javax.swing.JComboBox<String> getjComboBoxLoanType() {
+        return jComboBoxLoanType;
+    }
+
+    public void setjComboBoxLoanType(javax.swing.JComboBox<String> jComboBoxLoanType) {
+        this.jComboBoxLoanType = jComboBoxLoanType;
+    }
 }

@@ -186,6 +186,18 @@ public class MortgageLoanCategories extends javax.swing.JPanel {
     private void MortgageLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MortgageLoanApplyButtonActionPerformed
         // TODO add your handling code here:
         ApplicationForm applicationForm = new ApplicationForm(jLayeredPane, username);
+        if(FixedRateRadioButton.isSelected()){
+           applicationForm.getjComboBoxLoanType().setSelectedIndex(11); 
+        }
+        if(VariableRateRadioButton.isSelected()){
+           applicationForm.getjComboBoxLoanType().setSelectedIndex(12); 
+        }
+        if(FirstTimeBuyerRadioButton.isSelected()){
+           applicationForm.getjComboBoxLoanType().setSelectedIndex(13); 
+        }
+        if(VAMortgageRadioButton.isSelected()){
+           applicationForm.getjComboBoxLoanType().setSelectedIndex(14); 
+        }
         jLayeredPane.removeAll();
         jLayeredPane.add(applicationForm);
         jLayeredPane.repaint();

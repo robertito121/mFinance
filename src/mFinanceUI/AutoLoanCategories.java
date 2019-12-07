@@ -199,6 +199,18 @@ public class AutoLoanCategories extends javax.swing.JPanel {
     private void AutoLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AutoLoanApplyButtonActionPerformed
         // TODO add your handling code here:
         ApplicationForm applicationForm = new ApplicationForm(jLayeredPane, username);
+         if(NewCarLoanRadioButton.isSelected()){
+           applicationForm.getjComboBoxLoanType().setSelectedIndex(5); 
+        }
+        if(UsedCarRadioButton.isSelected()){
+           applicationForm.getjComboBoxLoanType().setSelectedIndex(6); 
+        }
+        if(AutoRefinanceRadioButton.isSelected()){
+           applicationForm.getjComboBoxLoanType().setSelectedIndex(8); 
+        }
+        if(OtherLoanRadioButton.isSelected()){
+           applicationForm.getjComboBoxLoanType().setSelectedIndex(7); 
+        }
         jLayeredPane.removeAll();
         jLayeredPane.add(applicationForm);
         jLayeredPane.repaint();
