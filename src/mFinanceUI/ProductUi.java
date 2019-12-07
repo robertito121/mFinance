@@ -15,14 +15,16 @@ import javax.swing.JLayeredPane;
 public class ProductUi extends javax.swing.JPanel {
 
     private JLayeredPane mainPanel;
+    private String username;
     /**
      * Creates new form ProductUi
      */
-    public ProductUi(JLayeredPane j) {
+    public ProductUi(JLayeredPane j, String user) {
         
         initComponents();
         setVisible(true);
         mainPanel = j;
+        username = user;
     }
 
     /**
@@ -40,6 +42,16 @@ public class ProductUi extends javax.swing.JPanel {
         mortgageButton = new javax.swing.JButton();
         personalButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea4 = new javax.swing.JTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextArea5 = new javax.swing.JTextArea();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -88,70 +100,121 @@ public class ProductUi extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabel1.setText("Loan Type");
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+        jTextArea1.setEditable(false);
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea2.setRows(5);
+        jScrollPane2.setViewportView(jTextArea2);
+        jTextArea1.setEditable(false);
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea3.setRows(5);
+        jScrollPane3.setViewportView(jTextArea3);
+        jTextArea1.setEditable(false);
+
+        jTextArea4.setColumns(20);
+        jTextArea4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea4.setRows(5);
+        jScrollPane4.setViewportView(jTextArea4);
+        jTextArea1.setEditable(false);
+
+        jTextArea5.setColumns(20);
+        jTextArea5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea5.setRows(5);
+        jScrollPane5.setViewportView(jTextArea5);
+        jTextArea1.setEditable(false);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(businessButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(vehicleButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(studentButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(mortgageButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(personalButton)
-                .addContainerGap(50, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(217, 217, 217))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(businessButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(studentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(vehicleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(mortgageButton)
+                            .addComponent(personalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(124, 124, 124)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(742, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(113, 113, 113)
+                .addGap(65, 65, 65)
                 .addComponent(jLabel1)
-                .addGap(59, 59, 59)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(businessButton)
-                    .addComponent(vehicleButton)
+                .addGap(47, 47, 47)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(personalButton)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(19, 19, 19)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(studentButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mortgageButton)
-                    .addComponent(personalButton))
-                .addContainerGap(196, Short.MAX_VALUE))
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(13, 13, 13)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(vehicleButton)
+                        .addGap(45, 45, 45)
+                        .addComponent(mortgageButton)
+                        .addGap(49, 49, 49)
+                        .addComponent(businessButton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void personalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personalButtonActionPerformed
         // TODO add your handling code here:
-        PersonalLoanCategories personalPanel = new PersonalLoanCategories(mainPanel);
+        PersonalLoanCategories personalPanel = new PersonalLoanCategories(mainPanel, username);
         changeScreen(personalPanel);
     }//GEN-LAST:event_personalButtonActionPerformed
 
     private void businessButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_businessButtonActionPerformed
         // TODO add your handling code here:
-        BusinessLoanCategories businessPanel = new BusinessLoanCategories(mainPanel);
+        BusinessLoanCategories businessPanel = new BusinessLoanCategories(mainPanel, username);
         changeScreen(businessPanel);
     }//GEN-LAST:event_businessButtonActionPerformed
 
     private void vehicleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vehicleButtonActionPerformed
         // TODO add your handling code here:
-        AutoLoanCategories auto = new AutoLoanCategories(mainPanel);
+        AutoLoanCategories auto = new AutoLoanCategories(mainPanel, username);
         changeScreen(auto);
     }//GEN-LAST:event_vehicleButtonActionPerformed
 
     private void studentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentButtonActionPerformed
         // TODO add your handling code here:
-        StudentLoanCategories studentPanel = new StudentLoanCategories(mainPanel);
+        StudentLoanCategories studentPanel = new StudentLoanCategories(mainPanel, username);
         changeScreen(studentPanel);
     }//GEN-LAST:event_studentButtonActionPerformed
 
     private void mortgageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mortgageButtonActionPerformed
         // TODO add your handling code here:
-        MortgageLoanCategories mortgage = new MortgageLoanCategories( mainPanel);
+        MortgageLoanCategories mortgage = new MortgageLoanCategories( mainPanel, username);
         changeScreen(mortgage);
     }//GEN-LAST:event_mortgageButtonActionPerformed
 
@@ -172,6 +235,16 @@ public class ProductUi extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton businessButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JTextArea jTextArea5;
     private javax.swing.JButton mortgageButton;
     private javax.swing.JButton personalButton;
     private javax.swing.JButton studentButton;

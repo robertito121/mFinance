@@ -6,6 +6,7 @@
 package mFinanceUI;
 
 import javax.swing.JFrame;
+import mFinanceProductInformation.LoanList;
 import mFinanceUserInformation.Address;
 import mFinanceUserInformation.Customer;
 import mFinanceUserInformation.CustomerList;
@@ -288,7 +289,7 @@ public class RegisterForm extends javax.swing.JFrame {
         Customer newCustomer = new Customer(firstname, lastName, customerId, address, phoneNumber, emailAdress, credentials);
         CustomerList customerList = new CustomerList();
         customerList.addCustomerToList(newCustomer);
-        MainUI mainUI = new MainUI();
+        MainUI mainUI = new MainUI(newCustomer);
         mainUI.setVisible(true);
         loginFrame.dispose();
         this.dispose();

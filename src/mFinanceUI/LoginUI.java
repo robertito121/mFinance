@@ -147,7 +147,7 @@ public class LoginUI extends javax.swing.JFrame {
             jLabel2.setText("Incorrect Password");
         }
         else {
-            MainUI mainUI = new MainUI();
+            MainUI mainUI = new MainUI(customerList.getCustomersListById(username).get(0));
             mainUI.setVisible(true);
             this.dispose();
         }

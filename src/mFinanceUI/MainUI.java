@@ -5,13 +5,9 @@
  */
 package mFinanceUI;
 
-import java.awt.CardLayout;
 import java.awt.Color;
-import java.awt.Component;
-import java.awt.Graphics;
-import java.awt.Insets;
-import javax.swing.border.Border;
 import javax.swing.plaf.BorderUIResource;
+import mFinanceUserInformation.Customer;
 
 /**
  *
@@ -19,10 +15,13 @@ import javax.swing.plaf.BorderUIResource;
  */
 public class MainUI extends javax.swing.JFrame {
 
+    Customer user;
+    
     /**
      * Creates new form MainUI
      */
-    public MainUI() {
+    public MainUI(Customer username) {
+        user = username;
         initComponents();
         setSize(1000,1000);
         setResizable(false);
@@ -181,7 +180,7 @@ public class MainUI extends javax.swing.JFrame {
 
     private void viewProductsMenyItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewProductsMenyItemActionPerformed
 
-        ProductUi productsUi = new ProductUi(jLayeredPane1);
+        ProductUi productsUi = new ProductUi(jLayeredPane1, user.getCustomerId());
         jLayeredPane1.removeAll();
         jLayeredPane1.add(productsUi);
         jLayeredPane1.repaint();
@@ -213,7 +212,7 @@ public class MainUI extends javax.swing.JFrame {
         myLoansButton.setBorder(null);
         myProfileButton.setBackground(null);
         paymentsButton.setBackground(null);
-        MyLoansUI myLoans = new MyLoansUI(jLayeredPane1);
+        MyLoansUI myLoans = new MyLoansUI(jLayeredPane1, user.getCustomerId());
         jLayeredPane1.removeAll();
         jLayeredPane1.add(myLoans);
         jLayeredPane1.repaint();
@@ -236,6 +235,11 @@ public class MainUI extends javax.swing.JFrame {
         paymentsButton.setBorder(null);
         myProfileButton.setBackground(null);
         myLoansButton.setBackground(null);
+        PaymentUi myPayment = new PaymentUi(jLayeredPane1, user.getCustomerId());
+        jLayeredPane1.removeAll();
+        jLayeredPane1.add(myPayment);
+        jLayeredPane1.repaint();
+        jLayeredPane1.revalidate();
         
     }//GEN-LAST:event_paymentsButtonMouseClicked
 
