@@ -130,7 +130,10 @@ public class PaymentUi extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void paymentFotmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paymentFotmButtonActionPerformed
-        // TODO add your handling code here:
+
+        PaymentForm paymentForm = new PaymentForm();
+        //changeScreen(paymentForm);
+        //Need help making the PaymentForm JPanel class to display once this button is pressed.
     }//GEN-LAST:event_paymentFotmButtonActionPerformed
 
 
