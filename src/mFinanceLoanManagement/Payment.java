@@ -109,5 +109,19 @@ public class Payment implements Serializable{
         this.amount = amount;
     }
 
+    /**
+     * @return the confirmation
+     */
+    public PaymentConfirmation getConfirmation() {
+        return confirmation;
+    }
+
+    /**
+     * @param confirmation the confirmation to set
+     */
+    public void setConfirmation(PaymentConfirmation confirmation) {
+        this.confirmation = confirmation;
+    }
+
 }
 

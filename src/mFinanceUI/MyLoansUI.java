@@ -42,7 +42,7 @@ public class MyLoansUI extends javax.swing.JPanel {
             for(int i = 0; i < list.size(); i++) {
                 rowData[0] = list.get(i).getLoanNumber();
                 rowData[1] = list.get(i).getLoanType();
-                rowData[2] = list.get(i).getAmount();
+                rowData[2] = "$"+list.get(i).getAmount();
                 rowData[3] = list.get(i).getStatus();
                 model.addRow(rowData);
             }
@@ -80,7 +80,7 @@ public class MyLoansUI extends javax.swing.JPanel {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
                 false, false, false, false
@@ -99,6 +99,7 @@ public class MyLoansUI extends javax.swing.JPanel {
         if (loansTable.getColumnModel().getColumnCount() > 0) {
             loansTable.getColumnModel().getColumn(0).setResizable(false);
             loansTable.getColumnModel().getColumn(1).setResizable(false);
+            loansTable.getColumnModel().getColumn(2).setResizable(false);
             loansTable.getColumnModel().getColumn(3).setResizable(false);
         }
 

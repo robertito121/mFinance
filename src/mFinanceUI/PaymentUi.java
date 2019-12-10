@@ -34,12 +34,13 @@ public class PaymentUi extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) loansTable.getModel();
         PaymentList paymentList = new PaymentList();
         ArrayList<Payment> list = paymentList.getPaymentList(user);
-        Object[] rowData = new Object[2];
+        Object[] rowData = new Object[4];
         if(list != null){
             for(int i = 0; i < list.size(); i++) {
                 rowData[0] = list.get(i).getLoanNumber(); 
-                rowData[1] = list.get(i).getAmount();
-                //rowData[2] = list.get(i).getDate();
+                rowData[1] = "$"+list.get(i).getAmount();
+                rowData[2] = list.get(i).getConfirmation().getTransactionDate();
+                rowData[3] = list.get(i).getConfirmation().getConfirmationNumber();
                 model.addRow(rowData);
             }
         }
@@ -68,14 +69,14 @@ public class PaymentUi extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Number", "Amount"
+                "Loan Number", "Amount", "Date", "Confirmation Number"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Double.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false
+                false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -91,6 +92,8 @@ public class PaymentUi extends javax.swing.JPanel {
         if (loansTable.getColumnModel().getColumnCount() > 0) {
             loansTable.getColumnModel().getColumn(0).setResizable(false);
             loansTable.getColumnModel().getColumn(1).setResizable(false);
+            loansTable.getColumnModel().getColumn(2).setResizable(false);
+            loansTable.getColumnModel().getColumn(3).setResizable(false);
         }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
