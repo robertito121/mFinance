@@ -35,7 +35,7 @@ public class MyProfile extends javax.swing.JPanel {
         phoneNumber.setText(user.getPhoneNumber());
         emailAddress.setText(user.getEmailAddress());
         userName.setText(user.getCredentials().getUsername());
-        password.setText(user.getCredentials().getPassword());
+        password.setText(user.getCredentials().getPassword().substring(0, 2)+"*******");
         
     }
 
