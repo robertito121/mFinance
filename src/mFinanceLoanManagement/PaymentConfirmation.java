@@ -16,7 +16,7 @@ public class PaymentConfirmation {
     private String transactionDate;
 
     /**
-     * Constructor generates a random confirmation number everytime during instantiation
+     * Constructor generates a random confirmation number every time during instantiation
      * it also gets the date of transaction
      */
     public PaymentConfirmation() {
@@ -26,7 +26,7 @@ public class PaymentConfirmation {
     }
 
     /**
-     * generates a randon confirmation number
+     * generates a random confirmation number
      * @param length
      * @return String
      */

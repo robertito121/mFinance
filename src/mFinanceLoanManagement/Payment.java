@@ -6,8 +6,10 @@ import mFinanceUserInformation.Address;
 public class Payment {
 
     //Payment: Loan_number, amount, account, type
-    private int loanNumber;
-    private double amount;
+    private String loanNumber;
+    private String amount;
+    private String chargeNumber;
+    private PaymentConfirmation confirmation;
 
 
     /**
@@ -15,9 +17,11 @@ public class Payment {
      * @param loanNumber
      * @param paymentAmount
      */
-    public Payment (int loanNumber, double paymentAmount){
+    public Payment (String loanNumber, String paymentAmount,String chargeNumber, PaymentConfirmation confirmation){
         this.loanNumber = loanNumber;
         this.amount = amount;
+        this.chargeNumber = chargeNumber;
+        this.confirmation = confirmation;
     }
 
     /**
@@ -75,7 +79,7 @@ public class Payment {
      * Get the loanNumber attribute of the user
      * @return loanNumber of the user
      */
-    public int getLoanNumber() {
+    public String getLoanNumber() {
         return loanNumber;
     }
 
@@ -83,7 +87,7 @@ public class Payment {
      * Set the loanNumber attribute of the user
      * @param loanNumber
      */
-    public void setLoanNumber(int loanNumber) {
+    public void setLoanNumber(String loanNumber) {
         this.loanNumber = loanNumber;
     }
 
@@ -91,7 +95,7 @@ public class Payment {
      * Get the amount attribute of the user
      * @return amount of the user
      */
-    public double getAmount() {
+    public String getAmount() {
         return amount;
     }
 
@@ -99,7 +103,7 @@ public class Payment {
      * Set the amount attribute of the user
      * @param amount
      */
-    public void setAmount(double amount) {
+    public void setAmount(String amount) {
         this.amount = amount;
     }
 

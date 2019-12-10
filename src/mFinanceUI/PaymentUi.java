@@ -19,7 +19,7 @@ import mFinanceUserInformation.Customer;
 public class PaymentUi extends javax.swing.JPanel {
 
     String user;
-    
+
     /**
      * Creates new form PaymentUi
      */

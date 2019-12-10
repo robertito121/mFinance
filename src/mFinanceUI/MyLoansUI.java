@@ -63,7 +63,8 @@ public class MyLoansUI extends javax.swing.JPanel {
         myLoansLabel = new javax.swing.JLabel();
         loansTableJScrollPane = new javax.swing.JScrollPane();
         loansTable = new javax.swing.JTable();
-        paymentFotmButton = new javax.swing.JButton();
+        paymentFormButton = new javax.swing.JButton();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 32767));
 
         setBackground(java.awt.Color.white);
 
@@ -101,10 +102,10 @@ public class MyLoansUI extends javax.swing.JPanel {
             loansTable.getColumnModel().getColumn(3).setResizable(false);
         }
 
-        paymentFotmButton.setText("Payment Form");
-        paymentFotmButton.addActionListener(new java.awt.event.ActionListener() {
+        paymentFormButton.setText("Payment Form");
+        paymentFormButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                paymentFotmButtonActionPerformed(evt);
+                paymentFormButtonActionPerformed(evt);
             }
         });
 
@@ -112,10 +113,6 @@ public class MyLoansUI extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(paymentFotmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(322, 322, 322))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -123,8 +120,13 @@ public class MyLoansUI extends javax.swing.JPanel {
                         .addComponent(myLoansLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addComponent(loansTableJScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 712, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(60, Short.MAX_VALUE))
+                        .addComponent(loansTableJScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 712, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(312, 312, 312)
+                        .addComponent(paymentFormButton, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -133,13 +135,18 @@ public class MyLoansUI extends javax.swing.JPanel {
                 .addComponent(myLoansLabel)
                 .addGap(22, 22, 22)
                 .addComponent(loansTableJScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(paymentFotmButton, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
-                .addGap(7, 7, 7))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(paymentFormButton, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void paymentFotmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paymentFotmButtonActionPerformed
+    private void paymentFormButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paymentFormButtonActionPerformed
 
         Loan loan;
         LoanList loanList = new LoanList();
@@ -154,13 +161,14 @@ public class MyLoansUI extends javax.swing.JPanel {
             JLayeredPanel.repaint();
             JLayeredPanel.revalidate();
         }
-    }//GEN-LAST:event_paymentFotmButtonActionPerformed
+    }//GEN-LAST:event_paymentFormButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.Box.Filler filler1;
     private javax.swing.JTable loansTable;
     private javax.swing.JScrollPane loansTableJScrollPane;
     private javax.swing.JLabel myLoansLabel;
-    private javax.swing.JButton paymentFotmButton;
+    private javax.swing.JButton paymentFormButton;
     // End of variables declaration//GEN-END:variables
 }
