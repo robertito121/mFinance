@@ -1,13 +1,14 @@
 package mFinanceLoanManagement;
 
 
+import java.io.Serializable;
 import mFinanceUserInformation.Address;
 
-public class Payment {
+public class Payment implements Serializable{
 
     //Payment: Loan_number, amount, account, type
     private String loanNumber;
-    private String amount;
+    private double amount;
     private String chargeNumber;
     private PaymentConfirmation confirmation;
 
@@ -17,11 +18,11 @@ public class Payment {
      * @param loanNumber
      * @param paymentAmount
      */
-    public Payment (String loanNumber, String paymentAmount,String chargeNumber, PaymentConfirmation confirmation){
-        this.loanNumber = loanNumber;
-        this.amount = amount;
-        this.chargeNumber = chargeNumber;
-        this.confirmation = confirmation;
+    public Payment (String newLoanNumber, double newPaymentAmount, String newChargeNumber, PaymentConfirmation newConfirmation){
+        loanNumber = newLoanNumber;
+        amount = newPaymentAmount;
+        chargeNumber = newChargeNumber;
+        confirmation = newConfirmation;
     }
 
     /**
@@ -95,7 +96,8 @@ public class Payment {
      * Get the amount attribute of the user
      * @return amount of the user
      */
-    public String getAmount() {
+    public double getAmount() {
+        System.out.println(amount);
         return amount;
     }
 
@@ -103,7 +105,7 @@ public class Payment {
      * Set the amount attribute of the user
      * @param amount
      */
-    public void setAmount(String amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 

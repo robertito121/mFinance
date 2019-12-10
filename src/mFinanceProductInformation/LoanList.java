@@ -79,7 +79,6 @@ public class LoanList {
         Loan loan;
         ArrayList<Loan> loanList = new  ArrayList<Loan>();
         loanList = getLoanList(userId);
-        System.out.println(loanList);
         if (loanList != null){
             index = loanList.size()-1;
             number = loanList.get(index).getLoanNumber()+1;            

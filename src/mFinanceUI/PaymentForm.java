@@ -143,7 +143,8 @@ public class PaymentForm extends javax.swing.JPanel {
         String loanNumber = loanNumberTextField.getText();
         String paymentAmount = paymentAmountTextField.getText();
         String chargeNumber = chargeNumberTextField.getText();
-        payment = new Payment(loanNumber, paymentAmount, chargeNumber, confirmation);
+        double paymentAmountNumber = Double.parseDouble(paymentAmount);
+        payment = new Payment(loanNumber, paymentAmountNumber, chargeNumber, confirmation);
         paymentList.addPaymentToList(payment, userID);
     }//GEN-LAST:event_submitButtonActionPerformed
 

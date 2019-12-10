@@ -37,7 +37,7 @@ public class PaymentUi extends javax.swing.JPanel {
         Object[] rowData = new Object[2];
         if(list != null){
             for(int i = 0; i < list.size(); i++) {
-                rowData[0] = list.get(i).getLoanNumber();                
+                rowData[0] = list.get(i).getLoanNumber(); 
                 rowData[1] = list.get(i).getAmount();
                 //rowData[2] = list.get(i).getDate();
                 model.addRow(rowData);
