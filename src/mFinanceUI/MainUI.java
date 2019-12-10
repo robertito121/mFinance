@@ -25,6 +25,12 @@ public class MainUI extends javax.swing.JFrame {
         initComponents();
         setSize(1000,1000);
         setResizable(false);
+        MyProfile myProfile = new MyProfile(jLayeredPane1, user);
+        jLayeredPane1.removeAll();
+        jLayeredPane1.add(myProfile);
+        jLayeredPane1.repaint();
+        jLayeredPane1.revalidate();
+
     }
 
     /**
