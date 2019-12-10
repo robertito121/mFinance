@@ -4,19 +4,34 @@
  * and open the template in the editor.
  */
 package mFinanceUI;
+import javax.swing.JLayeredPane;
+import mFinanceLoanManagement.Payment;
+import mFinanceLoanManagement.PaymentList;
+import mFinanceProductInformation.Loan;
 
 /**
  *
  * @author Parker
  */
-public class PaymentForm extends javax.swing.JPanel {
 
+public class PaymentForm extends javax.swing.JPanel {
+    private JLayeredPane jLayeredPane;
+    private String username;
+    private Loan loan;
+    private Payment payment;
+    private PaymentList paymentList;
     /**
      * Creates new form PaymentForm
      */
-    public PaymentForm() {
+    public PaymentForm(JLayeredPane j, String user, Loan loan) {
         initComponents();
+        setVisible(true);
+        jLayeredPane = j;
+        username = user;
+        loan = this.loan;
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -32,8 +47,6 @@ public class PaymentForm extends javax.swing.JPanel {
         firstName = new javax.swing.JTextField();
         firstNameLabel1 = new javax.swing.JLabel();
         firstName1 = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
         firstNameLabel2 = new javax.swing.JLabel();
         firstName2 = new javax.swing.JTextField();
         firstNameLabel3 = new javax.swing.JLabel();
@@ -50,20 +63,6 @@ public class PaymentForm extends javax.swing.JPanel {
 
         firstNameLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         firstNameLabel1.setText("Payment Amount:");
-
-        jRadioButton1.setText("One-Time Payment");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
-            }
-        });
-
-        jRadioButton2.setText("Recurring Payment (Monthly)");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
-            }
-        });
 
         firstNameLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         firstNameLabel2.setText("Charge Account Number: ");
@@ -103,26 +102,29 @@ public class PaymentForm extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(108, 108, 108)
+                        .addComponent(paymentsLabel))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(56, 56, 56)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(firstNameLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(firstName1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(10, 10, 10)
-                                    .addComponent(jRadioButton1)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jRadioButton2))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(firstNameLabel)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(firstNameLabel1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(firstName1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(firstNameLabel2)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(firstName2, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addGap(169, 169, 169)
+                                    .addComponent(jButton1)
+                                    .addGap(177, 177, 177)))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(firstNameLabel2)
+                                .addComponent(firstNameLabel)
                                 .addGap(18, 18, 18)
-                                .addComponent(firstName2, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(firstNameLabel3)
                                 .addGap(18, 18, 18)
@@ -131,15 +133,8 @@ public class PaymentForm extends javax.swing.JPanel {
                                 .addComponent(firstName4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(32, 32, 32))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(108, 108, 108)
-                        .addComponent(paymentsLabel)))
-                .addContainerGap(23, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(199, 199, 199))
+                                .addGap(32, 32, 32)))))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,10 +151,6 @@ public class PaymentForm extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(firstNameLabel)
                     .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(firstNameLabel1)
@@ -170,17 +161,9 @@ public class PaymentForm extends javax.swing.JPanel {
                     .addComponent(firstName2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
-
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void firstName2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstName2ActionPerformed
         // TODO add your handling code here:
@@ -210,8 +193,6 @@ public class PaymentForm extends javax.swing.JPanel {
     private javax.swing.JLabel firstNameLabel2;
     private javax.swing.JLabel firstNameLabel3;
     private javax.swing.JButton jButton1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel paymentsLabel;
     // End of variables declaration//GEN-END:variables

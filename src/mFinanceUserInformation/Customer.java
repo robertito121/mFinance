@@ -31,6 +31,8 @@ public class Customer extends User implements Serializable {
     public Address getAddress() {
         return address;
     }
+    
+    
 
     /**
      * Sets the address attribute of the user

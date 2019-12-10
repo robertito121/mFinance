@@ -57,7 +57,6 @@ public class PaymentUi extends javax.swing.JPanel {
         paymentsLabel = new javax.swing.JLabel();
         paymentsTableJScrollPane = new javax.swing.JScrollPane();
         loansTable = new javax.swing.JTable();
-        paymentFotmButton = new javax.swing.JButton();
 
         setBackground(java.awt.Color.white);
 
@@ -94,13 +93,6 @@ public class PaymentUi extends javax.swing.JPanel {
             loansTable.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        paymentFotmButton.setText("Payment Form");
-        paymentFotmButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                paymentFotmButtonActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -111,9 +103,7 @@ public class PaymentUi extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(32, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(paymentFotmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(paymentsTableJScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 712, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(paymentsTableJScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 712, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28))
         );
         layout.setVerticalGroup(
@@ -123,23 +113,13 @@ public class PaymentUi extends javax.swing.JPanel {
                 .addComponent(paymentsLabel)
                 .addGap(18, 18, 18)
                 .addComponent(paymentsTableJScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(paymentFotmButton, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
-                .addGap(24, 24, 24))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void paymentFotmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paymentFotmButtonActionPerformed
-
-        PaymentForm paymentForm = new PaymentForm();
-        //changeScreen(paymentForm);
-        //Need help making the PaymentForm JPanel class to display once this button is pressed.
-    }//GEN-LAST:event_paymentFotmButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable loansTable;
-    private javax.swing.JButton paymentFotmButton;
     private javax.swing.JLabel paymentsLabel;
     private javax.swing.JScrollPane paymentsTableJScrollPane;
     // End of variables declaration//GEN-END:variables

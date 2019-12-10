@@ -28,10 +28,7 @@
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace pref="32" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="paymentFotmButton" min="-2" pref="148" max="-2" attributes="0"/>
-                  <Component id="paymentsTableJScrollPane" min="-2" pref="712" max="-2" attributes="0"/>
-              </Group>
+              <Component id="paymentsTableJScrollPane" min="-2" pref="712" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -43,9 +40,7 @@
               <Component id="paymentsLabel" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="paymentsTableJScrollPane" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="paymentFotmButton" pref="41" max="32767" attributes="0"/>
-              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+              <EmptySpace pref="83" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -92,13 +87,5 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="paymentFotmButton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Payment Form"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="paymentFotmButtonActionPerformed"/>
-      </Events>
-    </Component>
   </SubComponents>
 </Form>
