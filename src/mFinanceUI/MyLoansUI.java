@@ -10,7 +10,6 @@ import javax.swing.JLayeredPane;
 import javax.swing.table.DefaultTableModel;
 import mFinanceProductInformation.Loan;
 import mFinanceProductInformation.LoanList;
-import mFinanceUserInformation.Customer;
 
 /**
  *
@@ -21,6 +20,7 @@ public class MyLoansUI extends javax.swing.JPanel {
     private JLayeredPane JLayeredPanel;
     private String[] columnNames= {"Loan Number", "Type", "Amount"};
     private String username;
+    private int counter = -1;
 
     /**
      * Creates new form MyLoansUI
@@ -48,6 +48,8 @@ public class MyLoansUI extends javax.swing.JPanel {
             }
         }
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -110,28 +112,28 @@ public class MyLoansUI extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(loansTableJScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 712, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(282, 282, 282)
-                        .addComponent(myLoansLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(47, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(paymentFotmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(322, 322, 322))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(282, 282, 282)
+                        .addComponent(myLoansLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(loansTableJScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 712, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addComponent(myLoansLabel)
-                .addGap(27, 27, 27)
+                .addGap(22, 22, 22)
                 .addComponent(loansTableJScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(paymentFotmButton, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
                 .addGap(7, 7, 7))
         );
@@ -139,8 +141,19 @@ public class MyLoansUI extends javax.swing.JPanel {
 
     private void paymentFotmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paymentFotmButtonActionPerformed
 
-        //PaymentForm paymentForm = new PaymentForm(,);
-        
+        Loan loan;
+        LoanList loanList = new LoanList();
+        ArrayList<Loan> list = loanList.getLoanList(username);
+        counter = loansTable.getSelectedRow();
+        System.out.println(counter);
+        if (counter != -1) {
+            loan = list.get(counter);
+            PaymentForm paymentForm = new PaymentForm(JLayeredPanel, username, loan);
+            JLayeredPanel.removeAll();
+            JLayeredPanel.add(paymentForm);
+            JLayeredPanel.repaint();
+            JLayeredPanel.revalidate();
+        }
     }//GEN-LAST:event_paymentFotmButtonActionPerformed
 
 

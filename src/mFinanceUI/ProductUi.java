@@ -45,15 +45,17 @@ public class ProductUi extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        businessButton.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        businessButton.setFont(new java.awt.Font("Tahoma", 1, 40)); // NOI18N
         businessButton.setText("Business");
+        businessButton.setMaximumSize(new java.awt.Dimension(225, 57));
+        businessButton.setMinimumSize(new java.awt.Dimension(225, 57));
         businessButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 businessButtonActionPerformed(evt);
             }
         });
 
-        vehicleButton.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        vehicleButton.setFont(new java.awt.Font("Tahoma", 1, 40)); // NOI18N
         vehicleButton.setText("Vehicle");
         vehicleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,7 +63,7 @@ public class ProductUi extends javax.swing.JPanel {
             }
         });
 
-        studentButton.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        studentButton.setFont(new java.awt.Font("Tahoma", 1, 40)); // NOI18N
         studentButton.setText("Student");
         studentButton.setMaximumSize(new java.awt.Dimension(100, 29));
         studentButton.setMinimumSize(new java.awt.Dimension(100, 29));
@@ -71,7 +73,7 @@ public class ProductUi extends javax.swing.JPanel {
             }
         });
 
-        mortgageButton.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        mortgageButton.setFont(new java.awt.Font("Tahoma", 1, 40)); // NOI18N
         mortgageButton.setText("Mortgage");
         mortgageButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,7 +81,7 @@ public class ProductUi extends javax.swing.JPanel {
             }
         });
 
-        personalButton.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        personalButton.setFont(new java.awt.Font("Tahoma", 1, 40)); // NOI18N
         personalButton.setText("Personal");
         personalButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,38 +96,38 @@ public class ProductUi extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(321, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(businessButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(studentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(vehicleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(mortgageButton)
-                            .addComponent(personalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(1073, Short.MAX_VALUE))
+                        .addGap(16, 16, 16)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(vehicleButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(personalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(businessButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(mortgageButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(studentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(308, 308, 308))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(71, 71, 71)
                 .addComponent(jLabel1)
-                .addGap(47, 47, 47)
+                .addGap(90, 90, 90)
                 .addComponent(personalButton)
-                .addGap(57, 57, 57)
-                .addComponent(studentButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
+                .addGap(70, 70, 70)
                 .addComponent(vehicleButton)
-                .addGap(45, 45, 45)
+                .addGap(70, 70, 70)
                 .addComponent(mortgageButton)
-                .addGap(49, 49, 49)
-                .addComponent(businessButton)
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addGap(58, 58, 58)
+                .addComponent(businessButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(70, 70, 70)
+                .addComponent(studentButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(81, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
