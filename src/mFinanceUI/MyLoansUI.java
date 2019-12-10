@@ -152,7 +152,6 @@ public class MyLoansUI extends javax.swing.JPanel {
         LoanList loanList = new LoanList();
         ArrayList<Loan> list = loanList.getLoanList(username);
         counter = loansTable.getSelectedRow();
-        System.out.println(counter);
         if (counter != -1) {
             loan = list.get(counter);
             PaymentForm paymentForm = new PaymentForm(JLayeredPanel, username, loan);

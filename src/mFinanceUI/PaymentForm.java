@@ -24,13 +24,13 @@ public class PaymentForm extends javax.swing.JPanel {
     /**
      * Creates new form PaymentForm
      */
-    public PaymentForm(JLayeredPane j, String userID, Loan loan) {
+    public PaymentForm(JLayeredPane j, String userID, Loan newLoan) {
         initComponents();
         setVisible(true);
         jLayeredPane = j;
         this.userID = userID;
         paymentList = new PaymentList();
-        loan = this.loan;
+        loan = newLoan;
         loanNumberTextField.setText(loan.getLoanNumber()+"");
     }
     
