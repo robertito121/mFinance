@@ -64,6 +64,8 @@ public class MyProfile extends javax.swing.JPanel {
         firstName6 = new javax.swing.JLabel();
         firstName7 = new javax.swing.JLabel();
 
+        setBackground(java.awt.Color.white);
+
         header.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
         header.setText("HEADER");
 
