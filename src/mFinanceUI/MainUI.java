@@ -6,6 +6,7 @@
 package mFinanceUI;
 
 import java.awt.Color;
+import java.awt.Component;
 import javax.swing.plaf.BorderUIResource;
 import mFinanceUserInformation.Customer;
 
@@ -26,10 +27,7 @@ public class MainUI extends javax.swing.JFrame {
         setSize(1000,1000);
         setResizable(false);
         MyProfile myProfile = new MyProfile(jLayeredPane1, user);
-        jLayeredPane1.removeAll();
-        jLayeredPane1.add(myProfile);
-        jLayeredPane1.repaint();
-        jLayeredPane1.revalidate();
+        changeScreen(myProfile);
 
     }
 
@@ -187,10 +185,7 @@ public class MainUI extends javax.swing.JFrame {
     private void viewProductsMenyItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewProductsMenyItemActionPerformed
 
         ProductUi productsUi = new ProductUi(jLayeredPane1, user.getCustomerId());
-        jLayeredPane1.removeAll();
-        jLayeredPane1.add(productsUi);
-        jLayeredPane1.repaint();
-        jLayeredPane1.revalidate();
+        changeScreen(productsUi);
 
     }//GEN-LAST:event_viewProductsMenyItemActionPerformed
 
@@ -211,10 +206,7 @@ public class MainUI extends javax.swing.JFrame {
         myLoansButton.setBackground(null);
         paymentsButton.setBackground(null);
         MyProfile myProfile = new MyProfile(jLayeredPane1, user);
-        jLayeredPane1.removeAll();
-        jLayeredPane1.add(myProfile);
-        jLayeredPane1.repaint();
-        jLayeredPane1.revalidate();
+        changeScreen(myProfile);
     }//GEN-LAST:event_myProfileButtonMouseClicked
 
     private void myLoansButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_myLoansButtonMouseClicked
@@ -224,11 +216,7 @@ public class MainUI extends javax.swing.JFrame {
         myProfileButton.setBackground(null);
         paymentsButton.setBackground(null);
         MyLoansUI myLoans = new MyLoansUI(jLayeredPane1, user.getCustomerId());
-        jLayeredPane1.removeAll();
-        jLayeredPane1.add(myLoans);
-        jLayeredPane1.repaint();
-        jLayeredPane1.revalidate();
-        
+        changeScreen(myLoans);        
     }//GEN-LAST:event_myLoansButtonMouseClicked
 
     private void myLoansButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_myLoansButtonMouseEntered
@@ -247,10 +235,7 @@ public class MainUI extends javax.swing.JFrame {
         myProfileButton.setBackground(null);
         myLoansButton.setBackground(null);
         PaymentUi myPayment = new PaymentUi(jLayeredPane1, user.getCustomerId());
-        jLayeredPane1.removeAll();
-        jLayeredPane1.add(myPayment);
-        jLayeredPane1.repaint();
-        jLayeredPane1.revalidate();
+        changeScreen(myPayment);
         
     }//GEN-LAST:event_paymentsButtonMouseClicked
 
@@ -276,4 +261,11 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JPanel sideBarPanel;
     private javax.swing.JMenuItem viewProductsMenyItem;
     // End of variables declaration//GEN-END:variables
+
+    private void changeScreen(Component o) {
+        jLayeredPane1.removeAll();
+        jLayeredPane1.add(o);
+        jLayeredPane1.repaint();
+        jLayeredPane1.revalidate();
+    }
 }
