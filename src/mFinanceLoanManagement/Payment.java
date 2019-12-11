@@ -97,7 +97,6 @@ public class Payment implements Serializable{
      * @return amount of the user
      */
     public double getAmount() {
-        System.out.println(amount);
         return amount;
     }
 
