@@ -40,7 +40,6 @@ public class LoanList {
      */
     public void addLoan(String userId ,Loan loan) {
         ArrayList<Loan> loans = new ArrayList<Loan>();
-        System.out.println("Loan Added to " + userId);
         if (loanMap.get(userId) != null){
             loans = loanMap.get(userId);
         }
@@ -80,7 +79,6 @@ public class LoanList {
         Loan loan;
         ArrayList<Loan> loanList = new  ArrayList<Loan>();
         loanList = getLoanList(userId);
-        System.out.println(loanList);
         if (loanList != null){
             index = loanList.size()-1;
             number = loanList.get(index).getLoanNumber()+1;            

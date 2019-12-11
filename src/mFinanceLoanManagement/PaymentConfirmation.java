@@ -1,11 +1,12 @@
 package mFinanceLoanManagement;
 
+import java.io.Serializable;
 import java.security.SecureRandom;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class PaymentConfirmation {
+public class PaymentConfirmation implements Serializable{
 
     private final String CHAR_LOWER = "abcdefghijklmnopqrstuvwxyz";
     private final String CHAR_UPPER = CHAR_LOWER.toUpperCase();
@@ -16,7 +17,7 @@ public class PaymentConfirmation {
     private String transactionDate;
 
     /**
-     * Constructor generates a random confirmation number everytime during instantiation
+     * Constructor generates a random confirmation number every time during instantiation
      * it also gets the date of transaction
      */
     public PaymentConfirmation() {
@@ -26,7 +27,7 @@ public class PaymentConfirmation {
     }
 
     /**
-     * generates a randon confirmation number
+     * generates a random confirmation number
      * @param length
      * @return String
      */

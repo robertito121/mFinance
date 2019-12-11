@@ -25,6 +25,7 @@ public class Loan implements Serializable{
         this.status = status;
     }
     
+    
     /**
      * Gets the loanType attribute of the Loan
      * @return the Loans loanType

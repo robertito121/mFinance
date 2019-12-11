@@ -10,7 +10,6 @@ import javax.swing.JLayeredPane;
 import javax.swing.table.DefaultTableModel;
 import mFinanceProductInformation.Loan;
 import mFinanceProductInformation.LoanList;
-import mFinanceUserInformation.Customer;
 
 /**
  *
@@ -21,6 +20,7 @@ public class MyLoansUI extends javax.swing.JPanel {
     private JLayeredPane JLayeredPanel;
     private String[] columnNames= {"Loan Number", "Type", "Amount"};
     private String username;
+    private int counter = -1;
 
     /**
      * Creates new form MyLoansUI
@@ -42,12 +42,14 @@ public class MyLoansUI extends javax.swing.JPanel {
             for(int i = 0; i < list.size(); i++) {
                 rowData[0] = list.get(i).getLoanNumber();
                 rowData[1] = list.get(i).getLoanType();
-                rowData[2] = list.get(i).getAmount();
+                rowData[2] = "$"+list.get(i).getAmount();
                 rowData[3] = list.get(i).getStatus();
                 model.addRow(rowData);
             }
         }
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -61,6 +63,8 @@ public class MyLoansUI extends javax.swing.JPanel {
         myLoansLabel = new javax.swing.JLabel();
         loansTableJScrollPane = new javax.swing.JScrollPane();
         loansTable = new javax.swing.JTable();
+        paymentFormButton = new javax.swing.JButton();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 32767));
 
         setBackground(java.awt.Color.white);
 
@@ -76,7 +80,7 @@ public class MyLoansUI extends javax.swing.JPanel {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
                 false, false, false, false
@@ -95,8 +99,16 @@ public class MyLoansUI extends javax.swing.JPanel {
         if (loansTable.getColumnModel().getColumnCount() > 0) {
             loansTable.getColumnModel().getColumn(0).setResizable(false);
             loansTable.getColumnModel().getColumn(1).setResizable(false);
+            loansTable.getColumnModel().getColumn(2).setResizable(false);
             loansTable.getColumnModel().getColumn(3).setResizable(false);
         }
+
+        paymentFormButton.setText("Payment Form");
+        paymentFormButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                paymentFormButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -105,28 +117,58 @@ public class MyLoansUI extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
+                        .addGap(282, 282, 282)
+                        .addComponent(myLoansLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
                         .addComponent(loansTableJScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 712, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(282, 282, 282)
-                        .addComponent(myLoansLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(47, Short.MAX_VALUE))
+                        .addGap(312, 312, 312)
+                        .addComponent(paymentFormButton, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addComponent(myLoansLabel)
-                .addGap(27, 27, 27)
+                .addGap(22, 22, 22)
                 .addComponent(loansTableJScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(paymentFormButton, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void paymentFormButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paymentFormButtonActionPerformed
+
+        Loan loan;
+        LoanList loanList = new LoanList();
+        ArrayList<Loan> list = loanList.getLoanList(username);
+        counter = loansTable.getSelectedRow();
+        if (counter != -1) {
+            loan = list.get(counter);
+            PaymentForm paymentForm = new PaymentForm(JLayeredPanel, username, loan);
+            JLayeredPanel.removeAll();
+            JLayeredPanel.add(paymentForm);
+            JLayeredPanel.repaint();
+            JLayeredPanel.revalidate();
+        }
+    }//GEN-LAST:event_paymentFormButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.Box.Filler filler1;
     private javax.swing.JTable loansTable;
     private javax.swing.JScrollPane loansTableJScrollPane;
     private javax.swing.JLabel myLoansLabel;
+    private javax.swing.JButton paymentFormButton;
     // End of variables declaration//GEN-END:variables
 }

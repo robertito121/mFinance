@@ -174,7 +174,7 @@ public class PersonalLoanCategories extends javax.swing.JPanel {
                                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                .addContainerGap(204, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,13 +205,28 @@ public class PersonalLoanCategories extends javax.swing.JPanel {
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
                 .addComponent(personalLineOfCreditLoanApplyButton)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void personalLineOfCreditLoanApplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personalLineOfCreditLoanApplyButtonActionPerformed
         // TODO add your handling code here:
         ApplicationForm applicationForm = new ApplicationForm(jLayeredPane, username);
+         if(FixedRateRadioButton.isSelected()){
+           applicationForm.getjComboBoxLoanType().setSelectedIndex(15); 
+        }
+        if(LineOfCreditRadioButton.isSelected()){
+           applicationForm.getjComboBoxLoanType().setSelectedIndex(19); 
+        }
+        if(CoSignRadioButton.isSelected()){
+           applicationForm.getjComboBoxLoanType().setSelectedIndex(18); 
+        }
+        if(DebtConsolidationRadioButton.isSelected()){
+           applicationForm.getjComboBoxLoanType().setSelectedIndex(17); 
+        }
+        if(VariableRateRadioButton.isSelected()){
+           applicationForm.getjComboBoxLoanType().setSelectedIndex(16); 
+        }
         jLayeredPane.removeAll();
         jLayeredPane.add(applicationForm);
         jLayeredPane.repaint();

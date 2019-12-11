@@ -1,13 +1,16 @@
 package mFinanceLoanManagement;
 
 
+import java.io.Serializable;
 import mFinanceUserInformation.Address;
 
-public class Payment {
+public class Payment implements Serializable{
 
     //Payment: Loan_number, amount, account, type
-    private int loanNumber;
+    private String loanNumber;
     private double amount;
+    private String chargeNumber;
+    private PaymentConfirmation confirmation;
 
 
     /**
@@ -15,9 +18,11 @@ public class Payment {
      * @param loanNumber
      * @param paymentAmount
      */
-    public Payment (int loanNumber, double paymentAmount){
-        this.loanNumber = loanNumber;
-        this.amount = amount;
+    public Payment (String newLoanNumber, double newPaymentAmount, String newChargeNumber, PaymentConfirmation newConfirmation){
+        loanNumber = newLoanNumber;
+        amount = newPaymentAmount;
+        chargeNumber = newChargeNumber;
+        confirmation = newConfirmation;
     }
 
     /**
@@ -75,7 +80,7 @@ public class Payment {
      * Get the loanNumber attribute of the user
      * @return loanNumber of the user
      */
-    public int getLoanNumber() {
+    public String getLoanNumber() {
         return loanNumber;
     }
 
@@ -83,7 +88,7 @@ public class Payment {
      * Set the loanNumber attribute of the user
      * @param loanNumber
      */
-    public void setLoanNumber(int loanNumber) {
+    public void setLoanNumber(String loanNumber) {
         this.loanNumber = loanNumber;
     }
 
@@ -101,6 +106,20 @@ public class Payment {
      */
     public void setAmount(double amount) {
         this.amount = amount;
+    }
+
+    /**
+     * @return the confirmation
+     */
+    public PaymentConfirmation getConfirmation() {
+        return confirmation;
+    }
+
+    /**
+     * @param confirmation the confirmation to set
+     */
+    public void setConfirmation(PaymentConfirmation confirmation) {
+        this.confirmation = confirmation;
     }
 
 }

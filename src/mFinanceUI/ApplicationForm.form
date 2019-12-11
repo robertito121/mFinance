@@ -31,42 +31,32 @@
                       </Group>
                       <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="jComboBoxLoanType" min="-2" pref="141" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="jTextFieldLoanAmount" min="-2" pref="141" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="jTextFieldLoanAmount" min="-2" pref="141" max="-2" attributes="0"/>
+                          <Component id="jComboBoxLoanType" min="-2" pref="200" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                              <Component id="jLabelDate" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jTextFieldDateDay" min="-2" pref="43" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jTextFieldDateMonth" min="-2" pref="43" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jTextFieldDateYear" min="-2" pref="66" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                              <Component id="jLabelProposedCollaterals" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTextFieldProposedCollaterals" min="-2" pref="141" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                      <Component id="jLabelDate" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jTextFieldDateDay" min="-2" pref="43" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jTextFieldDateMonth" min="-2" pref="43" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jTextFieldDateYear" min="-2" pref="66" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                      <Component id="jLabelProposedCollaterals" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jTextFieldProposedCollaterals" min="-2" pref="141" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace pref="29" max="32767" attributes="0"/>
               <Component id="jSeparator1" min="-2" pref="19" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
@@ -218,30 +208,27 @@
     <Component class="javax.swing.JComboBox" name="jComboBoxLoanType">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="23">
+          <StringArray count="20">
             <StringItem index="0" value="Business &#x2013; Term Loan"/>
             <StringItem index="1" value="Business &#x2013; SBA Loan"/>
             <StringItem index="2" value="Business &#x2013; Line Of Credit"/>
-            <StringItem index="3" value="Business &#x2013; Financing Loan"/>
+            <StringItem index="3" value="Business &#x2013; Invoice Financing Loan"/>
             <StringItem index="4" value="Business &#x2013; Merchant Cash Advances"/>
             <StringItem index="5" value="Auto &#x2013; New Car Loan"/>
             <StringItem index="6" value="Auto &#x2013; Used Car Loan"/>
             <StringItem index="7" value="Auto -Motorcycle/Boat"/>
             <StringItem index="8" value="Auto -Refinance Loan"/>
-            <StringItem index="9" value="Student &#x2013; Direct Subsidized"/>
-            <StringItem index="10" value="Student &#x2013; Direct Unsubsidized"/>
-            <StringItem index="11" value="Student &#x2013; Direct PLUS"/>
-            <StringItem index="12" value="Student &#x2013; Direct Consolidation"/>
-            <StringItem index="13" value="Student &#x2013; Private Student Loan"/>
-            <StringItem index="14" value="Mortgage &#x2013; Fixed Rate"/>
-            <StringItem index="15" value="Mortgage &#x2013; Variable Rate"/>
-            <StringItem index="16" value="Mortgage &#x2013; First Time Buyer"/>
-            <StringItem index="17" value="Mortgage &#x2013; VA Loan"/>
-            <StringItem index="18" value="Personal &#x2013; Fixed Rate"/>
-            <StringItem index="19" value="Personal &#x2013; Variable Rate"/>
-            <StringItem index="20" value="Personal &#x2013; Debt Consolidation"/>
-            <StringItem index="21" value="Personal &#x2013; Co-Sign"/>
-            <StringItem index="22" value="Personal &#x2013; Line of Credit"/>
+            <StringItem index="9" value="Student &#x2013; Refinance"/>
+            <StringItem index="10" value="Student &#x2013; Private Student Loan"/>
+            <StringItem index="11" value="Mortgage &#x2013; Fixed Rate"/>
+            <StringItem index="12" value="Mortgage &#x2013; Variable Rate"/>
+            <StringItem index="13" value="Mortgage &#x2013; First Time Buyer"/>
+            <StringItem index="14" value="Mortgage &#x2013; VA Loan"/>
+            <StringItem index="15" value="Personal &#x2013; Fixed Rate"/>
+            <StringItem index="16" value="Personal &#x2013; Variable Rate"/>
+            <StringItem index="17" value="Personal &#x2013; Debt Consolidation"/>
+            <StringItem index="18" value="Personal &#x2013; Co-Sign"/>
+            <StringItem index="19" value="Personal &#x2013; Line of Credit"/>
           </StringArray>
         </Property>
       </Properties>
@@ -249,6 +236,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxLoanTypeActionPerformed"/>
       </Events>
       <AuxValues>
+        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="ApplicationForm_jComboBoxLoanType"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
